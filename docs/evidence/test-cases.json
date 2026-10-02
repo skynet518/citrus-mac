@@ -1,0 +1,832 @@
+{
+  "cases": [
+    {
+      "id": "MAC-01",
+      "key": "convert_jpg",
+      "title": "PNG 转 JPG",
+      "input_or_operation": "240×320 的蓝／红／白测试图 Sample.png",
+      "expected": "有效文件，可解码，尺寸 240×320，非空；文件类型必须与目标编码一致",
+      "actual": "public.jpeg, 240×320, 2815 bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-02",
+      "key": "convert_png",
+      "title": "PNG 转 PNG",
+      "input_or_operation": "240×320 的蓝／红／白测试图 Sample.png",
+      "expected": "有效文件，可解码，尺寸 240×320，非空；文件类型必须与目标编码一致",
+      "actual": "public.png, 240×320, 2422 bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-03",
+      "key": "convert_webp",
+      "title": "PNG 转 WEBP",
+      "input_or_operation": "240×320 的蓝／红／白测试图 Sample.png",
+      "expected": "有效文件，可解码，尺寸 240×320，非空；文件类型必须与目标编码一致",
+      "actual": "org.webmproject.webp, 240×320, 298 bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-04",
+      "key": "convert_heic",
+      "title": "PNG 转 HEIC",
+      "input_or_operation": "240×320 的蓝／红／白测试图 Sample.png",
+      "expected": "有效文件，可解码，尺寸 240×320，非空；文件类型必须与目标编码一致",
+      "actual": "public.heic, 240×320, 602 bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-05",
+      "key": "convert_tiff",
+      "title": "PNG 转 TIFF",
+      "input_or_operation": "240×320 的蓝／红／白测试图 Sample.png",
+      "expected": "有效文件，可解码，尺寸 240×320，非空；文件类型必须与目标编码一致",
+      "actual": "public.tiff, 240×320, 310590 bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-06",
+      "key": "convert_avif",
+      "title": "PNG 转 AVIF",
+      "input_or_operation": "240×320 的蓝／红／白测试图 Sample.png",
+      "expected": "有效文件，可解码，尺寸 240×320，非空；文件类型必须与目标编码一致",
+      "actual": "public.avif, 240×320, 490 bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-07",
+      "key": "convert_bmp",
+      "title": "PNG 转 BMP",
+      "input_or_operation": "240×320 的蓝／红／白测试图 Sample.png",
+      "expected": "有效文件，可解码，尺寸 240×320，非空；文件类型必须与目标编码一致",
+      "actual": "com.microsoft.bmp, 240×320, 307338 bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-08",
+      "key": "convert_pdf",
+      "title": "PNG 转 PDF",
+      "input_or_operation": "240×320 的蓝／红／白测试图 Sample.png",
+      "expected": "以 %PDF 开头，PDFKit 读取为 1 页",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-09",
+      "key": "convert_docx",
+      "title": "PNG 转 DOCX",
+      "input_or_operation": "240×320 的蓝／红／白测试图 Sample.png",
+      "expected": "ZIP 内包含 word/document.xml 和 word/media/image0.png",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-10",
+      "key": "source_unchanged",
+      "title": "转换后原文件保留",
+      "input_or_operation": "九项格式转换前后读取 Sample.png",
+      "expected": "前后文件字节完全相同",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-11",
+      "key": "collision_avoids_overwrite",
+      "title": "同名输出保护",
+      "input_or_operation": "再连续两次把 Sample.png 转为 JPG",
+      "expected": "两个输出路径不同，不覆盖已存在结果",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-12",
+      "key": "crop_full_resolution",
+      "title": "按原图尺寸裁剪",
+      "input_or_operation": "240×320 图；归一化区域 x=0.1、y=0.2、宽=0.6、高=0.5",
+      "expected": "保存后重新解码为 144×160",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-13",
+      "key": "background_padding",
+      "title": "背景边距",
+      "input_or_operation": "144×160 裁剪图；Padding=40、Corners=24、Shadow=12",
+      "expected": "输出画布为 224×240",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-14",
+      "key": "background_aspect_ratio",
+      "title": "16:9 背景比例",
+      "input_or_operation": "同一裁剪图；背景比例改为 16:9",
+      "expected": "输出宽高比与 16:9 的差小于 0.01",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-15",
+      "key": "preview_matches_export_ratio",
+      "title": "预览与导出比例一致",
+      "input_or_operation": "同一背景配置；预览最长边限制为 200",
+      "expected": "预览和导出宽高比之差小于 0.02",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-16",
+      "key": "redaction_is_baked_into_pixels",
+      "title": "遮盖写入像素",
+      "input_or_operation": "测试图区域 0.1,0.1 至 0.4,0.4 实色遮盖；取样 x=48,y=64",
+      "expected": "取样 RGB 三通道均小于 5",
+      "actual": "[0, 0, 0, 255]",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-17",
+      "key": "rotate_dimensions",
+      "title": "旋转尺寸",
+      "input_or_operation": "240×320 图旋转 90°",
+      "expected": "输出尺寸变为 320×240",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-18",
+      "key": "edit_saturation",
+      "title": "饱和度归零",
+      "input_or_operation": "测试图饱和度设为 0；取样 x=48,y=64",
+      "expected": "RGB 相邻通道之差均小于 3",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-19",
+      "key": "pdf_all_pages",
+      "title": "多页 PDF 全部导出",
+      "input_or_operation": "包含两页的 Two Pages.pdf 转 JPG",
+      "expected": "返回两张图片",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-20",
+      "key": "pdf_300dpi",
+      "title": "PDF 以 300 DPI 栅格化",
+      "input_or_operation": "72×96 点的 PDF 页面",
+      "expected": "导出图片为 300×400 像素",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-21",
+      "key": "pdf_split_merge",
+      "title": "拆分再合并",
+      "input_or_operation": "两页 PDF 拆分后把两个单页文件合并",
+      "expected": "拆分为两个文件，合并结果为两页",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-22",
+      "key": "radial_sector_0",
+      "title": "第 1 个扇区命中",
+      "input_or_operation": "八扇区圆盘中，距中心 110 点、第 0° 方向的测试坐标",
+      "expected": "命中索引 0；此项为坐标计算检查",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-23",
+      "key": "radial_sector_1",
+      "title": "第 2 个扇区命中",
+      "input_or_operation": "八扇区圆盘中，距中心 110 点、第 45° 方向的测试坐标",
+      "expected": "命中索引 1；此项为坐标计算检查",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-24",
+      "key": "radial_sector_2",
+      "title": "第 3 个扇区命中",
+      "input_or_operation": "八扇区圆盘中，距中心 110 点、第 90° 方向的测试坐标",
+      "expected": "命中索引 2；此项为坐标计算检查",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-25",
+      "key": "radial_sector_3",
+      "title": "第 4 个扇区命中",
+      "input_or_operation": "八扇区圆盘中，距中心 110 点、第 135° 方向的测试坐标",
+      "expected": "命中索引 3；此项为坐标计算检查",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-26",
+      "key": "radial_sector_4",
+      "title": "第 5 个扇区命中",
+      "input_or_operation": "八扇区圆盘中，距中心 110 点、第 180° 方向的测试坐标",
+      "expected": "命中索引 4；此项为坐标计算检查",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-27",
+      "key": "radial_sector_5",
+      "title": "第 6 个扇区命中",
+      "input_or_operation": "八扇区圆盘中，距中心 110 点、第 225° 方向的测试坐标",
+      "expected": "命中索引 5；此项为坐标计算检查",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-28",
+      "key": "radial_sector_6",
+      "title": "第 7 个扇区命中",
+      "input_or_operation": "八扇区圆盘中，距中心 110 点、第 270° 方向的测试坐标",
+      "expected": "命中索引 6；此项为坐标计算检查",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-29",
+      "key": "radial_sector_7",
+      "title": "第 8 个扇区命中",
+      "input_or_operation": "八扇区圆盘中，距中心 110 点、第 315° 方向的测试坐标",
+      "expected": "命中索引 7；此项为坐标计算检查",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-30",
+      "key": "radial_center_cancels",
+      "title": "圆盘中心不执行",
+      "input_or_operation": "坐标 x=170,y=170",
+      "expected": "不选中任何扇区",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-31",
+      "key": "radial_outside_cancels",
+      "title": "圆盘外部不执行",
+      "input_or_operation": "坐标 x=500,y=170",
+      "expected": "不选中任何扇区",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-32",
+      "key": "radial_screen_edge_clamp",
+      "title": "屏幕边缘定位",
+      "input_or_operation": "1440×900 测试屏幕；鼠标位置 10,10",
+      "expected": "整个菜单框位于测试屏幕内；未测试真实多屏",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-33",
+      "key": "current_format_excluded",
+      "title": "隐藏当前格式",
+      "input_or_operation": "PNG 输入，读取可转换格式目录",
+      "expected": "目录不包含 PNG",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-34",
+      "key": "image_tool_catalog",
+      "title": "七个图片工具",
+      "input_or_operation": "单张 PNG 输入，读取工具目录",
+      "expected": "工具数量为 7；此断言未逐个执行工具界面",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-35",
+      "key": "subtitle_conversion",
+      "title": "SRT／VTT 时间与文字",
+      "input_or_operation": "含两段字幕、中文，以及 00:00:01,500 时间戳的 SRT",
+      "expected": "VTT 以 WEBVTT 开头，时间变为 00:00:01.500，纯文本含“你好”",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-36",
+      "key": "metadata_location_removed",
+      "title": "移除位置信息",
+      "input_or_operation": "带 GPS 的 Tagged.jpg；清除全部与移除位置均启用",
+      "expected": "导出 JPEG 回读不含 GPS 字典",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-37",
+      "key": "metadata_author_saved",
+      "title": "作者写入后回读",
+      "input_or_operation": "清理元数据后写入作者 Kris",
+      "expected": "导出 JPEG 的 IPTC Byline 回读为 Kris",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-38",
+      "key": "metadata_caption_saved",
+      "title": "描述写入后回读",
+      "input_or_operation": "写入描述 Local test",
+      "expected": "IPTC CaptionAbstract 回读为 Local test",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-39",
+      "key": "metadata_original_preserved",
+      "title": "元数据编辑保留原图",
+      "input_or_operation": "编辑 Tagged.jpg 前后读取原文件",
+      "expected": "原文件字节完全相同",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-40",
+      "key": "compression_smaller",
+      "title": "压缩后体积减小",
+      "input_or_operation": "Tagged.jpg；强压缩且最长边限制 128",
+      "expected": "结果字节数小于原文件；此项同时使用缩小尺寸",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-41",
+      "key": "compression_resize",
+      "title": "压缩时最长边限制",
+      "input_or_operation": "同一强压缩输出",
+      "expected": "重新解码后最长边等于 128",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-42",
+      "key": "partial_batch_keeps_successes",
+      "title": "批量部分失败保留成功项",
+      "input_or_operation": "一张有效 PNG 与不存在的 missing.jpg 同时转 WebP",
+      "expected": "返回 1 个成功结果、1 个错误，成功文件仍存在",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-43",
+      "key": "text_pagination",
+      "title": "长文本分页",
+      "input_or_operation": "中文句子重复 800 次",
+      "expected": "生成页面数量大于 1；未逐页核对末尾全文",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-44",
+      "key": "archive_extract",
+      "title": "ZIP 解压与内容回读",
+      "input_or_operation": "ZIP 内 note.txt 内容 Local archive fixture",
+      "expected": "解压后的 note.txt 内容完全一致",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-45",
+      "key": "archive_convert",
+      "title": "ZIP 转 TAR",
+      "input_or_operation": "同一 ZIP 转 TAR",
+      "expected": "系统 tar 列表中包含 note.txt",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-46",
+      "key": "audio_real_encode",
+      "title": "WAV 转 MP3",
+      "input_or_operation": "440 Hz、2 秒合成 WAV",
+      "expected": "生成 MP3，文件大于 100 字节；此原断言未做完整播放检查",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-47",
+      "key": "video_real_encode",
+      "title": "MP4 转 WebM",
+      "input_or_operation": "96×64、12 fps、2 秒、带 440 Hz 音轨的合成 MP4",
+      "expected": "生成 WebM，文件大于 100 字节；此原断言未做全帧解码检查",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-48",
+      "key": "video_mute_removes_audio",
+      "title": "视频移除音轨",
+      "input_or_operation": "同一合成 MP4 执行 Mute",
+      "expected": "ffprobe 查询音频流为空",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-49",
+      "key": "media_trim_duration",
+      "title": "视频裁切时间",
+      "input_or_operation": "合成 MP4 从 0.5 秒裁到 1.5 秒",
+      "expected": "ffprobe 时长与 1 秒之差小于 0.1 秒",
+      "actual": "已满足上述断言（详见测试源码）",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-50",
+      "key": "drag_stale_pasteboard_ignored",
+      "title": "忽略上次拖拽留下的文件",
+      "input_or_operation": "Old file drag + held mouse does not activate.",
+      "expected": "Old file drag + held mouse does not activate.",
+      "actual": "Old file drag + held mouse does not activate.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-51",
+      "key": "drag_fresh_pasteboard_without_event",
+      "title": "缺少拖动通知时仍能识别新会话",
+      "input_or_operation": "Fresh file drag activates without an NSEvent callback; physical Shift remains a separate manual check.",
+      "expected": "Fresh file drag activates without an NSEvent callback; physical Shift remains a separate manual check.",
+      "actual": "Fresh file drag activates without an NSEvent callback; physical Shift remains a separate manual check.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-52",
+      "key": "drag_editor_mouse_ignored",
+      "title": "编辑器内部拖动不触发全局菜单",
+      "input_or_operation": "Crop, paint and window drags stay outside the desktop entry.",
+      "expected": "Crop, paint and window drags stay outside the desktop entry.",
+      "actual": "Crop, paint and window drags stay outside the desktop entry.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-53",
+      "key": "drag_consumed_session_stays_closed",
+      "title": "取消或完成后本次会话保持关闭",
+      "input_or_operation": "Esc/drop consumes the session until button release.",
+      "expected": "Esc/drop consumes the session until button release.",
+      "actual": "Esc/drop consumes the session until button release.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-54",
+      "key": "drag_next_session_rearms",
+      "title": "松手后下一次新拖拽可以再次激活",
+      "input_or_operation": "Release resets the baseline; a new file drag re-arms.",
+      "expected": "Release resets the baseline; a new file drag re-arms.",
+      "actual": "Release resets the baseline; a new file drag re-arms.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-55",
+      "key": "drag_modern_file_url_read",
+      "title": "读取标准文件 URL 拖拽数据",
+      "input_or_operation": "Private pasteboard with public.file-url.",
+      "expected": "Private pasteboard with public.file-url.",
+      "actual": "Private pasteboard with public.file-url.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-56",
+      "key": "drag_legacy_file_paths_read",
+      "title": "读取旧文件路径格式、去重并过滤",
+      "input_or_operation": "NSFilenamesPboardType works, duplicates and unsupported extensions are filtered.",
+      "expected": "NSFilenamesPboardType works, duplicates and unsupported extensions are filtered.",
+      "actual": "NSFilenamesPboardType works, duplicates and unsupported extensions are filtered.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-57",
+      "key": "transparency_png",
+      "title": "PNG 透明像素与半透明红色保存后读回",
+      "input_or_operation": "Corner [0, 0, 0, 0]; half-transparent red center [128, 19, 0, 128], premultiplied RGBA.",
+      "expected": "Corner [0, 0, 0, 0]; half-transparent red center [128, 19, 0, 128], premultiplied RGBA.",
+      "actual": "Corner [0, 0, 0, 0]; half-transparent red center [128, 19, 0, 128], premultiplied RGBA.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-58",
+      "key": "transparency_webp",
+      "title": "WEBP 透明像素与半透明红色保存后读回",
+      "input_or_operation": "Corner [0, 0, 0, 0]; half-transparent red center [128, 19, 0, 128], premultiplied RGBA.",
+      "expected": "Corner [0, 0, 0, 0]; half-transparent red center [128, 19, 0, 128], premultiplied RGBA.",
+      "actual": "Corner [0, 0, 0, 0]; half-transparent red center [128, 19, 0, 128], premultiplied RGBA.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-59",
+      "key": "jpeg_transparency_white",
+      "title": "透明图片转 JPG 后透明区填白",
+      "input_or_operation": "Transparent corner becomes white: [255, 255, 255, 255].",
+      "expected": "Transparent corner becomes white: [255, 255, 255, 255].",
+      "actual": "Transparent corner becomes white: [255, 255, 255, 255].",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-60",
+      "key": "exif_orientation_applied",
+      "title": "按照片方向标记旋转像素",
+      "input_or_operation": "EXIF orientation 6 loads as 320×240.",
+      "expected": "EXIF orientation 6 loads as 320×240.",
+      "actual": "EXIF orientation 6 loads as 320×240.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-61",
+      "key": "exif_orientation_not_applied_twice",
+      "title": "导出后不重复旋转",
+      "input_or_operation": "Export has normalized pixels and no stale orientation tag.",
+      "expected": "Export has normalized pixels and no stale orientation tag.",
+      "actual": "Export has normalized pixels and no stale orientation tag.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-62",
+      "key": "corrupt_image_rejected",
+      "title": "拒绝损坏图片",
+      "input_or_operation": "Malformed PNG is rejected.",
+      "expected": "Malformed PNG is rejected.",
+      "actual": "Malformed PNG is rejected.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-63",
+      "key": "oversized_canvas_rejected",
+      "title": "超出宽度上限时先拒绝分配",
+      "input_or_operation": "Width above 24000 is rejected before allocation.",
+      "expected": "Width above 24000 is rejected before allocation.",
+      "actual": "Width above 24000 is rejected before allocation.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-64",
+      "key": "outside_crop_rejected",
+      "title": "拒绝完全位于图像外的裁剪框",
+      "input_or_operation": "Crop completely outside the image is rejected.",
+      "expected": "Crop completely outside the image is rejected.",
+      "actual": "Crop completely outside the image is rejected.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-65",
+      "key": "gps_only_removal_keeps_author",
+      "title": "只移除定位时保留作者",
+      "input_or_operation": "Removing only location preserves the existing author.",
+      "expected": "Removing only location preserves the existing author.",
+      "actual": "Removing only location preserves the existing author.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-66",
+      "key": "gps_preserved_when_requested",
+      "title": "关闭移除定位时保留定位",
+      "input_or_operation": "Location remains only when removal is disabled.",
+      "expected": "Location remains only when removal is disabled.",
+      "actual": "Location remains only when removal is disabled.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-67",
+      "key": "png_unicode_metadata",
+      "title": "中文作者与描述写入 PNG 后读回",
+      "input_or_operation": "PNG author and description survive Unicode round-trip.",
+      "expected": "PNG author and description survive Unicode round-trip.",
+      "actual": "PNG author and description survive Unicode round-trip.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-68",
+      "key": "jpeg_compression_preserves_dimensions",
+      "title": "不缩尺寸的 JPG 压缩",
+      "input_or_operation": "JPEG compression without resizing remains 256×256 and shrinks bytes.",
+      "expected": "JPEG compression without resizing remains 256×256 and shrinks bytes.",
+      "actual": "JPEG compression without resizing remains 256×256 and shrinks bytes.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-69",
+      "key": "png_compression_shrinks",
+      "title": "不缩尺寸的 PNG 减色压缩",
+      "input_or_operation": "PNG uses lossy color quantization; size stays 256×256.",
+      "expected": "PNG uses lossy color quantization; size stays 256×256.",
+      "actual": "PNG uses lossy color quantization; size stays 256×256.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-70",
+      "key": "pdf_compression_page_geometry",
+      "title": "PDF 压缩保留页数和物理页面尺寸",
+      "input_or_operation": "Raster compression shrinks bytes and preserves page dimensions within 1 pt; searchable text is not retained.",
+      "expected": "Raster compression shrinks bytes and preserves page dimensions within 1 pt; searchable text is not retained.",
+      "actual": "Raster compression shrinks bytes and preserves page dimensions within 1 pt; searchable text is not retained.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-71",
+      "key": "batch_all_failures_reported",
+      "title": "批量全部失败时明确列出错误",
+      "input_or_operation": "Two missing inputs produce zero successes and two explicit errors.",
+      "expected": "Two missing inputs produce zero successes and two explicit errors.",
+      "actual": "Two missing inputs produce zero successes and two explicit errors.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-72",
+      "key": "background_custom_color",
+      "title": "自定义纯色背景写入最终图片",
+      "input_or_operation": "Custom green background corner: [0, 255, 0, 255].",
+      "expected": "Custom green background corner: [0, 255, 0, 255].",
+      "actual": "Custom green background corner: [0, 255, 0, 255].",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-73",
+      "key": "background_rounded_corner",
+      "title": "圆角区域露出背景",
+      "input_or_operation": "Rounded image corner reveals the background: [0, 255, 0, 255].",
+      "expected": "Rounded image corner reveals the background: [0, 255, 0, 255].",
+      "actual": "Rounded image corner reveals the background: [0, 255, 0, 255].",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-74",
+      "key": "background_photo_rendered",
+      "title": "照片背景写入最终图片",
+      "input_or_operation": "Photo background is composited into the exported pixels.",
+      "expected": "Photo background is composited into the exported pixels.",
+      "actual": "Photo background is composited into the exported pixels.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-75",
+      "key": "annotation_pen_export",
+      "title": "画笔标注烘焙进导出像素",
+      "input_or_operation": "Decoded export has 5318 changed color bytes, with actual raster annotation.",
+      "expected": "Decoded export has 5318 changed color bytes, with actual raster annotation.",
+      "actual": "Decoded export has 5318 changed color bytes, with actual raster annotation.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-76",
+      "key": "annotation_rectangle_export",
+      "title": "矩形标注烘焙进导出像素",
+      "input_or_operation": "Decoded export has 12816 changed color bytes, with actual raster annotation.",
+      "expected": "Decoded export has 12816 changed color bytes, with actual raster annotation.",
+      "actual": "Decoded export has 12816 changed color bytes, with actual raster annotation.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-77",
+      "key": "annotation_arrow_export",
+      "title": "箭头标注烘焙进导出像素",
+      "input_or_operation": "Decoded export has 8062 changed color bytes, with actual raster annotation.",
+      "expected": "Decoded export has 8062 changed color bytes, with actual raster annotation.",
+      "actual": "Decoded export has 8062 changed color bytes, with actual raster annotation.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-78",
+      "key": "annotation_text_export",
+      "title": "文字标注烘焙进导出像素",
+      "input_or_operation": "Decoded export has 6522 changed color bytes, with actual raster annotation.",
+      "expected": "Decoded export has 6522 changed color bytes, with actual raster annotation.",
+      "actual": "Decoded export has 6522 changed color bytes, with actual raster annotation.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-79",
+      "key": "redaction_then_blur_stays_hidden",
+      "title": "先黑块遮挡再模糊不露出原内容",
+      "input_or_operation": "Later blur uses the already redacted pixels; center [0, 0, 0, 255].",
+      "expected": "Later blur uses the already redacted pixels; center [0, 0, 0, 255].",
+      "actual": "Later blur uses the already redacted pixels; center [0, 0, 0, 255].",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-80",
+      "key": "redaction_then_pixelate_stays_hidden",
+      "title": "先黑块遮挡再像素化不露出原内容",
+      "input_or_operation": "Later pixelate uses the already redacted pixels; center [0, 0, 0, 255].",
+      "expected": "Later pixelate uses the already redacted pixels; center [0, 0, 0, 255].",
+      "actual": "Later pixelate uses the already redacted pixels; center [0, 0, 0, 255].",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-81",
+      "key": "crop_ratio_model",
+      "title": "裁剪比例影响真实输出尺寸",
+      "input_or_operation": "Selecting 1:1 produces 240×240 from 240×320.",
+      "expected": "Selecting 1:1 produces 240×240 from 240×320.",
+      "actual": "Selecting 1:1 produces 240×240 from 240×320.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-82",
+      "key": "crop_pixel_dimensions",
+      "title": "裁剪像素输入影响真实输出尺寸",
+      "input_or_operation": "Pixel fields drive actual 120×90 output.",
+      "expected": "Pixel fields drive actual 120×90 output.",
+      "actual": "Pixel fields drive actual 120×90 output.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-83",
+      "key": "editor_reset_restores_original",
+      "title": "重置恢复原始裁剪状态和像素字段",
+      "input_or_operation": "Reset restores crop, pixel fields and annotation state.",
+      "expected": "Reset restores crop, pixel fields and annotation state.",
+      "actual": "Reset restores crop, pixel fields and annotation state.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-84",
+      "key": "option_switches_seven_tools",
+      "title": "Option 状态切换到七个图片工具",
+      "input_or_operation": "Option changes the JPEG menu to seven tools.",
+      "expected": "Option changes the JPEG menu to seven tools.",
+      "actual": "Option changes the JPEG menu to seven tools.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-85",
+      "key": "option_release_restores_formats",
+      "title": "释放 Option 状态切换回八个图片格式",
+      "input_or_operation": "Releasing Option restores eight JPEG format targets.",
+      "expected": "Releasing Option restores eight JPEG format targets.",
+      "actual": "Releasing Option restores eight JPEG format targets.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-86",
+      "key": "mixed_batch_common_actions",
+      "title": "混合文件只展示共有操作",
+      "input_or_operation": "PNG + PDF exposes only their common conversions and tools; format order follows the first file.",
+      "expected": "PNG + PDF exposes only their common conversions and tools; format order follows the first file.",
+      "actual": "PNG + PDF exposes only their common conversions and tools; format order follows the first file.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-87",
+      "key": "docx_xml_parts_parse",
+      "title": "DOCX 四个关键 XML 部分均可解析",
+      "input_or_operation": "Content types, package relationships, document and image relationships all parse as XML.",
+      "expected": "Content types, package relationships, document and image relationships all parse as XML.",
+      "actual": "Content types, package relationships, document and image relationships all parse as XML.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-88",
+      "key": "docx_embedded_image_decodes",
+      "title": "DOCX 内嵌图片可解码且尺寸正确",
+      "input_or_operation": "DOCX contains a real, decodable 240×320 image. Office rendering remains manual.",
+      "expected": "DOCX contains a real, decodable 240×320 image. Office rendering remains manual.",
+      "actual": "DOCX contains a real, decodable 240×320 image. Office rendering remains manual.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-89",
+      "key": "text_last_page_contains_tail",
+      "title": "末页文字经 OCR 证明没有被截断",
+      "input_or_operation": "OCR of the last rendered page confirms the ending text was not truncated.",
+      "expected": "OCR of the last rendered page confirms the ending text was not truncated.",
+      "actual": "OCR of the last rendered page confirms the ending text was not truncated.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-90",
+      "key": "archive_symlink_rejected",
+      "title": "解压前拒绝包含符号链接的归档",
+      "input_or_operation": "ZIP containing a symbolic link is rejected before extraction.",
+      "expected": "ZIP containing a symbolic link is rejected before extraction.",
+      "actual": "ZIP containing a symbolic link is rejected before extraction.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-91",
+      "key": "audio_stream_fully_decodes",
+      "title": "MP3 编码正确且全文件可解码",
+      "input_or_operation": "Expected mp3 codec and complete FFmpeg decode without errors.",
+      "expected": "Expected mp3 codec and complete FFmpeg decode without errors.",
+      "actual": "Expected mp3 codec and complete FFmpeg decode without errors.",
+      "status": "PASS"
+    },
+    {
+      "id": "MAC-92",
+      "key": "video_stream_fully_decodes",
+      "title": "WebM 编码正确且全文件可解码",
+      "input_or_operation": "Expected vp9 codec and complete FFmpeg decode without errors.",
+      "expected": "Expected vp9 codec and complete FFmpeg decode without errors.",
+      "actual": "Expected vp9 codec and complete FFmpeg decode without errors.",
+      "status": "PASS"
+    }
+  ]
+}

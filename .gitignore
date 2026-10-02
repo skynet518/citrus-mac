@@ -1,0 +1,11 @@
+.DS_Store
+native/.build/
+native/.swiftpm/
+dist/
+test-output/
+*.app/
+*.zip
+__pycache__/
+*.pyc
+.env
+.env.*

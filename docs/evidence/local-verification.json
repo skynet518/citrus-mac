@@ -1,0 +1,572 @@
+{
+  "checks": [
+    {
+      "detail": "public.jpeg, 240×320, 2815 bytes",
+      "name": "convert_jpg",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "public.png, 240×320, 2422 bytes",
+      "name": "convert_png",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "org.webmproject.webp, 240×320, 298 bytes",
+      "name": "convert_webp",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "public.heic, 240×320, 602 bytes",
+      "name": "convert_heic",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "public.tiff, 240×320, 310590 bytes",
+      "name": "convert_tiff",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "public.avif, 240×320, 490 bytes",
+      "name": "convert_avif",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "com.microsoft.bmp, 240×320, 307338 bytes",
+      "name": "convert_bmp",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "convert_pdf",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "convert_docx",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "source_unchanged",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "collision_avoids_overwrite",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "crop_full_resolution",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "background_padding",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "background_aspect_ratio",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "preview_matches_export_ratio",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "[0, 0, 0, 255]",
+      "name": "redaction_is_baked_into_pixels",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "rotate_dimensions",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "edit_saturation",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "pdf_all_pages",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "pdf_300dpi",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "pdf_split_merge",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "radial_sector_0",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "radial_sector_1",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "radial_sector_2",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "radial_sector_3",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "radial_sector_4",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "radial_sector_5",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "radial_sector_6",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "radial_sector_7",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "radial_center_cancels",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "radial_outside_cancels",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "radial_screen_edge_clamp",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "current_format_excluded",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "image_tool_catalog",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "subtitle_conversion",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "metadata_location_removed",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "metadata_author_saved",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "metadata_caption_saved",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "metadata_original_preserved",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "compression_smaller",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "compression_resize",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "partial_batch_keeps_successes",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "text_pagination",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "archive_extract",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "archive_convert",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "audio_real_encode",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "video_real_encode",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "video_mute_removes_audio",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "media_trim_duration",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Old file drag + held mouse does not activate.",
+      "name": "drag_stale_pasteboard_ignored",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Fresh file drag activates without an NSEvent callback; physical Shift remains a separate manual check.",
+      "name": "drag_fresh_pasteboard_without_event",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Crop, paint and window drags stay outside the desktop entry.",
+      "name": "drag_editor_mouse_ignored",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Esc/drop consumes the session until button release.",
+      "name": "drag_consumed_session_stays_closed",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Release resets the baseline; a new file drag re-arms.",
+      "name": "drag_next_session_rearms",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Private pasteboard with public.file-url.",
+      "name": "drag_modern_file_url_read",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "NSFilenamesPboardType works, duplicates and unsupported extensions are filtered.",
+      "name": "drag_legacy_file_paths_read",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Corner [0, 0, 0, 0]; half-transparent red center [128, 19, 0, 128], premultiplied RGBA.",
+      "name": "transparency_png",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Corner [0, 0, 0, 0]; half-transparent red center [128, 19, 0, 128], premultiplied RGBA.",
+      "name": "transparency_webp",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Transparent corner becomes white: [255, 255, 255, 255].",
+      "name": "jpeg_transparency_white",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "EXIF orientation 6 loads as 320×240.",
+      "name": "exif_orientation_applied",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Export has normalized pixels and no stale orientation tag.",
+      "name": "exif_orientation_not_applied_twice",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Malformed PNG is rejected.",
+      "name": "corrupt_image_rejected",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Width above 24000 is rejected before allocation.",
+      "name": "oversized_canvas_rejected",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Crop completely outside the image is rejected.",
+      "name": "outside_crop_rejected",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Removing only location preserves the existing author.",
+      "name": "gps_only_removal_keeps_author",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Location remains only when removal is disabled.",
+      "name": "gps_preserved_when_requested",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "PNG author and description survive Unicode round-trip.",
+      "name": "png_unicode_metadata",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "JPEG compression without resizing remains 256×256 and shrinks bytes.",
+      "name": "jpeg_compression_preserves_dimensions",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "PNG uses lossy color quantization; size stays 256×256.",
+      "name": "png_compression_shrinks",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Raster compression shrinks bytes and preserves page dimensions within 1 pt; searchable text is not retained.",
+      "name": "pdf_compression_page_geometry",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Two missing inputs produce zero successes and two explicit errors.",
+      "name": "batch_all_failures_reported",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Custom green background corner: [0, 255, 0, 255].",
+      "name": "background_custom_color",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Rounded image corner reveals the background: [0, 255, 0, 255].",
+      "name": "background_rounded_corner",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Photo background is composited into the exported pixels.",
+      "name": "background_photo_rendered",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Decoded export has 5318 changed color bytes, with actual raster annotation.",
+      "name": "annotation_pen_export",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Decoded export has 12816 changed color bytes, with actual raster annotation.",
+      "name": "annotation_rectangle_export",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Decoded export has 8062 changed color bytes, with actual raster annotation.",
+      "name": "annotation_arrow_export",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Decoded export has 6522 changed color bytes, with actual raster annotation.",
+      "name": "annotation_text_export",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Later blur uses the already redacted pixels; center [0, 0, 0, 255].",
+      "name": "redaction_then_blur_stays_hidden",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Later pixelate uses the already redacted pixels; center [0, 0, 0, 255].",
+      "name": "redaction_then_pixelate_stays_hidden",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Selecting 1:1 produces 240×240 from 240×320.",
+      "name": "crop_ratio_model",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Pixel fields drive actual 120×90 output.",
+      "name": "crop_pixel_dimensions",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Reset restores crop, pixel fields and annotation state.",
+      "name": "editor_reset_restores_original",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Option changes the JPEG menu to seven tools.",
+      "name": "option_switches_seven_tools",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Releasing Option restores eight JPEG format targets.",
+      "name": "option_release_restores_formats",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "PNG + PDF exposes only their common conversions and tools; format order follows the first file.",
+      "name": "mixed_batch_common_actions",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Content types, package relationships, document and image relationships all parse as XML.",
+      "name": "docx_xml_parts_parse",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "DOCX contains a real, decodable 240×320 image. Office rendering remains manual.",
+      "name": "docx_embedded_image_decodes",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "OCR of the last rendered page confirms the ending text was not truncated.",
+      "name": "text_last_page_contains_tail",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "ZIP containing a symbolic link is rejected before extraction.",
+      "name": "archive_symlink_rejected",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Expected mp3 codec and complete FFmpeg decode without errors.",
+      "name": "audio_stream_fully_decodes",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "detail": "Expected vp9 codec and complete FFmpeg decode without errors.",
+      "name": "video_stream_fully_decodes",
+      "passed": true,
+      "status": "PASS"
+    }
+  ],
+  "created_at": "2026-10-02T20:43:13Z",
+  "failed": 0,
+  "fixtures": "local-installed-test/run-1BA9A4B5-1BD1-427F-9EBB-DFDE846E60DE",
+  "passed": 92,
+  "physical_finder_shift_drag": "requires real UI observation",
+  "runner_error": "",
+  "schema_version": 2,
+  "skipped": 0,
+  "started_at": "2026-10-02T20:43:09Z",
+  "status": "PASS",
+  "video_flow_outputs": [
+    "local-installed-test/run-1BA9A4B5-1BD1-427F-9EBB-DFDE846E60DE/Sample.png",
+    "local-installed-test/run-1BA9A4B5-1BD1-427F-9EBB-DFDE846E60DE/Sample Cropped.png",
+    "local-installed-test/run-1BA9A4B5-1BD1-427F-9EBB-DFDE846E60DE/Sample Cropped BG.png",
+    "local-installed-test/run-1BA9A4B5-1BD1-427F-9EBB-DFDE846E60DE/Sample Redacted.png"
+  ]
+}

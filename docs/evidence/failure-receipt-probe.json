@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "detail": "Intentional failure to verify receipt persistence and nonzero exit.",
+      "name": "forced_failure_probe",
+      "passed": false,
+      "status": "FAIL"
+    }
+  ],
+  "created_at": "2026-10-02T20:42:09Z",
+  "failed": 1,
+  "fixtures": "local-workspace/evidence/failure-probe/run-A69B8632-6B18-4371-BCD0-BBE7F9C877D7",
+  "passed": 0,
+  "physical_finder_shift_drag": "requires real UI observation",
+  "runner_error": "验证失败：forced_failure_probe Intentional failure to verify receipt persistence and nonzero exit.",
+  "schema_version": 2,
+  "skipped": 0,
+  "started_at": "2026-10-02T20:42:09Z",
+  "status": "FAIL",
+  "video_flow_outputs": []
+}

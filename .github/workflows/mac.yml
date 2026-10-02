@@ -1,0 +1,36 @@
+name: Mac verification
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mac:
+    runs-on: macos-26
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure FFmpeg is available
+        run: |
+          if ! command -v ffmpeg >/dev/null; then brew install ffmpeg; fi
+          ffmpeg -version
+          ffprobe -version
+      - name: Build and verify
+        run: ./scripts/test.sh
+      - name: Package the app
+        run: |
+          python3 scripts/package-app.py
+          ditto -c -k --sequesterRsrc --keepParent dist/橘子.app dist/Citrus-mac-arm64.zip
+      - name: Save test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mac-verification
+          path: test-output/
+      - name: Save app
+        uses: actions/upload-artifact@v4
+        with:
+          name: citrus-mac-app
+          path: dist/Citrus-mac-arm64.zip

@@ -1,0 +1,19 @@
+{
+  "run": {
+    "conclusion": "success",
+    "created_at": "2026-10-02T20:50:00Z",
+    "head_sha": "b0d6d5f964310a49aee2df6e72409e32579023d3",
+    "html_url": "https://github.com/skynet518/citrus-mac/actions/runs/37063085729",
+    "id": 37063085729,
+    "status": "completed",
+    "updated_at": "2026-10-02T20:51:23Z"
+  },
+  "summary": {
+    "functional_passed": 92,
+    "functional_failed": 0,
+    "functional_skipped": 0,
+    "failure_receipt_probe": "PASS",
+    "binary_sha256": "63f94082eef51b8a6b14ba09215a91f20dfeaeca3581b53faa9beb2e9c7b5dc2"
+  },
+  "desktop_gesture_acceptance": "PENDING_PHYSICAL_RETEST"
+}

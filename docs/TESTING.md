@@ -153,3 +153,9 @@
 源码复制到独立目录后，从零构建，92 项功能检查通过，0 失败，0 跳过；失败回执探针通过。该构建的 SHA-256 为 `3d9d439a533e58a67057d994be647e9dadda873a41cd7bae3c50e8c01570aaff`，因构建路径不同，与本地安装构建的哈希分列记录。详见 [`clean-build-summary.json`](evidence/clean-build-summary.json)。
 
 GitHub Actions 使用官方列出的 macOS 26 ARM64 执行环境：[runner-images](https://github.com/actions/runner-images)。真实桌面验收仍单独记录，云端自动检查结果以实际运行回执为准。
+
+## GitHub 云端实际结果
+
+[Mac verification 运行 #37063085729](https://github.com/skynet518/citrus-mac/actions/runs/37063085729) 已成功完成，实际产物下载后再次核对：92 PASS / 0 FAIL / 0 SKIP，故意失败回执探针审查 PASS，应用打包成功。测试的源码提交为 `b0d6d5f964310a49aee2df6e72409e32579023d3`。
+
+云端构建的二进制 SHA-256 为 `63f94082eef51b8a6b14ba09215a91f20dfeaeca3581b53faa9beb2e9c7b5dc2`。这是云端功能检查和打包证据；没有模拟或验证真实 Finder Shift / Shift+Option 操作。之后补充本节的提交仅更新文档与结果，不改变受测源码。

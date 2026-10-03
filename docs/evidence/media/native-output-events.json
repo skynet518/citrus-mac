@@ -1,0 +1,29 @@
+{
+  "redaction": "Only approved demo basenames; no absolute paths or unrelated events",
+  "events": [
+    {
+      "time": "2026-10-03T04:01:40Z",
+      "event": "output_created",
+      "count": 1,
+      "demoFiles": [
+        "Citrus Demo.jpg"
+      ]
+    },
+    {
+      "time": "2026-10-03T04:08:08Z",
+      "event": "output_created",
+      "count": 1,
+      "demoFiles": [
+        "Citrus Demo Cropped (2).jpg"
+      ]
+    },
+    {
+      "time": "2026-10-03T04:09:10Z",
+      "event": "output_created",
+      "count": 1,
+      "demoFiles": [
+        "Citrus Demo Cropped (2) BG.jpg"
+      ]
+    }
+  ]
+}

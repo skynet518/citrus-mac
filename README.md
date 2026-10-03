@@ -1,51 +1,65 @@
 # 橘子 / Citrus for Mac
 
-一个在本机处理文件的 macOS 菜单栏应用：拖动文件打开圆形菜单，转换格式，裁剪图片，添加背景，编辑和标注图片。
+[中文](README.md) · [English](README.en.md) · [中文图文教程](docs/GUIDE.zh-CN.md) · [English guide](docs/GUIDE.en.md)
 
-**当前状态：私有验收版本 1.0.1。** 本地与 GitHub 云端自动功能检查均为 92 项通过、0 失败、0 跳过；1.0.0 的 Finder Shift 拖拽由使用者报告“圆盘没有出现”。1.0.1 已补充新拖拽剪贴板检测、旧文件路径格式兼容和诊断记录，真实组合键拖拽需要重新验收。完整的产品验收尚未通过。
+在 Mac 本机转换文件、裁剪图片、添加背景。橘子常驻菜单栏，把常用操作放进一个圆形菜单。
 
-本项目是独立实现，交互参考使用者提供的 Tangerine 演示。与 Tangerine 无隶属关系，也未复制其源码、商标或界面素材。当前版本没有宣称复现原产品的全部转换类型、全部工具或所有未展示的状态。
+[![橘子实际界面演示：PDF 转 JPG、裁剪、添加背景](docs/media/citrus-demo-preview.gif)](docs/media/citrus-demo-horizontal-zh-en.mp4)
 
-## 使用
+**[▶ 查看完整 28 秒高清演示，含轻音效与中英字幕](docs/media/citrus-demo-horizontal-zh-en.mp4)** · [竖屏版本](docs/media/citrus-demo-vertical-zh-en.mp4) · [封面与可编辑素材](docs/MEDIA.md)
 
-1. 将构建生成的 `橘子.app` 放入“应用程序”，双击启动。
-2. 收起使用说明窗口，按住 **Shift** 在 Finder 中拖动支持的文件，移入目标格式扇区后松手。
-3. 拖动图片时同时按住 **Shift + Option**，切换到工具菜单。可选择 Crop、Add BG 等工具。
-4. 也可以点击菜单栏的白色橘子图标，选择“选择文件…”；按 Tab 可切换工具，Esc 可关闭菜单。
-5. 输出保存在原文件旁边，重名时自动添加序号，原文件保留。
+演示使用橘子 1.0.1 的实际界面和实际导出文件；光标动效重演，流程从“选择文件…”进入。画面只包含专门制作的演示文件。
 
-“体验示例”会创建应用自己的样例文件，并打开原生拖拽演练窗口。演练中的拖拽与 Finder 的全局组合键拖拽分别验收。
+**当前是私有验收版本 1.0.1。** 本地安装版本、独立构建与 GitHub 自动检查均为 **92 PASS / 0 FAIL / 0 SKIP**。使用者曾报告 1.0.0 的 Finder Shift 拖拽没有弹出圆盘；1.0.1 已修复检测逻辑，真实 Shift / Shift+Option 操作仍待复验。完整产品验收尚未通过，仓库保持私有。[验收清单](docs/ACCEPTANCE.md)
 
-## 已实现的范围
+## 先体验：PDF → JPG → 裁剪 → 背景
 
-- 图片转换：JPG、PNG、WebP、HEIC、TIFF、AVIF、BMP、PDF、DOCX。
-- 图片工具：压缩、元数据、调色、标注、背景、裁剪、遮挡。包含裁剪手柄、比例与像素输入；背景渐变、纯色、照片、留白、圆角和阴影。
-- PDF：按页转换图片、拆分、合并、文字提取；扫描页文字提取使用系统 OCR。
-- 使用本机 FFmpeg 的音视频转换与部分编辑，以及字幕和归档文件操作。完整输入输出组合尚未全部验证。
+1. 启动“应用程序”中的 `橘子.app`，点击使用说明里的 **选择文件…**，或点击菜单栏的白色橘子图标进入同一入口。
+2. 选择 [Citrus Demo.pdf](docs/demo-files/Citrus%20Demo.pdf)，点击圆盘上的 **JPG**。结果保存在原文件旁边。
+3. 再选择生成的 JPG，按 **Tab** 切换工具，点击 **Crop**。拖动裁剪手柄，点击 **Apply**。
+4. 选择裁剪后的副本，按 **Tab**，点击 **Add BG**。调整背景、留白、圆角、阴影与比例，点击 **Save with Background**。
 
-PNG 压缩会减少颜色，是有损处理。PDF 压缩会栅格化页面，不保留可搜索文字。图片转 DOCX 会嵌入图片；PDF 转 DOCX 不保证复杂版式。GIF 图片编辑使用首帧。RAR 创建不在当前范围内。
+每一步的实际截图、按钮说明和输出示例都在 **[中文图文教程](docs/GUIDE.zh-CN.md)**。原文件保留；输出重名时自动添加序号。`Esc` 关闭圆盘，方向键与回车也可选择操作。
 
-## 构建与测试
+## 安装与构建
 
-需要 macOS、Swift 6 工具链和 Apple Command Line Tools。项目声明最低 macOS 14；当前本地验证环境是 Apple Silicon、macOS 26.5.1、Swift 6.3.3，其他 Mac 系统版本与 Intel 真机没有完成验收。
+仓库当前提供源码和已验证的构建流程。需要 macOS、Swift 6 工具链及 Apple Command Line Tools。
 
 ```sh
 ./scripts/build-app.sh
 ./scripts/test.sh
 ```
 
-应用输出到 `dist/橘子.app`。首次构建会通过 Swift Package Manager 获取固定版本的 Swift-WebP 和其依赖。
+将生成的 `dist/橘子.app` 放入“应用程序”，双击启动。应用运行后常驻顶部菜单栏，主窗口收起后可从白色橘子图标打开“使用方法”或“选择文件…”。当前应用包使用临时签名，尚未完成 Apple Developer ID 签名和公证。
 
-音视频处理需要自行安装 FFmpeg，应用不会下载或捆绑 FFmpeg。程序查找 `/opt/homebrew/bin/ffmpeg` 或 `/usr/local/bin/ffmpeg`。测试脚本要求 FFmpeg 与 ffprobe 可用，并拒绝把跳过的检查算作通过。
+最低系统声明是 macOS 14；本地实际验证为 Apple Silicon、macOS 26.5.1、Swift 6.3.3，GitHub 检查为 macOS 26 ARM64。Intel 和其他 macOS 版本尚未完成真机验收。Windows 和 Linux 适配已延期。
 
-完整结果与验收边界见 [测试报告](docs/TESTING.md)，已知问题见 [验收清单](docs/ACCEPTANCE.md)。[GitHub Actions 实际检查](https://github.com/skynet518/citrus-mac/actions/runs/37063085729) 已成功完成；逐项回执保存在测试报告的证据链接中。
+音视频处理需要在本机另行安装 FFmpeg；应用不下载、不捆绑它。程序查找 `/opt/homebrew/bin/ffmpeg` 或 `/usr/local/bin/ffmpeg`。首次构建会通过 Swift Package Manager 下载固定版本的 Swift-WebP 及其依赖。
 
-## 本地数据
+## 功能与边界
 
-文件处理代码不包含上传文件或调用在线模型的操作。示例保存在用户的 Application Support/CitrusLocal 目录。诊断记录保存在用户的 Library/Logs/CitrusLocal/events.jsonl，其中输出事件可能包含本地文件路径；不自动上报。
+| 范围 | 已实现内容 | 使用边界 |
+| --- | --- | --- |
+| 图片转换 | JPG、PNG、WebP、HEIC、TIFF、AVIF、BMP、PDF、DOCX | 输出编码已在所列自动用例中核验；所有输入输出组合尚未全部验收 |
+| 图片工具 | 压缩、元数据、调色、标注、背景、裁剪、遮挡 | PNG 压缩会减少颜色；GIF 编辑使用首帧 |
+| PDF | 按页转图片、拆分、合并、文字提取与系统 OCR | 压缩会栅格化，不保留可搜索文字；PDF 转 DOCX 不保证复杂版式 |
+| 文档与媒体 | 图片嵌入 DOCX、字幕转换、归档操作、本机 FFmpeg 音视频处理 | Word/Pages 实际渲染、全部媒体编辑组合待验收；RAR 创建不在当前范围 |
 
-本地应用包采用临时签名，未完成 Apple Developer ID 签名和公证。它目前用于私有验收。Windows 和 Linux 版本已延期，仓库只包含 Mac 实现。
+Finder 中 **Shift 拖拽**打开格式菜单、**Shift + Option**打开工具菜单，是待复验的桌面入口。[真实桌面验收步骤](docs/ACCEPTANCE.md#需要在真实桌面复验的步骤)单独记录，自动状态模型检查不代替物理操作。
 
-## 许可证与致谢
+## 测试与证据
 
-独立实现使用 MIT 许可证。第三方组件保留各自许可，见 [第三方声明](THIRD_PARTY_NOTICES.md)。
+- [全部 92 项测试、逐项断言与实际结果](docs/TESTING.md)
+- [GitHub Actions 实际成功运行 #37063085729](https://github.com/skynet518/citrus-mac/actions/runs/37063085729)
+- [本地逐项回执](docs/evidence/local-verification.json) · [独立构建摘要](docs/evidence/clean-build-summary.json) · [云端逐项回执](docs/evidence/github-ci-verification.json)
+- [演示素材检查报告](docs/MEDIA_VALIDATION.md)：版面、字幕对比度、完整解码、素材来源与隐私检查
+
+自动功能结果、演示素材检查、真实桌面验收分别记录。此次演示与文档更新没有修改已测试的应用源码。
+
+## 本地数据与许可证
+
+文件处理代码不包含上传文件或调用在线模型的操作。应用自己的示例保存在用户的 `Application Support/CitrusLocal`；诊断日志位于 `Library/Logs/CitrusLocal/events.jsonl`，输出事件可能含本地文件路径，日志不自动上报。
+
+橘子是独立实现，交互参考使用者提供的 Tangerine 演示，与 Tangerine 无隶属关系，也未复制其源码、商标或界面素材。当前版本没有宣称复现原产品的全部功能或全部状态。
+
+本项目原创代码和素材使用 [MIT](LICENSE)。第三方组件及演示动画库保留各自许可，见 [第三方声明](THIRD_PARTY_NOTICES.md)。

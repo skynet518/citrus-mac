@@ -9,3 +9,9 @@ __pycache__/
 *.pyc
 .env
 .env.*
+
+# Editable demo build products
+docs/demo-source/node_modules/
+docs/demo-source/.hyperframes/
+docs/demo-source/renders/
+docs/demo-source/snapshots/

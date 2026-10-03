@@ -1,5 +1,7 @@
 # 橘子 1.0.1：Mac 补充测试与拖拽复验
 
+[English](TESTING.en.md) · [返回首页](../README.md)
+
 日期：2026-10-03（Asia/Shanghai）。本地环境：Apple Silicon arm64、macOS 26.5.1、Swift 6.3.3。
 
 ## 当前结论
@@ -159,3 +161,7 @@ GitHub Actions 使用官方列出的 macOS 26 ARM64 执行环境：[runner-image
 [Mac verification 运行 #37063085729](https://github.com/skynet518/citrus-mac/actions/runs/37063085729) 已成功完成，实际产物下载后再次核对：92 PASS / 0 FAIL / 0 SKIP，故意失败回执探针审查 PASS，应用打包成功。测试的源码提交为 `b0d6d5f964310a49aee2df6e72409e32579023d3`。
 
 云端构建的二进制 SHA-256 为 `63f94082eef51b8a6b14ba09215a91f20dfeaeca3581b53faa9beb2e9c7b5dc2`。这是云端功能检查和打包证据；没有模拟或验证真实 Finder Shift / Shift+Option 操作。之后补充本节的提交仅更新文档与结果，不改变受测源码。
+
+## 演示制作期间的实际界面检查
+
+2026-10-03 使用安装后的 1.0.1，实际通过“选择文件…”完成 PDF 转 JPG、裁剪手柄调整并导出副本、背景参数调整并导出副本。图文教程只展示专门制作的演示文件和应用窗口，见 [教程](GUIDE.zh-CN.md) 与 [素材检查报告](MEDIA_VALIDATION.md)。这次没有修改受测应用源码，也没有将 Finder Shift / Shift+Option 记作已通过。裁剪手柄操作的像素取整细节已补入 [验收清单](ACCEPTANCE.md)。

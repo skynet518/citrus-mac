@@ -1,0 +1,490 @@
+{
+  "composition": "citrus-demo-covers",
+  "duration": 2,
+  "totalTweens": 4,
+  "mappedTweens": 4,
+  "skippedMicroTweens": 0,
+  "tweens": [
+    {
+      "index": 1,
+      "selector": "#brand",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 0.1,
+      "end": 0.45,
+      "duration": 0.35,
+      "ease": "power3.out",
+      "bboxes": [
+        {
+          "t": 0.158,
+          "x": 76,
+          "y": 75,
+          "w": 928,
+          "h": 44,
+          "opacity": 0.3299,
+          "visible": true
+        },
+        {
+          "t": 0.275,
+          "x": 76,
+          "y": 67,
+          "w": 928,
+          "h": 44,
+          "opacity": 0.9247,
+          "visible": true
+        },
+        {
+          "t": 0.392,
+          "x": 76,
+          "y": 66,
+          "w": 928,
+          "h": 44,
+          "opacity": 0.9968,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#brand animates opacity+y over 0.35s (power3.out). moves 9px up. opacity 0.3→1.0. ends at (76, 66) 928×44px."
+    },
+    {
+      "index": 2,
+      "selector": "#title",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 0.16,
+      "end": 0.66,
+      "duration": 0.5,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 0.243,
+          "x": 76,
+          "y": 152,
+          "w": 928,
+          "h": 290,
+          "opacity": 0.3786,
+          "visible": true
+        },
+        {
+          "t": 0.41,
+          "x": 76,
+          "y": 141,
+          "w": 928,
+          "h": 290,
+          "opacity": 0.8594,
+          "visible": true
+        },
+        {
+          "t": 0.577,
+          "x": 76,
+          "y": 138,
+          "w": 928,
+          "h": 290,
+          "opacity": 0.9935,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#title animates opacity+y over 0.50s (power2.out). moves 14px up. opacity 0.4→1.0. ends at (76, 138) 928×290px."
+    },
+    {
+      "index": 3,
+      "selector": "#visual",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "scale",
+        "y"
+      ],
+      "start": 0.25,
+      "end": 0.85,
+      "duration": 0.6,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 0.35,
+          "x": 85,
+          "y": 466,
+          "w": 910,
+          "h": 392,
+          "opacity": 0.6146,
+          "visible": true
+        },
+        {
+          "t": 0.55,
+          "x": 77,
+          "y": 456,
+          "w": 927,
+          "h": 399,
+          "opacity": 0.9698,
+          "visible": true
+        },
+        {
+          "t": 0.75,
+          "x": 76,
+          "y": 455,
+          "w": 928,
+          "h": 400,
+          "opacity": 0.9992,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#visual animates opacity+scale+y over 0.60s (expo.out). moves 11px up and 9px left. opacity 0.6→1.0. scales. width 910→928px. height 392→400px. ends at (76, 455) 928×400px."
+    },
+    {
+      "index": 4,
+      "selector": "#labels",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 0.4,
+      "end": 0.8,
+      "duration": 0.4,
+      "ease": "power3.out",
+      "bboxes": [
+        {
+          "t": 0.467,
+          "x": 76,
+          "y": 889,
+          "w": 928,
+          "h": 99,
+          "opacity": 0.5177,
+          "visible": true
+        },
+        {
+          "t": 0.6,
+          "x": 76,
+          "y": 884,
+          "w": 928,
+          "h": 99,
+          "opacity": 0.9375,
+          "visible": true
+        },
+        {
+          "t": 0.733,
+          "x": 76,
+          "y": 883,
+          "w": 928,
+          "h": 99,
+          "opacity": 0.9961,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#labels animates opacity+y over 0.40s (power3.out). moves 6px up. opacity 0.5→1.0. ends at (76, 883) 928×99px."
+    }
+  ],
+  "choreography": "Timeline (2.0s, each char ≈ 0.03s):\n  0s                                                    2s\n  ┼───────────────────────────────────────────────────────────┤\n     ███████████                                                #brand opacity+y\n      ████████████████                                          #title opacity+y\n         ███████████████████                                    #visual opacity+scale+y\n              ████████████                                      #labels opacity+y",
+  "density": [
+    {
+      "t": 0,
+      "activeTweens": 4
+    },
+    {
+      "t": 0.5,
+      "activeTweens": 3
+    },
+    {
+      "t": 1,
+      "activeTweens": 0
+    },
+    {
+      "t": 1.5,
+      "activeTweens": 0
+    }
+  ],
+  "staggers": [],
+  "elements": {
+    "#brand": {
+      "firstAppears": 0.1,
+      "lastAnimates": 0.45,
+      "tweenCount": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 76,
+        "y": 66,
+        "w": 928,
+        "h": 44
+      }
+    },
+    "#title": {
+      "firstAppears": 0.16,
+      "lastAnimates": 0.66,
+      "tweenCount": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 76,
+        "y": 138,
+        "w": 928,
+        "h": 290
+      }
+    },
+    "#visual": {
+      "firstAppears": 0.25,
+      "lastAnimates": 0.85,
+      "tweenCount": 1,
+      "props": [
+        "opacity",
+        "scale",
+        "y"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 76,
+        "y": 455,
+        "w": 928,
+        "h": 400
+      }
+    },
+    "#labels": {
+      "firstAppears": 0.4,
+      "lastAnimates": 0.8,
+      "tweenCount": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 76,
+        "y": 883,
+        "w": 928,
+        "h": 99
+      }
+    }
+  },
+  "deadZones": [
+    {
+      "start": 1,
+      "end": 2,
+      "duration": 1,
+      "note": "No animation for 1.0s at end. Final hold or missing outro?"
+    }
+  ],
+  "snapshots": [
+    {
+      "t": 0,
+      "visibleElements": 1,
+      "animatingNow": [],
+      "elements": [
+        {
+          "id": "root",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1080,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "t": 0.5,
+      "visibleElements": 5,
+      "animatingNow": [
+        "#title",
+        "#visual",
+        "#labels"
+      ],
+      "elements": [
+        {
+          "id": "root",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "brand",
+          "x": 76,
+          "y": 66,
+          "w": 928,
+          "h": 44,
+          "opacity": 1
+        },
+        {
+          "id": "title",
+          "x": 76,
+          "y": 138,
+          "w": 928,
+          "h": 290,
+          "opacity": 0.97
+        },
+        {
+          "id": "visual",
+          "x": 77,
+          "y": 456,
+          "w": 926,
+          "h": 399,
+          "opacity": 0.95
+        },
+        {
+          "id": "labels",
+          "x": 76,
+          "y": 887,
+          "w": 928,
+          "h": 99,
+          "opacity": 0.68
+        }
+      ]
+    },
+    {
+      "t": 1,
+      "visibleElements": 5,
+      "animatingNow": [],
+      "elements": [
+        {
+          "id": "root",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "brand",
+          "x": 76,
+          "y": 66,
+          "w": 928,
+          "h": 44,
+          "opacity": 1
+        },
+        {
+          "id": "title",
+          "x": 76,
+          "y": 138,
+          "w": 928,
+          "h": 290,
+          "opacity": 1
+        },
+        {
+          "id": "visual",
+          "x": 76,
+          "y": 455,
+          "w": 928,
+          "h": 400,
+          "opacity": 1
+        },
+        {
+          "id": "labels",
+          "x": 76,
+          "y": 883,
+          "w": 928,
+          "h": 99,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "t": 1.5,
+      "visibleElements": 5,
+      "animatingNow": [],
+      "elements": [
+        {
+          "id": "root",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "brand",
+          "x": 76,
+          "y": 66,
+          "w": 928,
+          "h": 44,
+          "opacity": 1
+        },
+        {
+          "id": "title",
+          "x": 76,
+          "y": 138,
+          "w": 928,
+          "h": 290,
+          "opacity": 1
+        },
+        {
+          "id": "visual",
+          "x": 76,
+          "y": 455,
+          "w": 928,
+          "h": 400,
+          "opacity": 1
+        },
+        {
+          "id": "labels",
+          "x": 76,
+          "y": 883,
+          "w": 928,
+          "h": 99,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "t": 1.9,
+      "visibleElements": 5,
+      "animatingNow": [],
+      "elements": [
+        {
+          "id": "root",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "brand",
+          "x": 76,
+          "y": 66,
+          "w": 928,
+          "h": 44,
+          "opacity": 1
+        },
+        {
+          "id": "title",
+          "x": 76,
+          "y": 138,
+          "w": 928,
+          "h": 290,
+          "opacity": 1
+        },
+        {
+          "id": "visual",
+          "x": 76,
+          "y": 455,
+          "w": 928,
+          "h": 400,
+          "opacity": 1
+        },
+        {
+          "id": "labels",
+          "x": 76,
+          "y": 883,
+          "w": 928,
+          "h": 99,
+          "opacity": 1
+        }
+      ]
+    }
+  ]
+}

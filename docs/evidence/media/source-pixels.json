@@ -1,0 +1,191 @@
+{
+  "assetCount": 10,
+  "assets": [
+    {
+      "absoluteUserPathDetected": false,
+      "asset": "01-welcome.png",
+      "height": 1142,
+      "recognizedText": [
+        "橘子",
+        "拖一下，就换好了。",
+        "按住 Shift 拖动文件",
+        "圆形菜单会出现在鼠标旁。",
+        "拖进格式扇区，松手",
+        "转换结果自动放到原文件旁边。",
+        "再按 Option，切换工具",
+        "裁剪、背景、压缩、调色、标注和遮挡。",
+        "体验示例",
+        "选择文件⋯.",
+        "开始使用，收起窗口",
+        "运行时常驻菜单栏•文件在本机处理"
+      ],
+      "width": 860
+    },
+    {
+      "absoluteUserPathDetected": false,
+      "asset": "02-format-wheel.png",
+      "height": 680,
+      "recognizedText": [
+        "TXT",
+        "JPG",
+        "CONVERT",
+        "DOCX",
+        "PNG"
+      ],
+      "width": 680
+    },
+    {
+      "absoluteUserPathDetected": false,
+      "asset": "04-tools-wheel.png",
+      "height": 680,
+      "recognizedText": [
+        "COMPRESS",
+        "REDACT",
+        "METADATA",
+        "TOOLS",
+        "女",
+        "CROP",
+        "EDIT",
+        "ADD BG",
+        "ANNOTATE"
+      ],
+      "width": 680
+    },
+    {
+      "absoluteUserPathDetected": false,
+      "asset": "05-crop-before.png",
+      "height": 1296,
+      "recognizedText": [
+        "X",
+        "Aspect ratio",
+        "w",
+        "3000",
+        "Reset",
+        "Crop Image",
+        "CITRUS",
+        "A little less",
+        "friction.",
+        "FILES, IN GOOD SHAPE.",
+        "Convert. Crop.Add a background.",
+        "橘子•在本机，把文件处理好。",
+        "Free",
+        "1:1",
+        "16:9| 9:16",
+        "H",
+        "3751",
+        "pX",
+        "4:3",
+        "3:4",
+        "Apply"
+      ],
+      "width": 980
+    },
+    {
+      "absoluteUserPathDetected": false,
+      "asset": "07-crop-final.png",
+      "height": 1296,
+      "recognizedText": [
+        "×",
+        "Aspect ratio",
+        "w",
+        "1896",
+        "Reset",
+        "Crop Image",
+        "CITRUS",
+        "A little less",
+        "friction.",
+        "FILES, IN GOOD SHAPE.",
+        "Convert. Crop. Add a background.",
+        "橘子，在本机，把文件处理好。",
+        "Free",
+        "1:1",
+        "16:9 9:16",
+        "H",
+        "1738",
+        "pX",
+        "4:3",
+        "3:4",
+        "Apply"
+      ],
+      "width": 980
+    },
+    {
+      "absoluteUserPathDetected": false,
+      "asset": "08-background-before.png",
+      "height": 1386,
+      "recognizedText": [
+        "X",
+        "Add BG",
+        "Background",
+        "Padding",
+        "Corners",
+        "Shadow",
+        "160 px",
+        "24 px",
+        "24 px",
+        "Ratio",
+        "Auto",
+        "1:1",
+        "16:9",
+        "4:5",
+        "Reset",
+        "Save with Background"
+      ],
+      "width": 980
+    },
+    {
+      "absoluteUserPathDetected": false,
+      "asset": "09-background-final.png",
+      "height": 1386,
+      "recognizedText": [
+        "X",
+        "Add BG",
+        "Background",
+        "Padding",
+        "Corners",
+        "Shadow",
+        "520 px",
+        "144 pX",
+        "72 px",
+        "Ratio",
+        "Auto",
+        "1:1",
+        "16:9",
+        "4:5",
+        "Reset",
+        "Save with Background"
+      ],
+      "width": 980
+    },
+    {
+      "absoluteUserPathDetected": false,
+      "asset": "source.jpg",
+      "height": 3751,
+      "recognizedText": [
+        "CITRUS",
+        "A little less",
+        "friction.",
+        "FILES, IN GOOD SHAPE.",
+        "Convert. Crop. Add a background.",
+        "橘子．在本机，把文件处理好。"
+      ],
+      "width": 3000
+    },
+    {
+      "absoluteUserPathDetected": false,
+      "asset": "cropped.jpg",
+      "height": 1739,
+      "recognizedText": [],
+      "width": 1897
+    },
+    {
+      "absoluteUserPathDetected": false,
+      "asset": "final.jpg",
+      "height": 2779,
+      "recognizedText": [],
+      "width": 4941
+    }
+  ],
+  "audit": "OCR of all source screenshots and output images, plus manual visual review",
+  "failureCount": 0
+}

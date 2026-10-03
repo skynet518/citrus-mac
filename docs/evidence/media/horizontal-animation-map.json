@@ -1,0 +1,4596 @@
+{
+  "composition": "citrus-demo-horizontal",
+  "duration": 28,
+  "totalTweens": 75,
+  "mappedTweens": 62,
+  "skippedMicroTweens": 13,
+  "tweens": [
+    {
+      "index": 1,
+      "selector": "#progress",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 0,
+      "end": 28,
+      "duration": 28,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 4.667,
+          "x": 0,
+          "y": 0,
+          "w": 320,
+          "h": 7,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 14,
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 7,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 23.333,
+          "x": 0,
+          "y": 0,
+          "w": 1598,
+          "h": 7,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "#progress animates scaleX over 28.00s (none). scales. width 320→1598px. ends at (0, 0) 1598×7px. FLAGS: paced-slow."
+    },
+    {
+      "index": 2,
+      "selector": "#intro-copy",
+      "targets": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "start": 0.17,
+      "end": 0.72,
+      "duration": 0.55,
+      "ease": "power3.out",
+      "bboxes": [
+        {
+          "t": 0.262,
+          "x": 96,
+          "y": 246,
+          "w": 590,
+          "h": 456,
+          "opacity": 0.387,
+          "visible": true
+        },
+        {
+          "t": 0.445,
+          "x": 96,
+          "y": 232,
+          "w": 590,
+          "h": 456,
+          "opacity": 0.9262,
+          "visible": true
+        },
+        {
+          "t": 0.628,
+          "x": 96,
+          "y": 230,
+          "w": 590,
+          "h": 456,
+          "opacity": 0.9977,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#intro-copy animates y+opacity over 0.55s (power3.out). moves 16px up. opacity 0.4→1.0. ends at (96, 230) 590×456px."
+    },
+    {
+      "index": 3,
+      "selector": "#intro-hero",
+      "targets": 1,
+      "props": [
+        "y",
+        "scale",
+        "rotation",
+        "opacity"
+      ],
+      "start": 0.28,
+      "end": 1.08,
+      "duration": 0.8,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 0.413,
+          "x": 813,
+          "y": 265,
+          "w": 949,
+          "h": 542,
+          "opacity": 0.6429,
+          "visible": true
+        },
+        {
+          "t": 0.68,
+          "x": 803,
+          "y": 248,
+          "w": 968,
+          "h": 545,
+          "opacity": 0.9727,
+          "visible": true
+        },
+        {
+          "t": 0.947,
+          "x": 802,
+          "y": 246,
+          "w": 970,
+          "h": 546,
+          "opacity": 0.9993,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#intro-hero animates y+scale+rotation+opacity over 0.80s (expo.out). moves 19px up and 11px left. opacity 0.6→1.0. scales. width 949→970px. ends at (802, 246) 970×546px."
+    },
+    {
+      "index": 4,
+      "selector": "#intro-hint",
+      "targets": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "start": 0.45,
+      "end": 0.95,
+      "duration": 0.5,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 0.533,
+          "x": 96,
+          "y": 881,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.271,
+          "visible": true
+        },
+        {
+          "t": 0.7,
+          "x": 96,
+          "y": 870,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.875,
+          "visible": true
+        },
+        {
+          "t": 0.867,
+          "x": 96,
+          "y": 868,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.9954,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#intro-hint animates y+opacity over 0.50s (power2.out). moves 13px up. opacity 0.3→1.0. ends at (96, 868) 590×86px."
+    },
+    {
+      "index": 5,
+      "selector": "#intro-wheel",
+      "targets": 1,
+      "props": [
+        "y",
+        "scale",
+        "rotation",
+        "opacity"
+      ],
+      "start": 0.84,
+      "end": 1.49,
+      "duration": 0.65,
+      "ease": "back.out(1.15)",
+      "bboxes": [
+        {
+          "t": 0.948,
+          "x": 1477,
+          "y": 619,
+          "w": 261,
+          "h": 261,
+          "opacity": 0.493,
+          "visible": true
+        },
+        {
+          "t": 1.165,
+          "x": 1472,
+          "y": 604,
+          "w": 270,
+          "h": 270,
+          "opacity": 0.991,
+          "visible": true
+        },
+        {
+          "t": 1.382,
+          "x": 1470,
+          "y": 602,
+          "w": 273,
+          "h": 273,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#intro-wheel animates y+scale+rotation+opacity over 0.65s (back.out(1.15)). moves 17px up and 7px left. opacity 0.5→1.0. scales. width 261→273px. height 261→273px. ends at (1470, 602) 273×273px."
+    },
+    {
+      "index": 6,
+      "selector": "#intro",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "start": 3.8,
+      "end": 4.3,
+      "duration": 0.5,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 3.883,
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 0.9905,
+          "visible": true
+        },
+        {
+          "t": 4.05,
+          "x": -5,
+          "y": -3,
+          "w": 1929,
+          "h": 1085,
+          "opacity": 0.5935,
+          "visible": true
+        },
+        {
+          "t": 4.217,
+          "x": -11,
+          "y": -6,
+          "w": 1942,
+          "h": 1093,
+          "opacity": 0.032,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#intro animates opacity+filter+scale over 0.50s (power2.inOut). moves 6px up and 11px left. fades out. scales. width 1920→1942px. height 1080→1093px. ends at (-11, -6) 1942×1093px."
+    },
+    {
+      "index": 7,
+      "selector": "#convert",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "start": 3.9,
+      "end": 4.4,
+      "duration": 0.5,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 3.983,
+          "x": 11,
+          "y": 6,
+          "w": 1897,
+          "h": 1067,
+          "opacity": 0.0095,
+          "visible": true
+        },
+        {
+          "t": 4.15,
+          "x": 7,
+          "y": 4,
+          "w": 1906,
+          "h": 1072,
+          "opacity": 0.4065,
+          "visible": true
+        },
+        {
+          "t": 4.317,
+          "x": 0,
+          "y": 0,
+          "w": 1919,
+          "h": 1080,
+          "opacity": 0.968,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#convert animates opacity+filter+scale over 0.50s (power2.inOut). moves 6px up and 11px left. fades in. scales. width 1897→1919px. height 1067→1080px. ends at (0, 0) 1919×1080px."
+    },
+    {
+      "index": 8,
+      "selector": "#convert-copy",
+      "targets": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "start": 3.97,
+      "end": 4.52,
+      "duration": 0.55,
+      "ease": "power3.out",
+      "bboxes": [
+        {
+          "t": 4.062,
+          "x": 106,
+          "y": 339,
+          "w": 583,
+          "h": 271,
+          "opacity": 0.387,
+          "visible": true
+        },
+        {
+          "t": 4.245,
+          "x": 98,
+          "y": 323,
+          "w": 589,
+          "h": 274,
+          "opacity": 0.9262,
+          "visible": true
+        },
+        {
+          "t": 4.428,
+          "x": 96,
+          "y": 321,
+          "w": 590,
+          "h": 275,
+          "opacity": 0.9977,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#convert-copy animates y+opacity over 0.55s (power3.out). moves 18px up and 10px left. opacity 0.4→1.0. width 583→590px. ends at (96, 321) 590×275px."
+    },
+    {
+      "index": 9,
+      "selector": "#format-frame",
+      "targets": 1,
+      "props": [
+        "y",
+        "scale",
+        "opacity"
+      ],
+      "start": 4.12,
+      "end": 4.77,
+      "duration": 0.65,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 4.228,
+          "x": 1047,
+          "y": 161,
+          "w": 477,
+          "h": 477,
+          "opacity": 0.5704,
+          "visible": true
+        },
+        {
+          "t": 4.445,
+          "x": 1038,
+          "y": 140,
+          "w": 499,
+          "h": 499,
+          "opacity": 0.9724,
+          "visible": true
+        },
+        {
+          "t": 4.662,
+          "x": 1037,
+          "y": 139,
+          "w": 500,
+          "h": 500,
+          "opacity": 0.999,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#format-frame animates y+scale+opacity over 0.65s (expo.out). moves 22px up and 10px left. opacity 0.6→1.0. scales. width 477→500px. height 477→500px. ends at (1037, 139) 500×500px."
+    },
+    {
+      "index": 10,
+      "selector": "#convert-hint",
+      "targets": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "start": 4.25,
+      "end": 4.75,
+      "duration": 0.5,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 4.333,
+          "x": 96,
+          "y": 881,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.271,
+          "visible": true
+        },
+        {
+          "t": 4.5,
+          "x": 96,
+          "y": 870,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.875,
+          "visible": true
+        },
+        {
+          "t": 4.667,
+          "x": 96,
+          "y": 868,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.9954,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#convert-hint animates y+opacity over 0.50s (power2.out). moves 13px up. opacity 0.3→1.0. ends at (96, 868) 590×86px."
+    },
+    {
+      "index": 11,
+      "selector": "#source-proof",
+      "targets": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "start": 4.7,
+      "end": 5.2,
+      "duration": 0.5,
+      "ease": "power3.out",
+      "bboxes": [
+        {
+          "t": 4.783,
+          "x": 986,
+          "y": 676,
+          "w": 200,
+          "h": 235,
+          "opacity": 0.4358,
+          "visible": true
+        },
+        {
+          "t": 4.95,
+          "x": 986,
+          "y": 666,
+          "w": 200,
+          "h": 235,
+          "opacity": 0.9191,
+          "visible": true
+        },
+        {
+          "t": 5.117,
+          "x": 986,
+          "y": 664,
+          "w": 200,
+          "h": 235,
+          "opacity": 0.9984,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#source-proof animates y+opacity over 0.50s (power3.out). moves 12px up. opacity 0.4→1.0. ends at (986, 664) 200×235px."
+    },
+    {
+      "index": 12,
+      "selector": "#pointer-convert",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 4.7,
+      "end": 4.88,
+      "duration": 0.18,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 4.73,
+          "x": 1437,
+          "y": 554,
+          "w": 36,
+          "h": 48,
+          "opacity": 0,
+          "visible": true
+        },
+        {
+          "t": 4.79,
+          "x": 1437,
+          "y": 554,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.7504,
+          "visible": true
+        },
+        {
+          "t": 4.85,
+          "x": 1437,
+          "y": 554,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.9826,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-fast"
+      ],
+      "summary": "#pointer-convert animates opacity over 0.18s (power2.out). fades in. ends at (1437, 554) 36×48px. FLAGS: paced-fast."
+    },
+    {
+      "index": 13,
+      "selector": "#pointer-convert",
+      "targets": 1,
+      "props": [
+        "x",
+        "y"
+      ],
+      "start": 4.98,
+      "end": 5.63,
+      "duration": 0.65,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 5.088,
+          "x": 1436,
+          "y": 551,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.305,
+          "x": 1365,
+          "y": 398,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.522,
+          "x": 1292,
+          "y": 238,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#pointer-convert animates x+y over 0.65s (power2.inOut). moves 313px up and 144px left. ends at (1292, 238) 36×48px."
+    },
+    {
+      "index": 14,
+      "selector": "#tap-convert",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "start": 5.65,
+      "end": 6.05,
+      "duration": 0.4,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 5.717,
+          "x": 1264,
+          "y": 205,
+          "w": 51,
+          "h": 51,
+          "opacity": 0.3816,
+          "visible": true
+        },
+        {
+          "t": 5.85,
+          "x": 1253,
+          "y": 194,
+          "w": 74,
+          "h": 74,
+          "opacity": 0.0308,
+          "visible": true
+        },
+        {
+          "t": 5.983,
+          "x": 1252,
+          "y": 193,
+          "w": 76,
+          "h": 76,
+          "opacity": 0.0008,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#tap-convert animates opacity+scale over 0.40s (expo.out). moves 12px up and 12px left. opacity 0.4→0.0. scales. width 51→76px. height 51→76px. ends at (1252, 193) 76×76px."
+    },
+    {
+      "index": 15,
+      "selector": "#pointer-convert",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 6.1,
+      "end": 6.3,
+      "duration": 0.2,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 6.133,
+          "x": 1287,
+          "y": 227,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 6.2,
+          "x": 1287,
+          "y": 227,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.125,
+          "visible": true
+        },
+        {
+          "t": 6.267,
+          "x": 1287,
+          "y": 227,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.0046,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#pointer-convert animates opacity over 0.20s (power2.out). fades out. ends at (1287, 227) 36×48px."
+    },
+    {
+      "index": 16,
+      "selector": "#proof-arrow",
+      "targets": 1,
+      "props": [
+        "x",
+        "opacity"
+      ],
+      "start": 6.5,
+      "end": 6.95,
+      "duration": 0.45,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 6.575,
+          "x": 1249,
+          "y": 721,
+          "w": 58,
+          "h": 121,
+          "opacity": 0.3819,
+          "visible": true
+        },
+        {
+          "t": 6.725,
+          "x": 1256,
+          "y": 721,
+          "w": 58,
+          "h": 121,
+          "opacity": 0.8285,
+          "visible": true
+        },
+        {
+          "t": 6.875,
+          "x": 1258,
+          "y": 721,
+          "w": 58,
+          "h": 121,
+          "opacity": 0.9936,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#proof-arrow animates x+opacity over 0.45s (power2.out). moves 9px right. opacity 0.4→1.0. ends at (1258, 721) 58×121px."
+    },
+    {
+      "index": 17,
+      "selector": "#jpg-proof",
+      "targets": 1,
+      "props": [
+        "x",
+        "rotation",
+        "opacity"
+      ],
+      "start": 7.1,
+      "end": 7.8,
+      "duration": 0.7,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 7.217,
+          "x": 1375,
+          "y": 662,
+          "w": 205,
+          "h": 239,
+          "opacity": 0.6249,
+          "visible": true
+        },
+        {
+          "t": 7.45,
+          "x": 1387,
+          "y": 664,
+          "w": 200,
+          "h": 235,
+          "opacity": 0.9709,
+          "visible": true
+        },
+        {
+          "t": 7.683,
+          "x": 1388,
+          "y": 664,
+          "w": 200,
+          "h": 235,
+          "opacity": 0.9993,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#jpg-proof animates x+rotation+opacity over 0.70s (expo.out). moves 13px right. opacity 0.6→1.0. ends at (1388, 664) 200×235px."
+    },
+    {
+      "index": 18,
+      "selector": "#convert",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "start": 10.2,
+      "end": 10.7,
+      "duration": 0.5,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 10.283,
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 0.9905,
+          "visible": true
+        },
+        {
+          "t": 10.45,
+          "x": -5,
+          "y": -3,
+          "w": 1929,
+          "h": 1085,
+          "opacity": 0.5935,
+          "visible": true
+        },
+        {
+          "t": 10.617,
+          "x": -11,
+          "y": -6,
+          "w": 1942,
+          "h": 1093,
+          "opacity": 0.032,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#convert animates opacity+filter+scale over 0.50s (power2.inOut). moves 6px up and 11px left. fades out. scales. width 1920→1942px. height 1080→1093px. ends at (-11, -6) 1942×1093px. Overlaps another animated element."
+    },
+    {
+      "index": 19,
+      "selector": "#crop",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "start": 10.3,
+      "end": 10.8,
+      "duration": 0.5,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 10.383,
+          "x": 11,
+          "y": 6,
+          "w": 1897,
+          "h": 1067,
+          "opacity": 0.0095,
+          "visible": true
+        },
+        {
+          "t": 10.55,
+          "x": 7,
+          "y": 4,
+          "w": 1906,
+          "h": 1072,
+          "opacity": 0.4065,
+          "visible": true
+        },
+        {
+          "t": 10.717,
+          "x": 0,
+          "y": 0,
+          "w": 1919,
+          "h": 1080,
+          "opacity": 0.968,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#crop animates opacity+filter+scale over 0.50s (power2.inOut). moves 6px up and 11px left. fades in. scales. width 1897→1919px. height 1067→1080px. ends at (0, 0) 1919×1080px. Overlaps another animated element."
+    },
+    {
+      "index": 20,
+      "selector": "#crop-copy",
+      "targets": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "start": 10.37,
+      "end": 10.92,
+      "duration": 0.55,
+      "ease": "power3.out",
+      "bboxes": [
+        {
+          "t": 10.462,
+          "x": 106,
+          "y": 284,
+          "w": 583,
+          "h": 381,
+          "opacity": 0.387,
+          "visible": true
+        },
+        {
+          "t": 10.645,
+          "x": 98,
+          "y": 268,
+          "w": 589,
+          "h": 384,
+          "opacity": 0.9262,
+          "visible": true
+        },
+        {
+          "t": 10.828,
+          "x": 96,
+          "y": 265,
+          "w": 590,
+          "h": 385,
+          "opacity": 0.9977,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#crop-copy animates y+opacity over 0.55s (power3.out). moves 19px up and 10px left. opacity 0.4→1.0. width 583→590px. ends at (96, 265) 590×385px."
+    },
+    {
+      "index": 21,
+      "selector": "#crop-tools",
+      "targets": 1,
+      "props": [
+        "scale",
+        "opacity"
+      ],
+      "start": 10.48,
+      "end": 11.03,
+      "duration": 0.55,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 10.572,
+          "x": 766,
+          "y": 98,
+          "w": 1040,
+          "h": 842,
+          "opacity": 0.6611,
+          "visible": true
+        },
+        {
+          "t": 10.755,
+          "x": 751,
+          "y": 85,
+          "w": 1071,
+          "h": 868,
+          "opacity": 0.9665,
+          "visible": true
+        },
+        {
+          "t": 10.938,
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 0.9994,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#crop-tools animates scale+opacity over 0.55s (expo.out). moves 14px up and 16px left. opacity 0.7→1.0. scales. width 1040→1074px. height 842→870px. ends at (750, 84) 1074×870px. Overlaps another animated element."
+    },
+    {
+      "index": 22,
+      "selector": "#crop-hint",
+      "targets": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "start": 10.65,
+      "end": 11.15,
+      "duration": 0.5,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 10.733,
+          "x": 96,
+          "y": 881,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.271,
+          "visible": true
+        },
+        {
+          "t": 10.9,
+          "x": 96,
+          "y": 870,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.875,
+          "visible": true
+        },
+        {
+          "t": 11.067,
+          "x": 96,
+          "y": 868,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.9954,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#crop-hint animates y+opacity over 0.50s (power2.out). moves 13px up. opacity 0.3→1.0. ends at (96, 868) 590×86px."
+    },
+    {
+      "index": 23,
+      "selector": "#pointer-crop",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 10.7,
+      "end": 10.88,
+      "duration": 0.18,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 10.73,
+          "x": 1447,
+          "y": 629,
+          "w": 36,
+          "h": 48,
+          "opacity": 0,
+          "visible": true
+        },
+        {
+          "t": 10.79,
+          "x": 1447,
+          "y": 629,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.7504,
+          "visible": true
+        },
+        {
+          "t": 10.85,
+          "x": 1447,
+          "y": 629,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.9826,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-fast"
+      ],
+      "summary": "#pointer-crop animates opacity over 0.18s (power2.out). fades in. ends at (1447, 629) 36×48px. FLAGS: paced-fast."
+    },
+    {
+      "index": 24,
+      "selector": "#pointer-crop",
+      "targets": 1,
+      "props": [
+        "x",
+        "y"
+      ],
+      "start": 10.92,
+      "end": 11.42,
+      "duration": 0.5,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 11.003,
+          "x": 1442,
+          "y": 628,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 11.17,
+          "x": 1294,
+          "y": 592,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 11.337,
+          "x": 1136,
+          "y": 553,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#pointer-crop animates x+y over 0.50s (power2.inOut). moves 75px up and 306px left. ends at (1136, 553) 36×48px."
+    },
+    {
+      "index": 25,
+      "selector": "#tap-crop",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "start": 11.55,
+      "end": 11.95,
+      "duration": 0.4,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 11.617,
+          "x": 1106,
+          "y": 529,
+          "w": 51,
+          "h": 51,
+          "opacity": 0.3816,
+          "visible": true
+        },
+        {
+          "t": 11.75,
+          "x": 1095,
+          "y": 518,
+          "w": 74,
+          "h": 74,
+          "opacity": 0.0308,
+          "visible": true
+        },
+        {
+          "t": 11.883,
+          "x": 1094,
+          "y": 517,
+          "w": 76,
+          "h": 76,
+          "opacity": 0.0008,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#tap-crop animates opacity+scale over 0.40s (expo.out). moves 12px up and 12px left. opacity 0.4→0.0. scales. width 51→76px. height 51→76px. ends at (1094, 517) 76×76px. Overlaps another animated element."
+    },
+    {
+      "index": 26,
+      "selector": "#crop-tools",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "start": 11.65,
+      "end": 11.95,
+      "duration": 0.3,
+      "ease": "power2.in",
+      "bboxes": [
+        {
+          "t": 11.7,
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 0.9954,
+          "visible": true
+        },
+        {
+          "t": 11.8,
+          "x": 752,
+          "y": 86,
+          "w": 1070,
+          "h": 867,
+          "opacity": 0.875,
+          "visible": true
+        },
+        {
+          "t": 11.9,
+          "x": 759,
+          "y": 92,
+          "w": 1055,
+          "h": 855,
+          "opacity": 0.4213,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#crop-tools animates opacity+scale over 0.30s (power2.in). moves 8px down and 9px right. opacity 1.0→0.4. scales. width 1074→1055px. height 870→855px. ends at (759, 92) 1055×855px. Overlaps another animated element."
+    },
+    {
+      "index": 27,
+      "selector": "#pointer-crop",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 11.72,
+      "end": 11.87,
+      "duration": 0.15,
+      "ease": "function(t){return 1-Math.pow(1-t,r)}",
+      "bboxes": [
+        {
+          "t": 11.745,
+          "x": 1129,
+          "y": 552,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.8301,
+          "visible": true
+        },
+        {
+          "t": 11.795,
+          "x": 1129,
+          "y": 552,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.4746,
+          "visible": true
+        },
+        {
+          "t": 11.845,
+          "x": 1129,
+          "y": 552,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.0598,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-fast"
+      ],
+      "summary": "#pointer-crop animates opacity over 0.15s (function(t){return 1-Math.pow(1-t,r)}). fades out. ends at (1129, 552) 36×48px. FLAGS: paced-fast."
+    },
+    {
+      "index": 28,
+      "selector": "#crop-editor",
+      "targets": 1,
+      "props": [
+        "y",
+        "scale",
+        "opacity"
+      ],
+      "start": 11.85,
+      "end": 12.45,
+      "duration": 0.6,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 11.95,
+          "x": 1000,
+          "y": 148,
+          "w": 573,
+          "h": 758,
+          "opacity": 0.6146,
+          "visible": true
+        },
+        {
+          "t": 12.15,
+          "x": 996,
+          "y": 135,
+          "w": 581,
+          "h": 769,
+          "opacity": 0.9698,
+          "visible": true
+        },
+        {
+          "t": 12.35,
+          "x": 996,
+          "y": 134,
+          "w": 582,
+          "h": 770,
+          "opacity": 0.9992,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#crop-editor animates y+scale+opacity over 0.60s (expo.out). moves 14px up and 4px left. opacity 0.6→1.0. scales. width 573→582px. height 758→770px. ends at (996, 134) 582×770px. Overlaps another animated element."
+    },
+    {
+      "index": 29,
+      "selector": "#pointer-crop",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 12.67,
+      "end": 12.82,
+      "duration": 0.15,
+      "ease": "function(t){return 1-Math.pow(1-t,r)}",
+      "bboxes": [
+        {
+          "t": 12.695,
+          "x": 1099,
+          "y": 233,
+          "w": 36,
+          "h": 48,
+          "opacity": 0,
+          "visible": true
+        },
+        {
+          "t": 12.745,
+          "x": 1099,
+          "y": 233,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.6662,
+          "visible": true
+        },
+        {
+          "t": 12.795,
+          "x": 1099,
+          "y": 233,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.8736,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-fast"
+      ],
+      "summary": "#pointer-crop animates opacity over 0.15s (function(t){return 1-Math.pow(1-t,r)}). fades in. ends at (1099, 233) 36×48px. FLAGS: paced-fast."
+    },
+    {
+      "index": 30,
+      "selector": "#pointer-crop",
+      "targets": 1,
+      "props": [
+        "x",
+        "y"
+      ],
+      "start": 13.05,
+      "end": 13.62,
+      "duration": 0.57,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 13.145,
+          "x": 1100,
+          "y": 235,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 13.335,
+          "x": 1136,
+          "y": 316,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 13.525,
+          "x": 1171,
+          "y": 396,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#pointer-crop animates x+y over 0.57s (power2.inOut). moves 161px down and 71px right. ends at (1171, 396) 36×48px."
+    },
+    {
+      "index": 31,
+      "selector": "#pointer-crop",
+      "targets": 1,
+      "props": [
+        "x",
+        "y"
+      ],
+      "start": 13.78,
+      "end": 14.18,
+      "duration": 0.4,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 13.847,
+          "x": 1177,
+          "y": 405,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 13.98,
+          "x": 1296,
+          "y": 524,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 14.113,
+          "x": 1465,
+          "y": 694,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#pointer-crop animates x+y over 0.40s (power2.inOut). moves 289px down and 288px right. ends at (1465, 694) 36×48px."
+    },
+    {
+      "index": 32,
+      "selector": "#pointer-crop",
+      "targets": 1,
+      "props": [
+        "x",
+        "y"
+      ],
+      "start": 14.32,
+      "end": 14.8,
+      "duration": 0.48,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 14.4,
+          "x": 1473,
+          "y": 702,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 14.56,
+          "x": 1453,
+          "y": 674,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 14.72,
+          "x": 1414,
+          "y": 623,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#pointer-crop animates x+y over 0.48s (power2.inOut). moves 79px up and 59px left. ends at (1414, 623) 36×48px."
+    },
+    {
+      "index": 33,
+      "selector": "#crop-after",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 14.85,
+      "end": 15.33,
+      "duration": 0.48,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 14.93,
+          "x": 996,
+          "y": 134,
+          "w": 582,
+          "h": 770,
+          "opacity": 0.0045,
+          "visible": true
+        },
+        {
+          "t": 15.09,
+          "x": 996,
+          "y": 134,
+          "w": 582,
+          "h": 770,
+          "opacity": 0.3679,
+          "visible": true
+        },
+        {
+          "t": 15.25,
+          "x": 996,
+          "y": 134,
+          "w": 582,
+          "h": 770,
+          "opacity": 0.9673,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#crop-after animates opacity over 0.48s (power2.inOut). fades in. ends at (996, 134) 582×770px."
+    },
+    {
+      "index": 34,
+      "selector": "#pointer-crop",
+      "targets": 1,
+      "props": [
+        "x",
+        "y"
+      ],
+      "start": 15.22,
+      "end": 15.6,
+      "duration": 0.38,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 15.283,
+          "x": 1413,
+          "y": 622,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 15.41,
+          "x": 1459,
+          "y": 727,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 15.537,
+          "x": 1520,
+          "y": 865,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#pointer-crop animates x+y over 0.38s (power2.inOut). moves 243px down and 107px right. ends at (1520, 865) 36×48px."
+    },
+    {
+      "index": 35,
+      "selector": "#tap-crop",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "start": 15.65,
+      "end": 16.05,
+      "duration": 0.4,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 15.717,
+          "x": 1500,
+          "y": 848,
+          "w": 51,
+          "h": 51,
+          "opacity": 0.3816,
+          "visible": true
+        },
+        {
+          "t": 15.85,
+          "x": 1488,
+          "y": 837,
+          "w": 74,
+          "h": 74,
+          "opacity": 0.0308,
+          "visible": true
+        },
+        {
+          "t": 15.983,
+          "x": 1487,
+          "y": 836,
+          "w": 76,
+          "h": 76,
+          "opacity": 0.0008,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#tap-crop animates opacity+scale over 0.40s (expo.out). moves 12px up and 13px left. opacity 0.4→0.0. scales. width 51→76px. height 51→76px. ends at (1487, 836) 76×76px."
+    },
+    {
+      "index": 36,
+      "selector": "#pointer-crop",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 15.95,
+      "end": 16.13,
+      "duration": 0.18,
+      "ease": "function(t){return 1-Math.pow(1-t,r)}",
+      "bboxes": [
+        {
+          "t": 15.98,
+          "x": 1522,
+          "y": 871,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.8234,
+          "visible": true
+        },
+        {
+          "t": 16.04,
+          "x": 1522,
+          "y": 871,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.2884,
+          "visible": true
+        },
+        {
+          "t": 16.1,
+          "x": 1522,
+          "y": 871,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.0278,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-fast"
+      ],
+      "summary": "#pointer-crop animates opacity over 0.18s (function(t){return 1-Math.pow(1-t,r)}). fades out. ends at (1522, 871) 36×48px. FLAGS: paced-fast."
+    },
+    {
+      "index": 37,
+      "selector": "#crop",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "start": 17.2,
+      "end": 17.7,
+      "duration": 0.5,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 17.283,
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 0.9905,
+          "visible": true
+        },
+        {
+          "t": 17.45,
+          "x": -5,
+          "y": -3,
+          "w": 1929,
+          "h": 1085,
+          "opacity": 0.5935,
+          "visible": true
+        },
+        {
+          "t": 17.617,
+          "x": -11,
+          "y": -6,
+          "w": 1942,
+          "h": 1093,
+          "opacity": 0.032,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#crop animates opacity+filter+scale over 0.50s (power2.inOut). moves 6px up and 11px left. fades out. scales. width 1920→1942px. height 1080→1093px. ends at (-11, -6) 1942×1093px. Overlaps another animated element."
+    },
+    {
+      "index": 38,
+      "selector": "#background",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "start": 17.3,
+      "end": 17.8,
+      "duration": 0.5,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 17.383,
+          "x": 11,
+          "y": 6,
+          "w": 1897,
+          "h": 1067,
+          "opacity": 0.0095,
+          "visible": true
+        },
+        {
+          "t": 17.55,
+          "x": 7,
+          "y": 4,
+          "w": 1906,
+          "h": 1072,
+          "opacity": 0.4065,
+          "visible": true
+        },
+        {
+          "t": 17.717,
+          "x": 0,
+          "y": 0,
+          "w": 1919,
+          "h": 1080,
+          "opacity": 0.968,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#background animates opacity+filter+scale over 0.50s (power2.inOut). moves 6px up and 11px left. fades in. scales. width 1897→1919px. height 1067→1080px. ends at (0, 0) 1919×1080px. Overlaps another animated element."
+    },
+    {
+      "index": 39,
+      "selector": "#bg-copy",
+      "targets": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "start": 17.37,
+      "end": 17.92,
+      "duration": 0.55,
+      "ease": "power3.out",
+      "bboxes": [
+        {
+          "t": 17.462,
+          "x": 106,
+          "y": 284,
+          "w": 583,
+          "h": 381,
+          "opacity": 0.387,
+          "visible": true
+        },
+        {
+          "t": 17.645,
+          "x": 98,
+          "y": 268,
+          "w": 589,
+          "h": 384,
+          "opacity": 0.9262,
+          "visible": true
+        },
+        {
+          "t": 17.828,
+          "x": 96,
+          "y": 265,
+          "w": 590,
+          "h": 385,
+          "opacity": 0.9977,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#bg-copy animates y+opacity over 0.55s (power3.out). moves 19px up and 10px left. opacity 0.4→1.0. width 583→590px. ends at (96, 265) 590×385px."
+    },
+    {
+      "index": 40,
+      "selector": "#bg-tools",
+      "targets": 1,
+      "props": [
+        "scale",
+        "opacity"
+      ],
+      "start": 17.48,
+      "end": 18.03,
+      "duration": 0.55,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 17.572,
+          "x": 766,
+          "y": 98,
+          "w": 1040,
+          "h": 842,
+          "opacity": 0.6611,
+          "visible": true
+        },
+        {
+          "t": 17.755,
+          "x": 751,
+          "y": 85,
+          "w": 1071,
+          "h": 868,
+          "opacity": 0.9665,
+          "visible": true
+        },
+        {
+          "t": 17.938,
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 0.9994,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#bg-tools animates scale+opacity over 0.55s (expo.out). moves 14px up and 16px left. opacity 0.7→1.0. scales. width 1040→1074px. height 842→870px. ends at (750, 84) 1074×870px. Overlaps another animated element."
+    },
+    {
+      "index": 41,
+      "selector": "#pointer-bg",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 17.6,
+      "end": 17.78,
+      "duration": 0.18,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 17.63,
+          "x": 1426,
+          "y": 609,
+          "w": 36,
+          "h": 48,
+          "opacity": 0,
+          "visible": true
+        },
+        {
+          "t": 17.69,
+          "x": 1427,
+          "y": 609,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.7504,
+          "visible": true
+        },
+        {
+          "t": 17.75,
+          "x": 1427,
+          "y": 609,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.9826,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-fast"
+      ],
+      "summary": "#pointer-bg animates opacity over 0.18s (power2.out). fades in. ends at (1427, 609) 36×48px. FLAGS: paced-fast."
+    },
+    {
+      "index": 42,
+      "selector": "#bg-hint",
+      "targets": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "start": 17.65,
+      "end": 18.15,
+      "duration": 0.5,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 17.733,
+          "x": 96,
+          "y": 881,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.271,
+          "visible": true
+        },
+        {
+          "t": 17.9,
+          "x": 96,
+          "y": 870,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.875,
+          "visible": true
+        },
+        {
+          "t": 18.067,
+          "x": 96,
+          "y": 868,
+          "w": 590,
+          "h": 86,
+          "opacity": 0.9954,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#bg-hint animates y+opacity over 0.50s (power2.out). moves 13px up. opacity 0.3→1.0. ends at (96, 868) 590×86px."
+    },
+    {
+      "index": 43,
+      "selector": "#pointer-bg",
+      "targets": 1,
+      "props": [
+        "x",
+        "y"
+      ],
+      "start": 17.8,
+      "end": 18.28,
+      "duration": 0.48,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 17.88,
+          "x": 1425,
+          "y": 610,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 18.04,
+          "x": 1329,
+          "y": 637,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 18.2,
+          "x": 1218,
+          "y": 668,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#pointer-bg animates x+y over 0.48s (power2.inOut). moves 58px down and 207px left. ends at (1218, 668) 36×48px."
+    },
+    {
+      "index": 44,
+      "selector": "#tap-bg",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "start": 18.35,
+      "end": 18.75,
+      "duration": 0.4,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 18.417,
+          "x": 1192,
+          "y": 646,
+          "w": 51,
+          "h": 51,
+          "opacity": 0.3816,
+          "visible": true
+        },
+        {
+          "t": 18.55,
+          "x": 1181,
+          "y": 635,
+          "w": 74,
+          "h": 74,
+          "opacity": 0.0308,
+          "visible": true
+        },
+        {
+          "t": 18.683,
+          "x": 1180,
+          "y": 634,
+          "w": 76,
+          "h": 76,
+          "opacity": 0.0008,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#tap-bg animates opacity+scale over 0.40s (expo.out). moves 12px up and 12px left. opacity 0.4→0.0. scales. width 51→76px. height 51→76px. ends at (1180, 634) 76×76px. Overlaps another animated element."
+    },
+    {
+      "index": 45,
+      "selector": "#bg-tools",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "start": 18.38,
+      "end": 18.68,
+      "duration": 0.3,
+      "ease": "power2.in",
+      "bboxes": [
+        {
+          "t": 18.43,
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 0.9997,
+          "visible": true
+        },
+        {
+          "t": 18.53,
+          "x": 751,
+          "y": 85,
+          "w": 1072,
+          "h": 868,
+          "opacity": 0.936,
+          "visible": true
+        },
+        {
+          "t": 18.63,
+          "x": 756,
+          "y": 89,
+          "w": 1061,
+          "h": 860,
+          "opacity": 0.6056,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#bg-tools animates opacity+scale over 0.30s (power2.in). moves 5px down and 6px right. opacity 1.0→0.6. scales. width 1074→1061px. height 870→860px. ends at (756, 89) 1061×860px. Overlaps another animated element."
+    },
+    {
+      "index": 46,
+      "selector": "#bg-editor",
+      "targets": 1,
+      "props": [
+        "y",
+        "scale",
+        "opacity"
+      ],
+      "start": 18.52,
+      "end": 19.12,
+      "duration": 0.6,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 18.62,
+          "x": 1016,
+          "y": 143,
+          "w": 542,
+          "h": 769,
+          "opacity": 0.5996,
+          "visible": true
+        },
+        {
+          "t": 18.82,
+          "x": 1012,
+          "y": 129,
+          "w": 550,
+          "h": 781,
+          "opacity": 0.9683,
+          "visible": true
+        },
+        {
+          "t": 19.02,
+          "x": 1012,
+          "y": 128,
+          "w": 551,
+          "h": 782,
+          "opacity": 0.9992,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#bg-editor animates y+scale+opacity over 0.60s (expo.out). moves 15px up and 4px left. opacity 0.6→1.0. scales. width 542→551px. height 769→782px. ends at (1012, 128) 551×782px. Overlaps another animated element."
+    },
+    {
+      "index": 47,
+      "selector": "#pointer-bg",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 19.2,
+      "end": 19.36,
+      "duration": 0.16,
+      "ease": "function(t){return 1-Math.pow(1-t,r)}",
+      "bboxes": [
+        {
+          "t": 19.227,
+          "x": 1208,
+          "y": 612,
+          "w": 36,
+          "h": 48,
+          "opacity": 0,
+          "visible": true
+        },
+        {
+          "t": 19.28,
+          "x": 1208,
+          "y": 612,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.6597,
+          "visible": true
+        },
+        {
+          "t": 19.333,
+          "x": 1208,
+          "y": 612,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.8594,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-fast"
+      ],
+      "summary": "#pointer-bg animates opacity over 0.16s (function(t){return 1-Math.pow(1-t,r)}). fades in. ends at (1208, 612) 36×48px. FLAGS: paced-fast."
+    },
+    {
+      "index": 48,
+      "selector": "#tap-bg",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "start": 19.55,
+      "end": 19.95,
+      "duration": 0.4,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 19.617,
+          "x": 1186,
+          "y": 589,
+          "w": 51,
+          "h": 51,
+          "opacity": 0.3816,
+          "visible": true
+        },
+        {
+          "t": 19.75,
+          "x": 1174,
+          "y": 578,
+          "w": 74,
+          "h": 74,
+          "opacity": 0.0308,
+          "visible": true
+        },
+        {
+          "t": 19.883,
+          "x": 1174,
+          "y": 577,
+          "w": 76,
+          "h": 76,
+          "opacity": 0.0008,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#tap-bg animates opacity+scale over 0.40s (expo.out). moves 12px up and 12px left. opacity 0.4→0.0. scales. width 51→76px. height 51→76px. ends at (1174, 577) 76×76px."
+    },
+    {
+      "index": 49,
+      "selector": "#pointer-bg",
+      "targets": 1,
+      "props": [
+        "x",
+        "y"
+      ],
+      "start": 19.8,
+      "end": 20.1,
+      "duration": 0.3,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 19.85,
+          "x": 1208,
+          "y": 612,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 19.95,
+          "x": 1199,
+          "y": 641,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 20.05,
+          "x": 1184,
+          "y": 691,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#pointer-bg animates x+y over 0.30s (power2.inOut). moves 79px down and 24px left. ends at (1184, 691) 36×48px."
+    },
+    {
+      "index": 50,
+      "selector": "#pointer-bg",
+      "targets": 1,
+      "props": [
+        "x",
+        "y"
+      ],
+      "start": 20.18,
+      "end": 20.66,
+      "duration": 0.48,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 20.26,
+          "x": 1183,
+          "y": 695,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 20.42,
+          "x": 1218,
+          "y": 695,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 20.58,
+          "x": 1272,
+          "y": 695,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#pointer-bg animates x+y over 0.48s (power2.inOut). moves 89px right. ends at (1272, 695) 36×48px."
+    },
+    {
+      "index": 51,
+      "selector": "#pointer-bg",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 20.77,
+      "end": 20.93,
+      "duration": 0.16,
+      "ease": "function(t){return 1-Math.pow(1-t,r)}",
+      "bboxes": [
+        {
+          "t": 20.797,
+          "x": 1275,
+          "y": 695,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 20.85,
+          "x": 1275,
+          "y": 695,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.365,
+          "visible": true
+        },
+        {
+          "t": 20.903,
+          "x": 1275,
+          "y": 695,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.0352,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-fast",
+        "collision"
+      ],
+      "summary": "#pointer-bg animates opacity over 0.16s (function(t){return 1-Math.pow(1-t,r)}). fades out. ends at (1275, 695) 36×48px. FLAGS: paced-fast. Overlaps another animated element."
+    },
+    {
+      "index": 52,
+      "selector": "#bg-after",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 20.8,
+      "end": 21.28,
+      "duration": 0.48,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 20.88,
+          "x": 1012,
+          "y": 128,
+          "w": 551,
+          "h": 782,
+          "opacity": 0.0107,
+          "visible": true
+        },
+        {
+          "t": 21.04,
+          "x": 1012,
+          "y": 128,
+          "w": 551,
+          "h": 782,
+          "opacity": 0.4595,
+          "visible": true
+        },
+        {
+          "t": 21.2,
+          "x": 1012,
+          "y": 128,
+          "w": 551,
+          "h": 782,
+          "opacity": 0.9815,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#bg-after animates opacity over 0.48s (power2.inOut). fades in. ends at (1012, 128) 551×782px. Overlaps another animated element."
+    },
+    {
+      "index": 53,
+      "selector": "#pointer-bg",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 21.98,
+      "end": 22.14,
+      "duration": 0.16,
+      "ease": "function(t){return 1-Math.pow(1-t,r)}",
+      "bboxes": [
+        {
+          "t": 22.007,
+          "x": 1455,
+          "y": 877,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.2344,
+          "visible": true
+        },
+        {
+          "t": 22.06,
+          "x": 1455,
+          "y": 877,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.5556,
+          "visible": true
+        },
+        {
+          "t": 22.113,
+          "x": 1455,
+          "y": 877,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.9375,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-fast"
+      ],
+      "summary": "#pointer-bg animates opacity over 0.16s (function(t){return 1-Math.pow(1-t,r)}). opacity 0.2→0.9. ends at (1455, 877) 36×48px. FLAGS: paced-fast."
+    },
+    {
+      "index": 54,
+      "selector": "#tap-bg",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "start": 22.45,
+      "end": 22.85,
+      "duration": 0.4,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 22.517,
+          "x": 1432,
+          "y": 855,
+          "w": 51,
+          "h": 51,
+          "opacity": 0.3816,
+          "visible": true
+        },
+        {
+          "t": 22.65,
+          "x": 1421,
+          "y": 844,
+          "w": 74,
+          "h": 74,
+          "opacity": 0.0308,
+          "visible": true
+        },
+        {
+          "t": 22.783,
+          "x": 1420,
+          "y": 843,
+          "w": 76,
+          "h": 76,
+          "opacity": 0.0008,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#tap-bg animates opacity+scale over 0.40s (expo.out). moves 12px up and 12px left. opacity 0.4→0.0. scales. width 51→76px. height 51→76px. ends at (1420, 843) 76×76px. Overlaps another animated element."
+    },
+    {
+      "index": 55,
+      "selector": "#pointer-bg",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 22.6,
+      "end": 22.76,
+      "duration": 0.16,
+      "ease": "function(t){return 1-Math.pow(1-t,r)}",
+      "bboxes": [
+        {
+          "t": 22.627,
+          "x": 1455,
+          "y": 877,
+          "w": 36,
+          "h": 48,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 22.68,
+          "x": 1455,
+          "y": 877,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.3403,
+          "visible": true
+        },
+        {
+          "t": 22.733,
+          "x": 1455,
+          "y": 877,
+          "w": 36,
+          "h": 48,
+          "opacity": 0.1406,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-fast",
+        "collision"
+      ],
+      "summary": "#pointer-bg animates opacity over 0.16s (function(t){return 1-Math.pow(1-t,r)}). opacity 1.0→0.1. ends at (1455, 877) 36×48px. FLAGS: paced-fast. Overlaps another animated element."
+    },
+    {
+      "index": 56,
+      "selector": "#bg-editor",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "start": 22.7,
+      "end": 23.08,
+      "duration": 0.38,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 22.763,
+          "x": 1012,
+          "y": 128,
+          "w": 551,
+          "h": 782,
+          "opacity": 0.9973,
+          "visible": true
+        },
+        {
+          "t": 22.89,
+          "x": 1014,
+          "y": 132,
+          "w": 545,
+          "h": 774,
+          "opacity": 0.6625,
+          "visible": true
+        },
+        {
+          "t": 23.017,
+          "x": 1019,
+          "y": 139,
+          "w": 535,
+          "h": 759,
+          "opacity": 0.0373,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#bg-editor animates opacity+scale over 0.38s (power2.inOut). moves 11px down and 7px right. fades out. scales. width 551→535px. height 782→759px. ends at (1019, 139) 535×759px. Overlaps another animated element."
+    },
+    {
+      "index": 57,
+      "selector": "#bg-result",
+      "targets": 1,
+      "props": [
+        "y",
+        "scale",
+        "opacity"
+      ],
+      "start": 22.92,
+      "end": 23.57,
+      "duration": 0.65,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 23.028,
+          "x": 815,
+          "y": 263,
+          "w": 945,
+          "h": 531,
+          "opacity": 0.5704,
+          "visible": true
+        },
+        {
+          "t": 23.245,
+          "x": 803,
+          "y": 247,
+          "w": 968,
+          "h": 545,
+          "opacity": 0.9724,
+          "visible": true
+        },
+        {
+          "t": 23.462,
+          "x": 802,
+          "y": 246,
+          "w": 970,
+          "h": 546,
+          "opacity": 0.999,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "#bg-result animates y+scale+opacity over 0.65s (expo.out). moves 17px up and 13px left. opacity 0.6→1.0. scales. width 945→970px. height 531→546px. ends at (802, 246) 970×546px. Overlaps another animated element."
+    },
+    {
+      "index": 58,
+      "selector": "#background",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "start": 24.2,
+      "end": 24.7,
+      "duration": 0.5,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 24.283,
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 0.9905,
+          "visible": true
+        },
+        {
+          "t": 24.45,
+          "x": -5,
+          "y": -3,
+          "w": 1929,
+          "h": 1085,
+          "opacity": 0.5935,
+          "visible": true
+        },
+        {
+          "t": 24.617,
+          "x": -11,
+          "y": -6,
+          "w": 1942,
+          "h": 1093,
+          "opacity": 0.032,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#background animates opacity+filter+scale over 0.50s (power2.inOut). moves 6px up and 11px left. fades out. scales. width 1920→1942px. height 1080→1093px. ends at (-11, -6) 1942×1093px."
+    },
+    {
+      "index": 59,
+      "selector": "#outro",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "start": 24.3,
+      "end": 24.8,
+      "duration": 0.5,
+      "ease": "power2.inOut",
+      "bboxes": [
+        {
+          "t": 24.383,
+          "x": 11,
+          "y": 6,
+          "w": 1897,
+          "h": 1067,
+          "opacity": 0.0095,
+          "visible": true
+        },
+        {
+          "t": 24.55,
+          "x": 7,
+          "y": 4,
+          "w": 1906,
+          "h": 1072,
+          "opacity": 0.4065,
+          "visible": true
+        },
+        {
+          "t": 24.717,
+          "x": 0,
+          "y": 0,
+          "w": 1919,
+          "h": 1080,
+          "opacity": 0.968,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#outro animates opacity+filter+scale over 0.50s (power2.inOut). moves 6px up and 11px left. fades in. scales. width 1897→1919px. height 1067→1080px. ends at (0, 0) 1919×1080px."
+    },
+    {
+      "index": 60,
+      "selector": "#outro-copy",
+      "targets": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "start": 24.37,
+      "end": 24.92,
+      "duration": 0.55,
+      "ease": "power3.out",
+      "bboxes": [
+        {
+          "t": 24.462,
+          "x": 106,
+          "y": 229,
+          "w": 583,
+          "h": 490,
+          "opacity": 0.387,
+          "visible": true
+        },
+        {
+          "t": 24.645,
+          "x": 98,
+          "y": 212,
+          "w": 589,
+          "h": 494,
+          "opacity": 0.9262,
+          "visible": true
+        },
+        {
+          "t": 24.828,
+          "x": 96,
+          "y": 210,
+          "w": 590,
+          "h": 495,
+          "opacity": 0.9977,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#outro-copy animates y+opacity over 0.55s (power3.out). moves 19px up and 10px left. opacity 0.4→1.0. width 583→590px. ends at (96, 210) 590×495px."
+    },
+    {
+      "index": 61,
+      "selector": "#outro-result",
+      "targets": 1,
+      "props": [
+        "y",
+        "scale",
+        "opacity"
+      ],
+      "start": 24.58,
+      "end": 25.28,
+      "duration": 0.7,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 24.697,
+          "x": 815,
+          "y": 269,
+          "w": 944,
+          "h": 531,
+          "opacity": 0.5725,
+          "visible": true
+        },
+        {
+          "t": 24.93,
+          "x": 803,
+          "y": 248,
+          "w": 968,
+          "h": 544,
+          "opacity": 0.9655,
+          "visible": true
+        },
+        {
+          "t": 25.163,
+          "x": 802,
+          "y": 246,
+          "w": 970,
+          "h": 546,
+          "opacity": 0.9991,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#outro-result animates y+scale+opacity over 0.70s (expo.out). moves 23px up and 13px left. opacity 0.6→1.0. scales. width 944→970px. height 531→546px. ends at (802, 246) 970×546px."
+    },
+    {
+      "index": 62,
+      "selector": "#outro-hint",
+      "targets": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "start": 24.65,
+      "end": 25.15,
+      "duration": 0.5,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 24.733,
+          "x": 96,
+          "y": 879,
+          "w": 590,
+          "h": 88,
+          "opacity": 0.271,
+          "visible": true
+        },
+        {
+          "t": 24.9,
+          "x": 96,
+          "y": 869,
+          "w": 590,
+          "h": 88,
+          "opacity": 0.875,
+          "visible": true
+        },
+        {
+          "t": 25.067,
+          "x": 96,
+          "y": 867,
+          "w": 590,
+          "h": 88,
+          "opacity": 0.9954,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "#outro-hint animates y+opacity over 0.50s (power2.out). moves 12px up. opacity 0.3→1.0. ends at (96, 867) 590×88px."
+    }
+  ],
+  "choreography": "Timeline (28.0s, each char ≈ 0.47s):\n  0s                                                    28s\n  ┼───────────────────────────────────────────────────────────┤\n  ████████████████████████████████████████████████████████████  #progress scaleX\n  ██                                                            #intro-copy y+opacity\n  ███                                                           #intro-hero y+scale+rotation+opacity\n  ███                                                           #intro-hint y+opacity\n   ███                                                          #intro-wheel y+scale+rotation+opacity\n          ██                                                    #intro opacity+filter+scale\n          ██                                                    #convert opacity+filter+scale\n          ██                                                    #convert-copy y+opacity\n          ███                                                   #format-frame y+scale+opacity\n           ██                                                   #convert-hint y+opacity\n            ██                                                  #source-proof y+opacity\n            █                                                   #pointer-convert opacity\n            ███                                                 #pointer-convert x+y\n              █                                                 #tap-convert opacity+scale\n               █                                                #pointer-convert opacity\n               ██                                               #proof-arrow x+opacity\n                 ██                                             #jpg-proof x+rotation+opacity\n                       ██                                       #convert opacity+filter+scale\n                        ██                                      #crop opacity+filter+scale\n                        ██                                      #crop-copy y+opacity\n                        ██                                      #crop-tools scale+opacity\n                        ██                                      #crop-hint y+opacity\n                        ██                                      #pointer-crop opacity\n                         ██                                     #pointer-crop x+y\n                          ██                                    #tap-crop opacity+scale\n                          ██                                    #crop-tools opacity+scale\n                           █                                    #pointer-crop opacity\n                           ██                                   #crop-editor y+scale+opacity\n                             █                                  #pointer-crop opacity\n                             ███                                #pointer-crop x+y\n                               ██                               #pointer-crop x+y\n                                ██                              #pointer-crop x+y\n                                 ██                             #crop-after opacity\n                                  ██                            #pointer-crop x+y\n                                   ██                           #tap-crop opacity+scale\n                                    █                           #pointer-crop opacity\n                                      ██                        #crop opacity+filter+scale\n                                       ██                       #background opacity+filter+scale\n                                       ██                       #bg-copy y+opacity\n                                       ██                       #bg-tools scale+opacity\n                                       ██                       #pointer-bg opacity\n                                       ██                       #bg-hint y+opacity\n                                        ██                      #pointer-bg x+y\n                                         ██                     #tap-bg opacity+scale\n                                         ██                     #bg-tools opacity+scale\n                                         ██                     #bg-editor y+scale+opacity\n                                           █                    #pointer-bg opacity\n                                           ██                   #tap-bg opacity+scale\n                                            ██                  #pointer-bg x+y\n                                             ██                 #pointer-bg x+y\n                                              █                 #pointer-bg opacity\n                                              ██                #bg-after opacity\n                                                 █              #pointer-bg opacity\n                                                  █             #tap-bg opacity+scale\n                                                  █             #pointer-bg opacity\n                                                  ██            #bg-editor opacity+scale\n                                                   ██           #bg-result y+scale+opacity\n                                                     ██         #background opacity+filter+scale\n                                                      ██        #outro opacity+filter+scale\n                                                      ██        #outro-copy y+opacity\n                                                      ███       #outro-result y+scale+opacity\n                                                      ██        #outro-hint y+opacity",
+  "density": [
+    {
+      "t": 0,
+      "activeTweens": 4
+    },
+    {
+      "t": 0.5,
+      "activeTweens": 5
+    },
+    {
+      "t": 1,
+      "activeTweens": 3
+    },
+    {
+      "t": 1.5,
+      "activeTweens": 1
+    },
+    {
+      "t": 2,
+      "activeTweens": 1
+    },
+    {
+      "t": 2.5,
+      "activeTweens": 1
+    },
+    {
+      "t": 3,
+      "activeTweens": 1
+    },
+    {
+      "t": 3.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 4,
+      "activeTweens": 6
+    },
+    {
+      "t": 4.5,
+      "activeTweens": 7
+    },
+    {
+      "t": 5,
+      "activeTweens": 3
+    },
+    {
+      "t": 5.5,
+      "activeTweens": 3
+    },
+    {
+      "t": 6,
+      "activeTweens": 4
+    },
+    {
+      "t": 6.5,
+      "activeTweens": 2
+    },
+    {
+      "t": 7,
+      "activeTweens": 2
+    },
+    {
+      "t": 7.5,
+      "activeTweens": 2
+    },
+    {
+      "t": 8,
+      "activeTweens": 1
+    },
+    {
+      "t": 8.5,
+      "activeTweens": 1
+    },
+    {
+      "t": 9,
+      "activeTweens": 1
+    },
+    {
+      "t": 9.5,
+      "activeTweens": 1
+    },
+    {
+      "t": 10,
+      "activeTweens": 5
+    },
+    {
+      "t": 10.5,
+      "activeTweens": 8
+    },
+    {
+      "t": 11,
+      "activeTweens": 4
+    },
+    {
+      "t": 11.5,
+      "activeTweens": 5
+    },
+    {
+      "t": 12,
+      "activeTweens": 2
+    },
+    {
+      "t": 12.5,
+      "activeTweens": 2
+    },
+    {
+      "t": 13,
+      "activeTweens": 2
+    },
+    {
+      "t": 13.5,
+      "activeTweens": 3
+    },
+    {
+      "t": 14,
+      "activeTweens": 3
+    },
+    {
+      "t": 14.5,
+      "activeTweens": 3
+    },
+    {
+      "t": 15,
+      "activeTweens": 3
+    },
+    {
+      "t": 15.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 16,
+      "activeTweens": 3
+    },
+    {
+      "t": 16.5,
+      "activeTweens": 1
+    },
+    {
+      "t": 17,
+      "activeTweens": 5
+    },
+    {
+      "t": 17.5,
+      "activeTweens": 8
+    },
+    {
+      "t": 18,
+      "activeTweens": 6
+    },
+    {
+      "t": 18.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 19,
+      "activeTweens": 3
+    },
+    {
+      "t": 19.5,
+      "activeTweens": 3
+    },
+    {
+      "t": 20,
+      "activeTweens": 3
+    },
+    {
+      "t": 20.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 21,
+      "activeTweens": 2
+    },
+    {
+      "t": 21.5,
+      "activeTweens": 2
+    },
+    {
+      "t": 22,
+      "activeTweens": 3
+    },
+    {
+      "t": 22.5,
+      "activeTweens": 5
+    },
+    {
+      "t": 23,
+      "activeTweens": 3
+    },
+    {
+      "t": 23.5,
+      "activeTweens": 2
+    },
+    {
+      "t": 24,
+      "activeTweens": 4
+    },
+    {
+      "t": 24.5,
+      "activeTweens": 6
+    },
+    {
+      "t": 25,
+      "activeTweens": 3
+    },
+    {
+      "t": 25.5,
+      "activeTweens": 1
+    },
+    {
+      "t": 26,
+      "activeTweens": 1
+    },
+    {
+      "t": 26.5,
+      "activeTweens": 1
+    },
+    {
+      "t": 27,
+      "activeTweens": 1
+    },
+    {
+      "t": 27.5,
+      "activeTweens": 1
+    }
+  ],
+  "staggers": [],
+  "elements": {
+    "#progress": {
+      "firstAppears": 0,
+      "lastAnimates": 28,
+      "tweenCount": 1,
+      "props": [
+        "scaleX"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 0,
+        "y": 0,
+        "w": 1598,
+        "h": 7
+      }
+    },
+    "#intro-copy": {
+      "firstAppears": 0.17,
+      "lastAnimates": 0.72,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 96,
+        "y": 230,
+        "w": 590,
+        "h": 456
+      }
+    },
+    "#intro-hero": {
+      "firstAppears": 0.28,
+      "lastAnimates": 1.08,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "scale",
+        "rotation",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 802,
+        "y": 246,
+        "w": 970,
+        "h": 546
+      }
+    },
+    "#intro-hint": {
+      "firstAppears": 0.45,
+      "lastAnimates": 0.95,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 96,
+        "y": 868,
+        "w": 590,
+        "h": 86
+      }
+    },
+    "#intro-wheel": {
+      "firstAppears": 0.84,
+      "lastAnimates": 1.49,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "scale",
+        "rotation",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 1470,
+        "y": 602,
+        "w": 273,
+        "h": 273
+      }
+    },
+    "#intro": {
+      "firstAppears": 3.8,
+      "lastAnimates": 4.3,
+      "tweenCount": 1,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": -11,
+        "y": -6,
+        "w": 1942,
+        "h": 1093
+      }
+    },
+    "#convert": {
+      "firstAppears": 3.9,
+      "lastAnimates": 10.7,
+      "tweenCount": 2,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": -11,
+        "y": -6,
+        "w": 1942,
+        "h": 1093
+      }
+    },
+    "#convert-copy": {
+      "firstAppears": 3.97,
+      "lastAnimates": 4.52,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 96,
+        "y": 321,
+        "w": 590,
+        "h": 275
+      }
+    },
+    "#format-frame": {
+      "firstAppears": 4.12,
+      "lastAnimates": 4.77,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "scale",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 1037,
+        "y": 139,
+        "w": 500,
+        "h": 500
+      }
+    },
+    "#convert-hint": {
+      "firstAppears": 4.25,
+      "lastAnimates": 4.75,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 96,
+        "y": 868,
+        "w": 590,
+        "h": 86
+      }
+    },
+    "#source-proof": {
+      "firstAppears": 4.7,
+      "lastAnimates": 5.2,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 986,
+        "y": 664,
+        "w": 200,
+        "h": 235
+      }
+    },
+    "#pointer-convert": {
+      "firstAppears": 4.7,
+      "lastAnimates": 6.3,
+      "tweenCount": 3,
+      "props": [
+        "opacity",
+        "x",
+        "y"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": 1287,
+        "y": 227,
+        "w": 36,
+        "h": 48
+      }
+    },
+    "#tap-convert": {
+      "firstAppears": 5.65,
+      "lastAnimates": 6.05,
+      "tweenCount": 1,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": 1252,
+        "y": 193,
+        "w": 76,
+        "h": 76
+      }
+    },
+    "#proof-arrow": {
+      "firstAppears": 6.5,
+      "lastAnimates": 6.95,
+      "tweenCount": 1,
+      "props": [
+        "x",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 1258,
+        "y": 721,
+        "w": 58,
+        "h": 121
+      }
+    },
+    "#jpg-proof": {
+      "firstAppears": 7.1,
+      "lastAnimates": 7.8,
+      "tweenCount": 1,
+      "props": [
+        "x",
+        "rotation",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 1388,
+        "y": 664,
+        "w": 200,
+        "h": 235
+      }
+    },
+    "#crop": {
+      "firstAppears": 10.3,
+      "lastAnimates": 17.7,
+      "tweenCount": 2,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": -11,
+        "y": -6,
+        "w": 1942,
+        "h": 1093
+      }
+    },
+    "#crop-copy": {
+      "firstAppears": 10.37,
+      "lastAnimates": 10.92,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 96,
+        "y": 265,
+        "w": 590,
+        "h": 385
+      }
+    },
+    "#crop-tools": {
+      "firstAppears": 10.48,
+      "lastAnimates": 11.95,
+      "tweenCount": 2,
+      "props": [
+        "scale",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 759,
+        "y": 92,
+        "w": 1055,
+        "h": 855
+      }
+    },
+    "#crop-hint": {
+      "firstAppears": 10.65,
+      "lastAnimates": 11.15,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 96,
+        "y": 868,
+        "w": 590,
+        "h": 86
+      }
+    },
+    "#pointer-crop": {
+      "firstAppears": 10.7,
+      "lastAnimates": 16.13,
+      "tweenCount": 9,
+      "props": [
+        "opacity",
+        "x",
+        "y"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": 1522,
+        "y": 871,
+        "w": 36,
+        "h": 48
+      }
+    },
+    "#tap-crop": {
+      "firstAppears": 11.55,
+      "lastAnimates": 16.05,
+      "tweenCount": 2,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": 1487,
+        "y": 836,
+        "w": 76,
+        "h": 76
+      }
+    },
+    "#crop-editor": {
+      "firstAppears": 11.85,
+      "lastAnimates": 12.45,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "scale",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 996,
+        "y": 134,
+        "w": 582,
+        "h": 770
+      }
+    },
+    "#crop-after": {
+      "firstAppears": 14.85,
+      "lastAnimates": 15.33,
+      "tweenCount": 1,
+      "props": [
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 996,
+        "y": 134,
+        "w": 582,
+        "h": 770
+      }
+    },
+    "#background": {
+      "firstAppears": 17.3,
+      "lastAnimates": 24.7,
+      "tweenCount": 2,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": -11,
+        "y": -6,
+        "w": 1942,
+        "h": 1093
+      }
+    },
+    "#bg-copy": {
+      "firstAppears": 17.37,
+      "lastAnimates": 17.92,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 96,
+        "y": 265,
+        "w": 590,
+        "h": 385
+      }
+    },
+    "#bg-tools": {
+      "firstAppears": 17.48,
+      "lastAnimates": 18.68,
+      "tweenCount": 2,
+      "props": [
+        "scale",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 756,
+        "y": 89,
+        "w": 1061,
+        "h": 860
+      }
+    },
+    "#pointer-bg": {
+      "firstAppears": 17.6,
+      "lastAnimates": 22.76,
+      "tweenCount": 8,
+      "props": [
+        "opacity",
+        "x",
+        "y"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 1455,
+        "y": 877,
+        "w": 36,
+        "h": 48
+      }
+    },
+    "#bg-hint": {
+      "firstAppears": 17.65,
+      "lastAnimates": 18.15,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 96,
+        "y": 868,
+        "w": 590,
+        "h": 86
+      }
+    },
+    "#tap-bg": {
+      "firstAppears": 18.35,
+      "lastAnimates": 22.85,
+      "tweenCount": 3,
+      "props": [
+        "opacity",
+        "scale"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": 1420,
+        "y": 843,
+        "w": 76,
+        "h": 76
+      }
+    },
+    "#bg-editor": {
+      "firstAppears": 18.52,
+      "lastAnimates": 23.08,
+      "tweenCount": 2,
+      "props": [
+        "y",
+        "scale",
+        "opacity"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": 1019,
+        "y": 139,
+        "w": 535,
+        "h": 759
+      }
+    },
+    "#bg-after": {
+      "firstAppears": 20.8,
+      "lastAnimates": 21.28,
+      "tweenCount": 1,
+      "props": [
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 1012,
+        "y": 128,
+        "w": 551,
+        "h": 782
+      }
+    },
+    "#bg-result": {
+      "firstAppears": 22.92,
+      "lastAnimates": 23.57,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "scale",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 802,
+        "y": 246,
+        "w": 970,
+        "h": 546
+      }
+    },
+    "#outro": {
+      "firstAppears": 24.3,
+      "lastAnimates": 24.8,
+      "tweenCount": 1,
+      "props": [
+        "opacity",
+        "filter",
+        "scale"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 0,
+        "y": 0,
+        "w": 1919,
+        "h": 1080
+      }
+    },
+    "#outro-copy": {
+      "firstAppears": 24.37,
+      "lastAnimates": 24.92,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 96,
+        "y": 210,
+        "w": 590,
+        "h": 495
+      }
+    },
+    "#outro-result": {
+      "firstAppears": 24.58,
+      "lastAnimates": 25.28,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "scale",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 802,
+        "y": 246,
+        "w": 970,
+        "h": 546
+      }
+    },
+    "#outro-hint": {
+      "firstAppears": 24.65,
+      "lastAnimates": 25.15,
+      "tweenCount": 1,
+      "props": [
+        "y",
+        "opacity"
+      ],
+      "endsVisible": true,
+      "finalPosition": {
+        "x": 96,
+        "y": 867,
+        "w": 590,
+        "h": 88
+      }
+    }
+  },
+  "deadZones": [],
+  "snapshots": [
+    {
+      "t": 0,
+      "visibleElements": 10,
+      "animatingNow": [
+        "#progress"
+      ],
+      "elements": [
+        {
+          "id": "root",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "intro",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "convert-stage",
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 1
+        },
+        {
+          "id": "format-shot",
+          "x": 1062,
+          "y": 188,
+          "w": 450,
+          "h": 450,
+          "opacity": 1
+        },
+        {
+          "id": "crop-stage",
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 1
+        },
+        {
+          "id": "crop-tools-shot",
+          "x": 1057,
+          "y": 289,
+          "w": 460,
+          "h": 460,
+          "opacity": 1
+        },
+        {
+          "id": "crop-before",
+          "x": 1008,
+          "y": 171,
+          "w": 559,
+          "h": 739,
+          "opacity": 1
+        },
+        {
+          "id": "bg-stage",
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 1
+        },
+        {
+          "id": "bg-tools-shot",
+          "x": 1057,
+          "y": 289,
+          "w": 460,
+          "h": 460,
+          "opacity": 1
+        },
+        {
+          "id": "bg-before",
+          "x": 1023,
+          "y": 166,
+          "w": 529,
+          "h": 751,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "t": 7,
+      "visibleElements": 20,
+      "animatingNow": [
+        "#progress"
+      ],
+      "elements": [
+        {
+          "id": "root",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "intro-copy",
+          "x": 86,
+          "y": 226,
+          "w": 597,
+          "h": 462,
+          "opacity": 1
+        },
+        {
+          "id": "intro-hero",
+          "x": 800,
+          "y": 243,
+          "w": 982,
+          "h": 552,
+          "opacity": 1
+        },
+        {
+          "id": "intro-wheel",
+          "x": 1478,
+          "y": 605,
+          "w": 273,
+          "h": 273,
+          "opacity": 1
+        },
+        {
+          "id": "intro-hint",
+          "x": 86,
+          "y": 872,
+          "w": 597,
+          "h": 87,
+          "opacity": 1
+        },
+        {
+          "id": "convert",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "convert-copy",
+          "x": 96,
+          "y": 321,
+          "w": 590,
+          "h": 275,
+          "opacity": 1
+        },
+        {
+          "id": "convert-stage",
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 1
+        },
+        {
+          "id": "format-frame",
+          "x": 1037,
+          "y": 139,
+          "w": 500,
+          "h": 500,
+          "opacity": 1
+        },
+        {
+          "id": "format-shot",
+          "x": 1037,
+          "y": 139,
+          "w": 500,
+          "h": 500,
+          "opacity": 1
+        },
+        {
+          "id": "source-proof",
+          "x": 986,
+          "y": 664,
+          "w": 200,
+          "h": 235,
+          "opacity": 1
+        },
+        {
+          "id": "proof-arrow",
+          "x": 1258,
+          "y": 721,
+          "w": 58,
+          "h": 121,
+          "opacity": 1
+        },
+        {
+          "id": "convert-hint",
+          "x": 96,
+          "y": 868,
+          "w": 590,
+          "h": 86,
+          "opacity": 1
+        },
+        {
+          "id": "crop-stage",
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 1
+        },
+        {
+          "id": "crop-tools-shot",
+          "x": 1057,
+          "y": 289,
+          "w": 460,
+          "h": 460,
+          "opacity": 1
+        },
+        {
+          "id": "crop-before",
+          "x": 1008,
+          "y": 171,
+          "w": 559,
+          "h": 739,
+          "opacity": 1
+        },
+        {
+          "id": "bg-stage",
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 1
+        },
+        {
+          "id": "bg-tools-shot",
+          "x": 1057,
+          "y": 289,
+          "w": 460,
+          "h": 460,
+          "opacity": 1
+        },
+        {
+          "id": "bg-before",
+          "x": 1023,
+          "y": 166,
+          "w": 529,
+          "h": 751,
+          "opacity": 1
+        },
+        {
+          "id": "progress",
+          "x": 0,
+          "y": 0,
+          "w": 480,
+          "h": 7,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "t": 14,
+      "visibleElements": 25,
+      "animatingNow": [
+        "#progress",
+        "#pointer-crop"
+      ],
+      "elements": [
+        {
+          "id": "root",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "intro-copy",
+          "x": 86,
+          "y": 226,
+          "w": 597,
+          "h": 462,
+          "opacity": 1
+        },
+        {
+          "id": "intro-hero",
+          "x": 800,
+          "y": 243,
+          "w": 982,
+          "h": 552,
+          "opacity": 1
+        },
+        {
+          "id": "intro-wheel",
+          "x": 1478,
+          "y": 605,
+          "w": 273,
+          "h": 273,
+          "opacity": 1
+        },
+        {
+          "id": "intro-hint",
+          "x": 86,
+          "y": 872,
+          "w": 597,
+          "h": 87,
+          "opacity": 1
+        },
+        {
+          "id": "convert-copy",
+          "x": 86,
+          "y": 318,
+          "w": 597,
+          "h": 278,
+          "opacity": 1
+        },
+        {
+          "id": "convert-stage",
+          "x": 747,
+          "y": 79,
+          "w": 1087,
+          "h": 880,
+          "opacity": 1
+        },
+        {
+          "id": "format-frame",
+          "x": 1038,
+          "y": 134,
+          "w": 506,
+          "h": 506,
+          "opacity": 1
+        },
+        {
+          "id": "format-shot",
+          "x": 1038,
+          "y": 134,
+          "w": 506,
+          "h": 506,
+          "opacity": 1
+        },
+        {
+          "id": "source-proof",
+          "x": 986,
+          "y": 665,
+          "w": 202,
+          "h": 238,
+          "opacity": 1
+        },
+        {
+          "id": "proof-arrow",
+          "x": 1262,
+          "y": 723,
+          "w": 59,
+          "h": 122,
+          "opacity": 1
+        },
+        {
+          "id": "jpg-proof",
+          "x": 1393,
+          "y": 665,
+          "w": 202,
+          "h": 238,
+          "opacity": 1
+        },
+        {
+          "id": "convert-hint",
+          "x": 86,
+          "y": 872,
+          "w": 597,
+          "h": 87,
+          "opacity": 1
+        },
+        {
+          "id": "crop",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "crop-copy",
+          "x": 96,
+          "y": 265,
+          "w": 590,
+          "h": 385,
+          "opacity": 1
+        },
+        {
+          "id": "crop-stage",
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 1
+        },
+        {
+          "id": "crop-tools-shot",
+          "x": 1045,
+          "y": 277,
+          "w": 485,
+          "h": 485,
+          "opacity": 1
+        },
+        {
+          "id": "crop-editor",
+          "x": 996,
+          "y": 134,
+          "w": 582,
+          "h": 770,
+          "opacity": 1
+        },
+        {
+          "id": "crop-before",
+          "x": 996,
+          "y": 134,
+          "w": 582,
+          "h": 770,
+          "opacity": 1
+        },
+        {
+          "id": "pointer-crop",
+          "x": 1365,
+          "y": 593,
+          "w": 36,
+          "h": 48,
+          "opacity": 1
+        },
+        {
+          "id": "crop-hint",
+          "x": 96,
+          "y": 868,
+          "w": 590,
+          "h": 86,
+          "opacity": 1
+        },
+        {
+          "id": "bg-stage",
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 1
+        },
+        {
+          "id": "bg-tools-shot",
+          "x": 1057,
+          "y": 289,
+          "w": 460,
+          "h": 460,
+          "opacity": 1
+        },
+        {
+          "id": "bg-before",
+          "x": 1023,
+          "y": 166,
+          "w": 529,
+          "h": 751,
+          "opacity": 1
+        },
+        {
+          "id": "progress",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 7,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "t": 21,
+      "visibleElements": 29,
+      "animatingNow": [
+        "#progress",
+        "#bg-after"
+      ],
+      "elements": [
+        {
+          "id": "root",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "intro-copy",
+          "x": 86,
+          "y": 226,
+          "w": 597,
+          "h": 462,
+          "opacity": 1
+        },
+        {
+          "id": "intro-hero",
+          "x": 800,
+          "y": 243,
+          "w": 982,
+          "h": 552,
+          "opacity": 1
+        },
+        {
+          "id": "intro-wheel",
+          "x": 1478,
+          "y": 605,
+          "w": 273,
+          "h": 273,
+          "opacity": 1
+        },
+        {
+          "id": "intro-hint",
+          "x": 86,
+          "y": 872,
+          "w": 597,
+          "h": 87,
+          "opacity": 1
+        },
+        {
+          "id": "convert-copy",
+          "x": 86,
+          "y": 318,
+          "w": 597,
+          "h": 278,
+          "opacity": 1
+        },
+        {
+          "id": "convert-stage",
+          "x": 747,
+          "y": 79,
+          "w": 1087,
+          "h": 880,
+          "opacity": 1
+        },
+        {
+          "id": "format-frame",
+          "x": 1038,
+          "y": 134,
+          "w": 506,
+          "h": 506,
+          "opacity": 1
+        },
+        {
+          "id": "format-shot",
+          "x": 1038,
+          "y": 134,
+          "w": 506,
+          "h": 506,
+          "opacity": 1
+        },
+        {
+          "id": "source-proof",
+          "x": 986,
+          "y": 665,
+          "w": 202,
+          "h": 238,
+          "opacity": 1
+        },
+        {
+          "id": "proof-arrow",
+          "x": 1262,
+          "y": 723,
+          "w": 59,
+          "h": 122,
+          "opacity": 1
+        },
+        {
+          "id": "jpg-proof",
+          "x": 1393,
+          "y": 665,
+          "w": 202,
+          "h": 238,
+          "opacity": 1
+        },
+        {
+          "id": "convert-hint",
+          "x": 86,
+          "y": 872,
+          "w": 597,
+          "h": 87,
+          "opacity": 1
+        },
+        {
+          "id": "crop-copy",
+          "x": 86,
+          "y": 262,
+          "w": 597,
+          "h": 390,
+          "opacity": 1
+        },
+        {
+          "id": "crop-stage",
+          "x": 747,
+          "y": 79,
+          "w": 1087,
+          "h": 880,
+          "opacity": 1
+        },
+        {
+          "id": "crop-tools-shot",
+          "x": 1046,
+          "y": 273,
+          "w": 491,
+          "h": 491,
+          "opacity": 1
+        },
+        {
+          "id": "crop-editor",
+          "x": 996,
+          "y": 129,
+          "w": 589,
+          "h": 779,
+          "opacity": 1
+        },
+        {
+          "id": "crop-before",
+          "x": 996,
+          "y": 129,
+          "w": 589,
+          "h": 779,
+          "opacity": 1
+        },
+        {
+          "id": "crop-after",
+          "x": 996,
+          "y": 129,
+          "w": 589,
+          "h": 779,
+          "opacity": 1
+        },
+        {
+          "id": "crop-hint",
+          "x": 86,
+          "y": 872,
+          "w": 597,
+          "h": 87,
+          "opacity": 1
+        },
+        {
+          "id": "background",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "bg-copy",
+          "x": 96,
+          "y": 265,
+          "w": 590,
+          "h": 385,
+          "opacity": 1
+        },
+        {
+          "id": "bg-stage",
+          "x": 750,
+          "y": 84,
+          "w": 1074,
+          "h": 870,
+          "opacity": 1
+        },
+        {
+          "id": "bg-tools-shot",
+          "x": 1045,
+          "y": 277,
+          "w": 485,
+          "h": 485,
+          "opacity": 1
+        },
+        {
+          "id": "bg-editor",
+          "x": 1012,
+          "y": 128,
+          "w": 551,
+          "h": 782,
+          "opacity": 1
+        },
+        {
+          "id": "bg-before",
+          "x": 1012,
+          "y": 128,
+          "w": 551,
+          "h": 782,
+          "opacity": 1
+        },
+        {
+          "id": "bg-after",
+          "x": 1012,
+          "y": 128,
+          "w": 551,
+          "h": 782,
+          "opacity": 0.29
+        },
+        {
+          "id": "bg-hint",
+          "x": 96,
+          "y": 868,
+          "w": 590,
+          "h": 86,
+          "opacity": 1
+        },
+        {
+          "id": "progress",
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 7,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "t": 27.9,
+      "visibleElements": 32,
+      "animatingNow": [
+        "#progress"
+      ],
+      "elements": [
+        {
+          "id": "root",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "intro-copy",
+          "x": 86,
+          "y": 226,
+          "w": 597,
+          "h": 462,
+          "opacity": 1
+        },
+        {
+          "id": "intro-hero",
+          "x": 800,
+          "y": 243,
+          "w": 982,
+          "h": 552,
+          "opacity": 1
+        },
+        {
+          "id": "intro-wheel",
+          "x": 1478,
+          "y": 605,
+          "w": 273,
+          "h": 273,
+          "opacity": 1
+        },
+        {
+          "id": "intro-hint",
+          "x": 86,
+          "y": 872,
+          "w": 597,
+          "h": 87,
+          "opacity": 1
+        },
+        {
+          "id": "convert-copy",
+          "x": 86,
+          "y": 318,
+          "w": 597,
+          "h": 278,
+          "opacity": 1
+        },
+        {
+          "id": "convert-stage",
+          "x": 747,
+          "y": 79,
+          "w": 1087,
+          "h": 880,
+          "opacity": 1
+        },
+        {
+          "id": "format-frame",
+          "x": 1038,
+          "y": 134,
+          "w": 506,
+          "h": 506,
+          "opacity": 1
+        },
+        {
+          "id": "format-shot",
+          "x": 1038,
+          "y": 134,
+          "w": 506,
+          "h": 506,
+          "opacity": 1
+        },
+        {
+          "id": "source-proof",
+          "x": 986,
+          "y": 665,
+          "w": 202,
+          "h": 238,
+          "opacity": 1
+        },
+        {
+          "id": "proof-arrow",
+          "x": 1262,
+          "y": 723,
+          "w": 59,
+          "h": 122,
+          "opacity": 1
+        },
+        {
+          "id": "jpg-proof",
+          "x": 1393,
+          "y": 665,
+          "w": 202,
+          "h": 238,
+          "opacity": 1
+        },
+        {
+          "id": "convert-hint",
+          "x": 86,
+          "y": 872,
+          "w": 597,
+          "h": 87,
+          "opacity": 1
+        },
+        {
+          "id": "crop-copy",
+          "x": 86,
+          "y": 262,
+          "w": 597,
+          "h": 390,
+          "opacity": 1
+        },
+        {
+          "id": "crop-stage",
+          "x": 747,
+          "y": 79,
+          "w": 1087,
+          "h": 880,
+          "opacity": 1
+        },
+        {
+          "id": "crop-tools-shot",
+          "x": 1046,
+          "y": 273,
+          "w": 491,
+          "h": 491,
+          "opacity": 1
+        },
+        {
+          "id": "crop-editor",
+          "x": 996,
+          "y": 129,
+          "w": 589,
+          "h": 779,
+          "opacity": 1
+        },
+        {
+          "id": "crop-before",
+          "x": 996,
+          "y": 129,
+          "w": 589,
+          "h": 779,
+          "opacity": 1
+        },
+        {
+          "id": "crop-after",
+          "x": 996,
+          "y": 129,
+          "w": 589,
+          "h": 779,
+          "opacity": 1
+        },
+        {
+          "id": "crop-hint",
+          "x": 86,
+          "y": 872,
+          "w": 597,
+          "h": 87,
+          "opacity": 1
+        },
+        {
+          "id": "bg-copy",
+          "x": 86,
+          "y": 262,
+          "w": 597,
+          "h": 390,
+          "opacity": 1
+        },
+        {
+          "id": "bg-stage",
+          "x": 747,
+          "y": 79,
+          "w": 1087,
+          "h": 880,
+          "opacity": 1
+        },
+        {
+          "id": "bg-tools-shot",
+          "x": 1046,
+          "y": 273,
+          "w": 491,
+          "h": 491,
+          "opacity": 1
+        },
+        {
+          "id": "bg-before",
+          "x": 1020,
+          "y": 135,
+          "w": 541,
+          "h": 768,
+          "opacity": 1
+        },
+        {
+          "id": "bg-after",
+          "x": 1020,
+          "y": 135,
+          "w": 541,
+          "h": 768,
+          "opacity": 1
+        },
+        {
+          "id": "bg-result",
+          "x": 800,
+          "y": 243,
+          "w": 982,
+          "h": 552,
+          "opacity": 1
+        },
+        {
+          "id": "bg-hint",
+          "x": 86,
+          "y": 872,
+          "w": 597,
+          "h": 87,
+          "opacity": 1
+        },
+        {
+          "id": "outro",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "opacity": 1
+        },
+        {
+          "id": "outro-copy",
+          "x": 96,
+          "y": 210,
+          "w": 590,
+          "h": 495,
+          "opacity": 1
+        },
+        {
+          "id": "outro-result",
+          "x": 802,
+          "y": 246,
+          "w": 970,
+          "h": 546,
+          "opacity": 1
+        },
+        {
+          "id": "outro-hint",
+          "x": 96,
+          "y": 866,
+          "w": 590,
+          "h": 88,
+          "opacity": 1
+        },
+        {
+          "id": "progress",
+          "x": 0,
+          "y": 0,
+          "w": 1913,
+          "h": 7,
+          "opacity": 1
+        }
+      ]
+    }
+  ]
+}

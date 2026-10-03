@@ -1,0 +1,753 @@
+{
+  "date": "2026-10-03",
+  "relativeDocumentationLinksChecked": 146,
+  "brokenLinks": [],
+  "privateWorkspaceTextFindings": 0,
+  "referenceVideoIncluded": false,
+  "nativeSourceDiffAgainstTestedCommitEmpty": true,
+  "assetsOver90MB": [],
+  "repositoryVisibilityBeforeUpload": "PRIVATE",
+  "publicReleaseAuthorized": false,
+  "links": [
+    {
+      "file": "README.md",
+      "target": "README.md",
+      "resolved": "README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "README.en.md",
+      "resolved": "README.en.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/GUIDE.zh-CN.md",
+      "resolved": "docs/GUIDE.zh-CN.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/GUIDE.en.md",
+      "resolved": "docs/GUIDE.en.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/media/citrus-demo-preview.gif",
+      "resolved": "docs/media/citrus-demo-preview.gif"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/media/citrus-demo-horizontal-zh-en.mp4",
+      "resolved": "docs/media/citrus-demo-horizontal-zh-en.mp4"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/media/citrus-demo-horizontal-zh-en.mp4",
+      "resolved": "docs/media/citrus-demo-horizontal-zh-en.mp4"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/media/citrus-demo-vertical-zh-en.mp4",
+      "resolved": "docs/media/citrus-demo-vertical-zh-en.mp4"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/MEDIA.md",
+      "resolved": "docs/MEDIA.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/ACCEPTANCE.md",
+      "resolved": "docs/ACCEPTANCE.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/demo-files/Citrus%20Demo.pdf",
+      "resolved": "docs/demo-files/Citrus Demo.pdf"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/GUIDE.zh-CN.md",
+      "resolved": "docs/GUIDE.zh-CN.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/ACCEPTANCE.md#需要在真实桌面复验的步骤",
+      "resolved": "docs/ACCEPTANCE.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/TESTING.md",
+      "resolved": "docs/TESTING.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/local-verification.json",
+      "resolved": "docs/evidence/local-verification.json"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/clean-build-summary.json",
+      "resolved": "docs/evidence/clean-build-summary.json"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/github-ci-verification.json",
+      "resolved": "docs/evidence/github-ci-verification.json"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/MEDIA_VALIDATION.md",
+      "resolved": "docs/MEDIA_VALIDATION.md"
+    },
+    {
+      "file": "README.md",
+      "target": "LICENSE",
+      "resolved": "LICENSE"
+    },
+    {
+      "file": "README.md",
+      "target": "THIRD_PARTY_NOTICES.md",
+      "resolved": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "file": "README.en.md",
+      "target": "README.md",
+      "resolved": "README.md"
+    },
+    {
+      "file": "README.en.md",
+      "target": "README.en.md",
+      "resolved": "README.en.md"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/GUIDE.zh-CN.md",
+      "resolved": "docs/GUIDE.zh-CN.md"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/GUIDE.en.md",
+      "resolved": "docs/GUIDE.en.md"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/media/citrus-demo-preview.gif",
+      "resolved": "docs/media/citrus-demo-preview.gif"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/media/citrus-demo-horizontal-zh-en.mp4",
+      "resolved": "docs/media/citrus-demo-horizontal-zh-en.mp4"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/media/citrus-demo-horizontal-zh-en.mp4",
+      "resolved": "docs/media/citrus-demo-horizontal-zh-en.mp4"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/media/citrus-demo-vertical-zh-en.mp4",
+      "resolved": "docs/media/citrus-demo-vertical-zh-en.mp4"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/MEDIA.md",
+      "resolved": "docs/MEDIA.md"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/ACCEPTANCE.en.md",
+      "resolved": "docs/ACCEPTANCE.en.md"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/demo-files/Citrus%20Demo.pdf",
+      "resolved": "docs/demo-files/Citrus Demo.pdf"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/GUIDE.en.md",
+      "resolved": "docs/GUIDE.en.md"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/ACCEPTANCE.en.md#physical-desktop-retest",
+      "resolved": "docs/ACCEPTANCE.en.md"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/TESTING.en.md",
+      "resolved": "docs/TESTING.en.md"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/evidence/local-verification.json",
+      "resolved": "docs/evidence/local-verification.json"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/evidence/clean-build-summary.json",
+      "resolved": "docs/evidence/clean-build-summary.json"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/evidence/github-ci-verification.json",
+      "resolved": "docs/evidence/github-ci-verification.json"
+    },
+    {
+      "file": "README.en.md",
+      "target": "docs/MEDIA_VALIDATION.md",
+      "resolved": "docs/MEDIA_VALIDATION.md"
+    },
+    {
+      "file": "README.en.md",
+      "target": "LICENSE",
+      "resolved": "LICENSE"
+    },
+    {
+      "file": "README.en.md",
+      "target": "THIRD_PARTY_NOTICES.md",
+      "resolved": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "target": "licenses/Swift-WebP.txt",
+      "resolved": "licenses/Swift-WebP.txt"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "target": "licenses/libwebp-Xcode.txt",
+      "resolved": "licenses/libwebp-Xcode.txt"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "target": "licenses/libwebp.txt",
+      "resolved": "licenses/libwebp.txt"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "target": "licenses/libwebp-PATENTS.txt",
+      "resolved": "licenses/libwebp-PATENTS.txt"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "target": "licenses/Drag.on-MIT.txt",
+      "resolved": "licenses/Drag.on-MIT.txt"
+    },
+    {
+      "file": "docs/ACCEPTANCE.en.md",
+      "target": "ACCEPTANCE.md",
+      "resolved": "docs/ACCEPTANCE.md"
+    },
+    {
+      "file": "docs/ACCEPTANCE.en.md",
+      "target": "../README.en.md",
+      "resolved": "README.en.md"
+    },
+    {
+      "file": "docs/ACCEPTANCE.en.md",
+      "target": "MEDIA_VALIDATION.md",
+      "resolved": "docs/MEDIA_VALIDATION.md"
+    },
+    {
+      "file": "docs/ACCEPTANCE.md",
+      "target": "GUIDE.zh-CN.md",
+      "resolved": "docs/GUIDE.zh-CN.md"
+    },
+    {
+      "file": "docs/ACCEPTANCE.md",
+      "target": "MEDIA_VALIDATION.md",
+      "resolved": "docs/MEDIA_VALIDATION.md"
+    },
+    {
+      "file": "docs/ACCEPTANCE.md",
+      "target": "ACCEPTANCE.en.md",
+      "resolved": "docs/ACCEPTANCE.en.md"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "../README.en.md",
+      "resolved": "README.en.md"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "GUIDE.zh-CN.md",
+      "resolved": "docs/GUIDE.zh-CN.md"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "media/citrus-demo-horizontal-zh-en.mp4",
+      "resolved": "docs/media/citrus-demo-horizontal-zh-en.mp4"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "ACCEPTANCE.en.md",
+      "resolved": "docs/ACCEPTANCE.en.md"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "demo-files/Citrus%20Demo.pdf",
+      "resolved": "docs/demo-files/Citrus Demo.pdf"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "demo-files/Citrus%20Demo.jpg",
+      "resolved": "docs/demo-files/Citrus Demo.jpg"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "demo-files/Citrus%20Demo%20Cropped%20%282%29.jpg",
+      "resolved": "docs/demo-files/Citrus Demo Cropped (2).jpg"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "demo-files/Citrus%20Demo%20Cropped%20%282%29%20BG.jpg",
+      "resolved": "docs/demo-files/Citrus Demo Cropped (2) BG.jpg"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "demo-files/Citrus%20Demo%20Cropped%20%282%29%20BG.jpg",
+      "resolved": "docs/demo-files/Citrus Demo Cropped (2) BG.jpg"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "ACCEPTANCE.en.md#physical-desktop-retest",
+      "resolved": "docs/ACCEPTANCE.en.md"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "TESTING.en.md",
+      "resolved": "docs/TESTING.en.md"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "ACCEPTANCE.en.md",
+      "resolved": "docs/ACCEPTANCE.en.md"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "MEDIA.md",
+      "resolved": "docs/MEDIA.md"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "images/01-welcome.png",
+      "resolved": "docs/images/01-welcome.png"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "images/02-format-wheel.png",
+      "resolved": "docs/images/02-format-wheel.png"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "images/04-tools-wheel.png",
+      "resolved": "docs/images/04-tools-wheel.png"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "images/05-crop-before.png",
+      "resolved": "docs/images/05-crop-before.png"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "images/07-crop-final.png",
+      "resolved": "docs/images/07-crop-final.png"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "images/08-background-before.png",
+      "resolved": "docs/images/08-background-before.png"
+    },
+    {
+      "file": "docs/GUIDE.en.md",
+      "target": "images/09-background-final.png",
+      "resolved": "docs/images/09-background-final.png"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "../README.md",
+      "resolved": "README.md"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "GUIDE.en.md",
+      "resolved": "docs/GUIDE.en.md"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "media/citrus-demo-horizontal-zh-en.mp4",
+      "resolved": "docs/media/citrus-demo-horizontal-zh-en.mp4"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "ACCEPTANCE.md",
+      "resolved": "docs/ACCEPTANCE.md"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "demo-files/Citrus%20Demo.pdf",
+      "resolved": "docs/demo-files/Citrus Demo.pdf"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "demo-files/Citrus%20Demo.jpg",
+      "resolved": "docs/demo-files/Citrus Demo.jpg"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "demo-files/Citrus%20Demo%20Cropped%20%282%29.jpg",
+      "resolved": "docs/demo-files/Citrus Demo Cropped (2).jpg"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "demo-files/Citrus%20Demo%20Cropped%20%282%29%20BG.jpg",
+      "resolved": "docs/demo-files/Citrus Demo Cropped (2) BG.jpg"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "demo-files/Citrus%20Demo%20Cropped%20%282%29%20BG.jpg",
+      "resolved": "docs/demo-files/Citrus Demo Cropped (2) BG.jpg"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "ACCEPTANCE.md#需要在真实桌面复验的步骤",
+      "resolved": "docs/ACCEPTANCE.md"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "TESTING.md",
+      "resolved": "docs/TESTING.md"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "ACCEPTANCE.md",
+      "resolved": "docs/ACCEPTANCE.md"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "MEDIA.md",
+      "resolved": "docs/MEDIA.md"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "images/01-welcome.png",
+      "resolved": "docs/images/01-welcome.png"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "images/02-format-wheel.png",
+      "resolved": "docs/images/02-format-wheel.png"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "images/04-tools-wheel.png",
+      "resolved": "docs/images/04-tools-wheel.png"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "images/05-crop-before.png",
+      "resolved": "docs/images/05-crop-before.png"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "images/07-crop-final.png",
+      "resolved": "docs/images/07-crop-final.png"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "images/08-background-before.png",
+      "resolved": "docs/images/08-background-before.png"
+    },
+    {
+      "file": "docs/GUIDE.zh-CN.md",
+      "target": "images/09-background-final.png",
+      "resolved": "docs/images/09-background-final.png"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "../README.md",
+      "resolved": "README.md"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "../README.en.md",
+      "resolved": "README.en.md"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "MEDIA_VALIDATION.md",
+      "resolved": "docs/MEDIA_VALIDATION.md"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "media/citrus-demo-vertical-zh-en.mp4",
+      "resolved": "docs/media/citrus-demo-vertical-zh-en.mp4"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "media/cover-xiaohongshu-1x1.png",
+      "resolved": "docs/media/cover-xiaohongshu-1x1.png"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "media/cover-douyin-9x16.png",
+      "resolved": "docs/media/cover-douyin-9x16.png"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "media/citrus-demo-horizontal-zh-en.mp4",
+      "resolved": "docs/media/citrus-demo-horizontal-zh-en.mp4"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "media/citrus-demo-preview.gif",
+      "resolved": "docs/media/citrus-demo-preview.gif"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "media/poster-github-16x9.png",
+      "resolved": "docs/media/poster-github-16x9.png"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "demo-source/README.md",
+      "resolved": "docs/demo-source/README.md"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "images/",
+      "resolved": "docs/images"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "demo-files/",
+      "resolved": "docs/demo-files"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "MEDIA_VALIDATION.md",
+      "resolved": "docs/MEDIA_VALIDATION.md"
+    },
+    {
+      "file": "docs/MEDIA.md",
+      "target": "MEDIA_VALIDATION.md",
+      "resolved": "docs/MEDIA_VALIDATION.md"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "../README.md",
+      "resolved": "README.md"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "../README.en.md",
+      "resolved": "README.en.md"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "MEDIA.md",
+      "resolved": "docs/MEDIA.md"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/manifest.json",
+      "resolved": "docs/evidence/media/manifest.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/vertical-animation-map.json",
+      "resolved": "docs/evidence/media/vertical-animation-map.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/horizontal-animation-map.json",
+      "resolved": "docs/evidence/media/horizontal-animation-map.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/cover-animation-map.json",
+      "resolved": "docs/evidence/media/cover-animation-map.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/source-pixels.json",
+      "resolved": "docs/evidence/media/source-pixels.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/vertical-frame-provenance.json",
+      "resolved": "docs/evidence/media/vertical-frame-provenance.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/horizontal-frame-provenance.json",
+      "resolved": "docs/evidence/media/horizontal-frame-provenance.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/native-output-events.json",
+      "resolved": "docs/evidence/media/native-output-events.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/manifest.json",
+      "resolved": "docs/evidence/media/manifest.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/vertical-check.json",
+      "resolved": "docs/evidence/media/vertical-check.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/horizontal-check.json",
+      "resolved": "docs/evidence/media/horizontal-check.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/cover-check.json",
+      "resolved": "docs/evidence/media/cover-check.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/manifest.json",
+      "resolved": "docs/evidence/media/manifest.json"
+    },
+    {
+      "file": "docs/MEDIA_VALIDATION.md",
+      "target": "evidence/media/publication-check.json",
+      "resolved": "docs/evidence/media/publication-check.json"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "TESTING.md",
+      "resolved": "docs/TESTING.md"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "../README.en.md",
+      "resolved": "README.en.md"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "ACCEPTANCE.en.md",
+      "resolved": "docs/ACCEPTANCE.en.md"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "evidence/local-verification.json",
+      "resolved": "docs/evidence/local-verification.json"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "evidence/test-cases.json",
+      "resolved": "docs/evidence/test-cases.json"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "evidence/first-regression-run.json",
+      "resolved": "docs/evidence/first-regression-run.json"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "evidence/failure-receipt-probe.json",
+      "resolved": "docs/evidence/failure-receipt-probe.json"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "evidence/clean-build-summary.json",
+      "resolved": "docs/evidence/clean-build-summary.json"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "evidence/github-ci-verification.json",
+      "resolved": "docs/evidence/github-ci-verification.json"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "evidence/github-ci-summary.json",
+      "resolved": "docs/evidence/github-ci-summary.json"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "GUIDE.en.md",
+      "resolved": "docs/GUIDE.en.md"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "MEDIA_VALIDATION.md",
+      "resolved": "docs/MEDIA_VALIDATION.md"
+    },
+    {
+      "file": "docs/TESTING.en.md",
+      "target": "ACCEPTANCE.en.md",
+      "resolved": "docs/ACCEPTANCE.en.md"
+    },
+    {
+      "file": "docs/TESTING.md",
+      "target": "TESTING.en.md",
+      "resolved": "docs/TESTING.en.md"
+    },
+    {
+      "file": "docs/TESTING.md",
+      "target": "../README.md",
+      "resolved": "README.md"
+    },
+    {
+      "file": "docs/TESTING.md",
+      "target": "evidence/local-verification.json",
+      "resolved": "docs/evidence/local-verification.json"
+    },
+    {
+      "file": "docs/TESTING.md",
+      "target": "evidence/clean-build-summary.json",
+      "resolved": "docs/evidence/clean-build-summary.json"
+    },
+    {
+      "file": "docs/TESTING.md",
+      "target": "GUIDE.zh-CN.md",
+      "resolved": "docs/GUIDE.zh-CN.md"
+    },
+    {
+      "file": "docs/TESTING.md",
+      "target": "MEDIA_VALIDATION.md",
+      "resolved": "docs/MEDIA_VALIDATION.md"
+    },
+    {
+      "file": "docs/TESTING.md",
+      "target": "ACCEPTANCE.md",
+      "resolved": "docs/ACCEPTANCE.md"
+    },
+    {
+      "file": "docs/demo-source/README.md",
+      "target": "../MEDIA.md",
+      "resolved": "docs/MEDIA.md"
+    },
+    {
+      "file": "docs/demo-source/README.md",
+      "target": "../MEDIA_VALIDATION.md",
+      "resolved": "docs/MEDIA_VALIDATION.md"
+    },
+    {
+      "file": "docs/demo-source/README.md",
+      "target": "../../THIRD_PARTY_NOTICES.md",
+      "resolved": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "file": "docs/demo-source/README.md",
+      "target": "../../THIRD_PARTY_NOTICES.md",
+      "resolved": "THIRD_PARTY_NOTICES.md"
+    }
+  ],
+  "vendoredGSAPOriginalBytesPreserved": true,
+  "vendorWhitespaceFindingsReviewed": [
+    "Original GSAP header trailing whitespace",
+    "Original GSAP final blank line"
+  ],
+  "editableHTMLMatchesCheckedCompositions": {
+    "index.html": true,
+    "horizontal.html": true,
+    "cover-square.html": true
+  }
+}

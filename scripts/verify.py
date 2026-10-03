@@ -12,7 +12,7 @@ main_run = subprocess.run([str(binary), '--verify', str(output / 'functional')],
 (output / 'functional.log').write_text(main_run.stdout + main_run.stderr)
 result = json.loads((output / 'functional/latest.json').read_text())
 assert main_run.returncode == 0, result.get('runner_error')
-assert result['status'] == 'PASS' and result['passed'] == 92 and result['failed'] == 0 and result['skipped'] == 0, result
+assert result['status'] == 'PASS' and result['passed'] == 108 and result['failed'] == 0 and result['skipped'] == 0, result
 probe = subprocess.run([str(binary), '--verify', str(output / 'failure-probe'), '--failure-probe'], capture_output=True, text=True)
 (output / 'failure-probe.log').write_text(probe.stdout + probe.stderr)
 failure = json.loads((output / 'failure-probe/latest.json').read_text())

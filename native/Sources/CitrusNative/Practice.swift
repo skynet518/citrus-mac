@@ -6,7 +6,7 @@ import Observation
 final class PracticeState {
     var files:[URL]
     let radial = RadialState()
-    init(files:[URL]) { self.files = files; radial.urls = Array(files.prefix(1)); radial.pinned = true; radial.appeared = true }
+    init(files:[URL]) { self.files = files; radial.urls = Array(files.prefix(1)); radial.pinned = true; radial.appeared = true; radial.entry = .practice }
 }
 
 @MainActor
@@ -19,7 +19,7 @@ final class PracticeFile:NSView,NSDraggingSource {
         let icon = NSWorkspace.shared.icon(forFile:url.path)
         icon.draw(in:CGRect(x:(bounds.width-58)/2,y:6,width:58,height:58),from:.zero,operation:.sourceOver,fraction:1,respectFlipped:true,hints:nil)
         let paragraph = NSMutableParagraphStyle(); paragraph.alignment = .center; paragraph.lineBreakMode = .byTruncatingMiddle
-        (url.lastPathComponent as NSString).draw(in:CGRect(x:4,y:72,width:bounds.width-8,height:34),withAttributes:[.font:NSFont.systemFont(ofSize:11,weight:.medium),.foregroundColor:NSColor.white,.paragraphStyle:paragraph])
+        (url.lastPathComponent as NSString).draw(in:CGRect(x:4,y:72,width:bounds.width-8,height:34),withAttributes:[.font:NSFont.systemFont(ofSize:12,weight:.medium),.foregroundColor:NSColor.labelColor,.paragraphStyle:paragraph])
     }
     override func mouseDown(with event:NSEvent) {}
     override func mouseDragged(with event:NSEvent) {
@@ -31,6 +31,10 @@ final class PracticeFile:NSView,NSDraggingSource {
     }
     func draggingSession(_ session:NSDraggingSession,sourceOperationMaskFor context:NSDraggingContext) -> NSDragOperation { .copy }
     func ignoreModifierKeys(for session:NSDraggingSession) -> Bool { true }
+    func draggingSession(_ session:NSDraggingSession,endedAt screenPoint:NSPoint,operation:NSDragOperation) {
+        let desktop = NSApp.windows.first { $0.title == "橘子桌面按钮" }
+        EventReceipt.record("practice_drag_ended",["x":screenPoint.x,"y":screenPoint.y,"operation":operation.rawValue,"desktop_visible":desktop?.isVisible ?? false,"desktop_active_space":desktop?.isOnActiveSpace ?? false])
+    }
 }
 
 struct PracticeFileSurface:NSViewRepresentable {
@@ -45,8 +49,9 @@ struct PracticeFileSurface:NSViewRepresentable {
 struct PracticeRadial:NSViewRepresentable {
     let state:RadialState
     let onDrop:([URL],RadialAction) -> Void
-    func makeNSView(context:Context) -> RadialDropView { let view = RadialDropView(state:state); view.onPerform = onDrop; return view }
-    func updateNSView(_ view:RadialDropView,context:Context) { view.onPerform = onDrop }
+    let onCancel:() -> Void
+    func makeNSView(context:Context) -> RadialDropView { let view = RadialDropView(state:state); view.onPerform = onDrop; view.onCancel = onCancel; return view }
+    func updateNSView(_ view:RadialDropView,context:Context) { view.onPerform = onDrop; view.onCancel = onCancel }
 }
 
 struct PracticeView:View {
@@ -55,12 +60,13 @@ struct PracticeView:View {
     let onDrop:([URL],RadialAction) -> Void
     var body:some View {
         VStack(spacing:0) {
-            EditorHeader(title:"交互演练",onClose:onClose).background(WarmGlass())
+            EditorHeader(title:"交互演练",onClose:onClose)
+            Divider().opacity(0.5)
             HStack {
                 Text("把左侧文件拖到圆形菜单，松手执行。") .font(.system(size:12))
                 Spacer()
                 Picker("菜单",selection:Binding(get:{ state.radial.latchedTools },set:{ state.radial.latchedTools = $0; state.radial.tools = $0; state.radial.selected = nil })) { Text("格式").tag(false); Text("工具").tag(true) }.pickerStyle(.segmented).frame(width:140)
-            }.padding(16).foregroundStyle(CitrusTheme.ink).background(WarmGlass())
+            }.padding(16).foregroundStyle(CitrusTheme.ink)
             HStack(spacing:36) {
                 ScrollView {
                     VStack(spacing:14) {
@@ -69,14 +75,15 @@ struct PracticeView:View {
                         }
                     }.padding(.vertical,30)
                 }.frame(width:210,height:410)
-                PracticeRadial(state:state.radial,onDrop:onDrop).frame(width:340,height:340)
-            }.padding(.horizontal,32).background(LinearGradient(colors:[Color(red:1,green:0.20,blue:0.27),Color(red:1,green:0.67,blue:0.12),Color(red:0.35,green:0.36,blue:0.8)],startPoint:.topLeading,endPoint:.bottomTrailing))
+                PracticeRadial(state:state.radial,onDrop:onDrop,onCancel:onClose).frame(width:340,height:340)
+            }.padding(.horizontal,32).background(CitrusTheme.surface.opacity(0.2))
+            Divider().opacity(0.5)
             HStack {
-                Text("在 Finder 或桌面使用时，按住 Shift 拖动；加按 Option 切换工具。") .font(.system(size:11)).foregroundStyle(.secondary)
+                Text("也可把文件拖到桌面小橘子，放下后点击操作。") .font(.system(size:12)).foregroundStyle(.secondary)
                 Spacer()
                 Button("在 Finder 中打开") { NSWorkspace.shared.activateFileViewerSelecting(Array(state.files.prefix(1))) }.buttonStyle(.borderless).font(.caption)
-            }.padding(16).background(WarmGlass())
-        }.frame(width:680).tint(CitrusTheme.orange).preferredColorScheme(.light)
+            }.padding(16)
+        }.frame(width:680).foregroundStyle(CitrusTheme.ink).tint(CitrusTheme.orange).background(WarmGlass())
     }
 }
 

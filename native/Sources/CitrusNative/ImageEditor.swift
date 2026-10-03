@@ -42,7 +42,10 @@ final class ImageEditorModel {
         if tool == .redact { paintKind = .redact; paintColor = .black }
         updateCropFields(); refreshPreview()
     }
-    func updateCropFields() { widthText = String(Int((cropRect.width*CGFloat(image.width)).rounded())); heightText = String(Int((cropRect.height*CGFloat(image.height)).rounded())) }
+    func updateCropFields() {
+        let pixels = ImageRendering.cropBounds(image,normalized:cropRect)
+        widthText = String(Int(pixels.width)); heightText = String(Int(pixels.height))
+    }
     func applyDimensions() {
         guard let width = Double(widthText), let height = Double(heightText), width > 0,height > 0 else { return }
         var w = min(1,width/Double(image.width)), h = min(1,height/Double(image.height))
@@ -104,8 +107,8 @@ struct EditorHeader:View {
     let onClose:() -> Void
     var body:some View {
         HStack {
-            Button(action:onClose) { Image(systemName:"xmark").font(.system(size:10,weight:.bold)).frame(width:22,height:22).background(.black.opacity(0.05),in:Circle()) }.buttonStyle(.plain).accessibilityLabel("关闭")
-            Spacer(); Text(title).font(.system(size:15,weight:.semibold)); Spacer(); Color.clear.frame(width:22,height:22)
+            Button(action:onClose) { Image(systemName:"xmark").font(.system(size:11,weight:.medium)).frame(width:28,height:28).background(CitrusTheme.surface,in:Circle()) }.buttonStyle(.plain).accessibilityLabel("关闭")
+            Spacer(); Text(title).font(.system(size:15,weight:.semibold)); Spacer(); Color.clear.frame(width:28,height:28)
         }.padding(.horizontal,16).padding(.vertical,14)
     }
 }
@@ -210,7 +213,7 @@ struct ImageEditorView:View {
                 VStack(alignment:.leading,spacing:6) {
                     ForEach(metadataRows(),id:\.self) { line in Text(line).font(.system(size:11,design:.monospaced)).frame(maxWidth:.infinity,alignment:.leading).textSelection(.enabled) }
                 }
-            }.frame(height:260).padding(10).background(.white.opacity(0.25),in:RoundedRectangle(cornerRadius:12))
+            }.frame(height:260).padding(10).background(CitrusTheme.surface,in:RoundedRectangle(cornerRadius:12))
             Toggle("Remove existing metadata",isOn:$model.removeAllMetadata)
             Toggle("Remove location",isOn:$model.removeLocation)
             TextField("Author",text:$model.author).textFieldStyle(.roundedBorder)
@@ -248,9 +251,9 @@ struct ValueSlider:View {
     let unit:String
     var body:some View {
         HStack(spacing:10) {
-            Text(title).font(.system(size:11)).frame(width:76,alignment:.leading)
+            Text(title).font(.system(size:12)).frame(width:76,alignment:.leading)
             Slider(value:$value,in:range).accessibilityLabel(title)
-            Text(range.upperBound > 5 ? "\(Int(value)) \(unit)" : String(format:"%.2f %@",value,unit)).font(.system(size:10,design:.monospaced)).frame(width:62,alignment:.trailing)
+            Text(range.upperBound > 5 ? "\(Int(value)) \(unit)" : String(format:"%.2f %@",value,unit)).font(.system(size:11,design:.monospaced)).frame(width:68,alignment:.trailing)
         }
     }
 }

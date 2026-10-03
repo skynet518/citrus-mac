@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "detail": "Intentional failure to verify receipt persistence and nonzero exit.",
+      "name": "forced_failure_probe",
+      "passed": false,
+      "status": "FAIL"
+    }
+  ],
+  "created_at": "2026-10-03T17:35:34Z",
+  "failed": 1,
+  "fixtures": "run-479C672B-1F0F-4081-B5C4-4A5CD979EEA2",
+  "passed": 0,
+  "physical_desktop_button_drag": "requires real Finder observation; automated checks are not product acceptance",
+  "physical_finder_shift_drag": "legacy compatibility requires real UI observation",
+  "runner_error": "验证失败：forced_failure_probe Intentional failure to verify receipt persistence and nonzero exit.",
+  "schema_version": 2,
+  "skipped": 0,
+  "started_at": "2026-10-03T17:35:34Z",
+  "status": "FAIL",
+  "video_flow_outputs": []
+}

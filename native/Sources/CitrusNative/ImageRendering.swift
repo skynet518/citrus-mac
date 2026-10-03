@@ -84,10 +84,18 @@ enum ImageRendering {
         c.saveGState(); c.addPath(path); c.clip(); c.draw(image, in: rect); c.restoreGState()
         return c.makeImage()!
     }
+    static func cropBounds(_ image: CGImage, normalized: CGRect) -> CGRect {
+        guard [normalized.origin.x, normalized.origin.y, normalized.width, normalized.height].allSatisfy(\.isFinite), normalized.width > 0, normalized.height > 0 else { return .zero }
+        let clipped = normalized.intersection(CGRect(x:0,y:0,width:1,height:1))
+        guard !clipped.isNull, clipped.width > 0, clipped.height > 0 else { return .zero }
+        let width = max(1, min(CGFloat(image.width), (clipped.width * CGFloat(image.width)).rounded()))
+        let height = max(1, min(CGFloat(image.height), (clipped.height * CGFloat(image.height)).rounded()))
+        let x = max(0, min(CGFloat(image.width)-width, (clipped.minX * CGFloat(image.width)).rounded()))
+        let y = max(0, min(CGFloat(image.height)-height, (clipped.minY * CGFloat(image.height)).rounded()))
+        return CGRect(x:x,y:y,width:width,height:height)
+    }
     static func crop(_ image: CGImage, normalized: CGRect) throws -> CGImage {
-        let bounds = CGRect(x: 0, y: 0, width: image.width, height: image.height)
-        let rect = CGRect(x: normalized.minX * bounds.width, y: normalized.minY * bounds.height,
-                          width: normalized.width * bounds.width, height: normalized.height * bounds.height).integral.intersection(bounds)
+        let rect = cropBounds(image,normalized:normalized)
         guard rect.width >= 1, rect.height >= 1, let output = image.cropping(to: rect) else { throw CitrusError.failed("裁剪区域无效。") }
         return output
     }

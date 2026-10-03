@@ -5,19 +5,47 @@ struct FrostedGlass: NSViewRepresentable {
     func makeNSView(context: Context) -> NSVisualEffectView {
         let view = NSVisualEffectView()
         view.material = .popover; view.blendingMode = .behindWindow; view.state = .active
-        view.appearance = NSAppearance(named:.aqua)
         return view
     }
     func updateNSView(_ view: NSVisualEffectView, context: Context) {}
 }
 
 struct WarmGlass:View {
-    var body:some View { ZStack { FrostedGlass(); Color(red:1,green:0.67,blue:0.31).opacity(0.50) } }
+    @ViewBuilder var body:some View {
+        if #available(macOS 26.0, *) { Color.clear } else { FrostedGlass() }
+    }
+}
+
+@MainActor enum CitrusGlass {
+    static func wrap(_ content:NSView,cornerRadius:CGFloat) -> NSView {
+        if #available(macOS 26.0, *) {
+            let glass = NSGlassEffectView(frame:content.frame)
+            glass.style = .regular; glass.cornerRadius = cornerRadius
+            content.autoresizingMask = [.width,.height]; glass.contentView = content
+            return glass
+        }
+        return content
+    }
+}
+
+struct CitrusButtonStyle:ButtonStyle {
+    var primary = false
+    func makeBody(configuration:Configuration) -> some View {
+        configuration.label
+            .font(.system(size:14,weight:.medium)).padding(.horizontal,14).padding(.vertical,11)
+            .foregroundStyle(primary ? Color.white : CitrusTheme.ink)
+            .background(primary ? CitrusTheme.orange : CitrusTheme.surface,in:RoundedRectangle(cornerRadius:12))
+            .overlay(RoundedRectangle(cornerRadius:12).stroke(primary ? Color.clear : CitrusTheme.border,lineWidth:1))
+            .opacity(configuration.isPressed ? 0.72 : 1)
+    }
 }
 
 enum CitrusTheme {
-    static let orange = Color(red: 0.89, green: 0.22, blue: 0.06)
-    static let ink = Color(red: 0.18, green: 0.11, blue: 0.06)
+    static let accentColor = NSColor(calibratedRed: 0.64, green: 0.38, blue: 0.24, alpha: 1)
+    static let orange = Color(nsColor: accentColor)
+    static let ink = Color.primary
+    static let surface = Color(nsColor: .controlBackgroundColor).opacity(0.55)
+    static let border = Color(nsColor: .separatorColor).opacity(0.35)
 }
 
 struct Wedge: Shape {
@@ -45,37 +73,44 @@ struct Wedge: Shape {
 
 struct RadialMenuView: View {
     let state: RadialState
+    var onCancel: (() -> Void)?
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     var body: some View {
         ZStack {
-            Circle().fill(.white.opacity(0.08))
-                .background(WarmGlass().clipShape(Circle()))
-                .overlay(Circle().fill(Color(red:1,green:0.64,blue:0.26).opacity(0.1)))
-                .overlay(Circle().stroke(.white.opacity(0.48),lineWidth:1.2)).padding(8)
+            Circle().fill(.clear).background(WarmGlass().clipShape(Circle()))
+                .overlay(Circle().stroke(CitrusTheme.border,lineWidth:0.8)).padding(8)
             ForEach(Array(state.actions.enumerated()),id:\.offset) { n, action in
                 let selected = state.selected == n
                 Wedge(index:n,count:state.actions.count)
-                    .fill(selected ? CitrusTheme.orange : Color.white.opacity(0.36))
-                    .overlay(Wedge(index:n,count:state.actions.count).stroke(.white.opacity(selected ? 0.5 : 0.16),lineWidth:0.8))
+                    .fill(selected ? CitrusTheme.orange : CitrusTheme.surface)
+                    .overlay(Wedge(index:n,count:state.actions.count).stroke(CitrusTheme.border,lineWidth:0.5))
                 VStack(spacing:5) {
                     if let symbol = action.symbol { Image(systemName:symbol).font(.system(size:17,weight:.medium)) }
-                    Text(action.title).font(.system(size:action.symbol == nil ? 14 : 10.5,weight:.bold,design:.rounded)).tracking(0.3)
+                    Text(action.title).font(.system(size:action.symbol == nil ? 14 : 11,weight:.semibold))
                 }
                 .foregroundStyle(selected ? .white : CitrusTheme.ink)
                 .position(labelPosition(n,count:state.actions.count))
             }
-            Text(state.action?.title ?? (state.tools ? "TOOLS" : "CONVERT"))
-                .font(.system(size:11,weight:.bold,design:.rounded)).tracking(0.4)
-                .foregroundStyle(CitrusTheme.ink)
-                .padding(.horizontal,15).padding(.vertical,12)
-                .background(.white.opacity(0.45),in:Capsule())
-                .overlay(Capsule().stroke(.white.opacity(0.35),lineWidth:1))
-                .frame(maxWidth:115)
+            Text(state.action?.title ?? (state.allowsStaging && !state.pinned ? "放下后选择" : "选择操作"))
+                .font(.system(size:10,weight:.medium)).foregroundStyle(.secondary).lineLimit(1)
+                .frame(width:102).position(x:170,y:140)
+            HStack(spacing:4) { modeButton("格式",tools:false); modeButton("工具",tools:true) }.position(x:170,y:169)
+            Button(action:{ onCancel?() }) { Image(systemName:"xmark").font(.system(size:10,weight:.medium)).frame(width:32,height:22) }
+                .buttonStyle(.plain).foregroundStyle(.secondary).accessibilityLabel("关闭圆盘").position(x:170,y:199)
         }
         .frame(width:RadialGeometry.diameter,height:RadialGeometry.diameter)
-        .scaleEffect(state.appeared ? 1 : 0.84).opacity(state.appeared ? 1 : 0)
-        .animation(.spring(response:0.22,dampingFraction:0.8),value:state.appeared)
-        .animation(.easeOut(duration:0.08),value:state.selected)
+        .scaleEffect(state.appeared || reduceMotion ? 1 : 0.94).opacity(state.appeared ? 1 : 0)
+        .animation(reduceMotion ? nil : .spring(response:0.24,dampingFraction:0.9),value:state.appeared)
+        .animation(reduceMotion ? nil : .easeOut(duration:0.10),value:state.selected)
+        .accessibilityElement(children:.contain)
         .accessibilityLabel(state.tools ? "文件工具圆形菜单" : "格式转换圆形菜单")
+    }
+    func modeButton(_ title:String,tools:Bool) -> some View {
+        Button(action:{ state.setMode(tools:tools) }) {
+            Text(title).font(.system(size:12,weight:.medium)).frame(width:44,height:26)
+                .foregroundStyle(state.tools == tools ? Color.white : CitrusTheme.ink)
+                .background(state.tools == tools ? CitrusTheme.orange : CitrusTheme.surface,in:Capsule())
+        }.buttonStyle(.plain).accessibilityLabel("切换到\(title)").accessibilityAddTraits(state.tools == tools ? .isSelected : [])
     }
     func labelPosition(_ n: Int,count: Int) -> CGPoint {
         let theta = -CGFloat.pi/2 + CGFloat(n)*2*CGFloat.pi/CGFloat(max(1,count))
@@ -97,18 +132,27 @@ final class RadialDropView: NSView {
     let state: RadialState
     var onPerform: (([URL],RadialAction) -> Void)?
     var onCancel: (() -> Void)?
+    var onStage: (() -> Void)?
+    var onDragExit: (() -> Void)?
     var tracking: NSTrackingArea?
+    private var hoverMode: Bool?
+    private var hoverGeneration = 0
     init(state: RadialState) {
         self.state = state
         super.init(frame:CGRect(x:0,y:0,width:340,height:340))
         registerForDraggedTypes([.fileURL, NSPasteboard.PasteboardType("NSFilenamesPboardType")])
-        let host = NSHostingView(rootView:RadialMenuView(state:state))
+        let host = NSHostingView(rootView:RadialMenuView(state:state,onCancel:{ [weak self] in self?.onCancel?() }))
         host.frame = bounds; host.autoresizingMask = [.width,.height]; addSubview(host)
         setAccessibilityElement(true); setAccessibilityRole(.group); setAccessibilityLabel("圆形转换菜单")
     }
     required init?(coder:NSCoder) { fatalError("init(coder:) unavailable") }
     override var isFlipped: Bool { true }
-    override func hitTest(_ point:NSPoint) -> NSView? { bounds.contains(point) ? self : nil }
+    override var acceptsFirstResponder: Bool { true }
+    override func hitTest(_ point:NSPoint) -> NSView? {
+        guard bounds.contains(point) else { return nil }
+        if hypot(point.x-170,point.y-170) < 58 { return super.hitTest(point) }
+        return self
+    }
     override func updateTrackingAreas() {
         if let tracking { removeTrackingArea(tracking) }
         tracking = NSTrackingArea(rect:bounds,options:[.mouseMoved,.activeAlways,.inVisibleRect],owner:self,userInfo:nil)
@@ -128,19 +172,40 @@ final class RadialDropView: NSView {
         let incoming = urls(sender.draggingPasteboard)
         guard !incoming.isEmpty else { return [] }
         state.urls = incoming
-        state.update(point:convert(sender.draggingLocation,from:nil),option:NSEvent.modifierFlags.contains(.option))
-        return state.action == nil ? [] : .copy
+        state.dragHover = true
+        let point = convert(sender.draggingLocation,from:nil)
+        state.update(point:point,option:NSEvent.modifierFlags.contains(.option))
+        if state.entry != .systemDrag {
+            let mode:Bool? = CGRect(x:124,y:156,width:44,height:26).contains(point) ? false : (CGRect(x:172,y:156,width:44,height:26).contains(point) ? true : nil)
+            if hoverMode != mode {
+                hoverMode = mode; hoverGeneration += 1
+                let generation = hoverGeneration
+                if let mode { DispatchQueue.main.asyncAfter(deadline:.now()+0.3) { [weak self] in
+                    guard let self, self.hoverGeneration == generation, self.state.dragHover else { return }
+                    self.state.setMode(tools:mode)
+                } }
+            }
+        }
+        let center = hypot(point.x-170,point.y-170) < RadialGeometry.innerRadius
+        return state.action != nil || (state.allowsStaging && center) ? .copy : []
     }
     override func draggingEntered(_ sender:NSDraggingInfo) -> NSDragOperation { update(sender) }
     override func draggingUpdated(_ sender:NSDraggingInfo) -> NSDragOperation { update(sender) }
     override func wantsPeriodicDraggingUpdates() -> Bool { true }
-    override func draggingExited(_ sender:NSDraggingInfo?) { state.selected = nil }
+    override func draggingExited(_ sender:NSDraggingInfo?) { state.selected = nil; state.dragHover = false; hoverMode = nil; hoverGeneration += 1; onDragExit?() }
+    override func draggingEnded(_ sender:NSDraggingInfo) { state.dragHover = false; hoverMode = nil; hoverGeneration += 1; onDragExit?() }
     override func prepareForDragOperation(_ sender:NSDraggingInfo) -> Bool { update(sender) == .copy }
     override func performDragOperation(_ sender:NSDraggingInfo) -> Bool {
         _ = update(sender)
         let incoming = urls(sender.draggingPasteboard)
-        guard !incoming.isEmpty, let action = state.action else { return false }
+        guard !incoming.isEmpty else { return false }
         let point = convert(sender.draggingLocation,from:nil)
+        if state.action == nil, state.allowsStaging, hypot(point.x-170,point.y-170) < RadialGeometry.innerRadius {
+            EventReceipt.record("desktop_button_center_staged",["count":incoming.count])
+            DispatchQueue.main.async { [weak self] in self?.onStage?() }
+            return true
+        }
+        guard let action = state.action else { return false }
         EventReceipt.record("drop_received",["source":sender.draggingSource is PracticeFile ? "practice" : "external","action":action.title,"count":incoming.count,"local_x":point.x,"local_y":point.y])
         // Dispatch after AppKit finishes its drag session, before opening an editor.
         DispatchQueue.main.async { [weak self] in self?.onPerform?(incoming,action) }
@@ -154,6 +219,9 @@ final class RadialController {
     private(set) var panel: RadialPanel!
     private var dropView: RadialDropView!
     var onAction: (([URL],RadialAction) -> Void)?
+    private var dismissGeneration = 0
+    private var outsideClick: Any?
+    private var localClick: Any?
     var isVisible: Bool { panel?.isVisible ?? false }
     init() {
         panel = RadialPanel(contentRect:CGRect(x:0,y:0,width:340,height:340),styleMask:[.borderless,.nonactivatingPanel],backing:.buffered,defer:false)
@@ -161,31 +229,52 @@ final class RadialController {
         panel.level = .statusBar; panel.hidesOnDeactivate = false; panel.isReleasedWhenClosed = false
         panel.collectionBehavior = [.canJoinAllSpaces,.fullScreenAuxiliary,.transient]
         panel.acceptsMouseMovedEvents = true
-        dropView = RadialDropView(state:state); panel.contentView = dropView
+        dropView = RadialDropView(state:state); panel.contentView = CitrusGlass.wrap(dropView,cornerRadius:170)
         dropView.onPerform = { [weak self] urls, action in self?.hide(); self?.onAction?(urls,action) }
         dropView.onCancel = { [weak self] in self?.hide() }
+        dropView.onStage = { [weak self] in self?.pin() }
+        dropView.onDragExit = { [weak self] in self?.scheduleDragDismissal() }
         panel.onKey = { [weak self] event in self?.key(event) }
+        outsideClick = NSEvent.addGlobalMonitorForEvents(matching:[.leftMouseDown,.rightMouseDown]) { [weak self] _ in MainActor.assumeIsolated { self?.hide() } }
+        localClick = NSEvent.addLocalMonitorForEvents(matching:[.leftMouseDown,.rightMouseDown]) { [weak self] event in
+            if let self, self.isVisible, event.window !== self.panel { self.hide() }
+            return event
+        }
     }
-    func show(urls:[URL],at center:CGPoint,tools:Bool,pinned:Bool=false) {
+    func show(urls:[URL],at center:CGPoint,tools:Bool,pinned:Bool=false,entry:RadialState.Entry? = nil) {
         guard !urls.isEmpty else { return }
-        state.urls = urls; state.tools = tools; state.selected = nil; state.pinned = pinned; state.latchedTools = false
+        dismissGeneration += 1
+        state.urls = urls; state.tools = tools; state.selected = nil; state.pinned = pinned; state.latchedTools = tools
+        state.entry = entry ?? (pinned ? .filePicker : .systemDrag); state.dragHover = false
         let screen = NSScreen.screens.first { $0.frame.contains(center) } ?? NSScreen.main
         panel.setFrame(RadialGeometry.frame(center:center,screen:screen?.visibleFrame ?? CGRect(x:0,y:0,width:1440,height:900)),display:false)
         state.appeared = false; panel.orderFrontRegardless()
-        if pinned { NSApp.activate(ignoringOtherApps:true); panel.makeKey(); panel.makeFirstResponder(dropView) }
+        if pinned { pin() }
         DispatchQueue.main.async { [weak self] in self?.state.appeared = true }
-        EventReceipt.record("menu_shown",["source":pinned ? "file_picker" : "system_drag", "count":urls.count,"tools":tools])
+        EventReceipt.record("menu_shown",["source":state.entry.rawValue, "count":urls.count,"tools":tools])
+    }
+    func pin() {
+        dismissGeneration += 1; state.pinned = true; state.dragHover = false
+        NSApp.activate(ignoringOtherApps:true); panel.makeKey(); panel.makeFirstResponder(dropView)
+        EventReceipt.record("menu_staged",["source":state.entry.rawValue,"count":state.urls.count])
+    }
+    func scheduleDragDismissal() {
+        let generation = dismissGeneration
+        DispatchQueue.main.asyncAfter(deadline:.now()+0.8) { [weak self] in
+            guard let self, self.dismissGeneration == generation, !self.state.pinned, !self.state.dragHover, self.state.entry == .desktopButton else { return }
+            self.hide()
+        }
     }
     func update(at point:CGPoint,option:Bool) {
         let local = CGPoint(x:point.x-panel.frame.minX,y:panel.frame.maxY-point.y)
         state.update(point:local,option:option)
     }
-    func hide() { state.appeared = false; panel.orderOut(nil); state.selected = nil }
+    func hide() { dismissGeneration += 1; state.appeared = false; panel.orderOut(nil); state.selected = nil; state.dragHover = false }
     func key(_ event:NSEvent) {
-        if event.type == .flagsChanged { state.tools = state.latchedTools || event.modifierFlags.contains(.option); state.selected = nil; return }
+        if event.type == .flagsChanged { if state.entry == .systemDrag { state.tools = state.latchedTools || event.modifierFlags.contains(.option); state.selected = nil }; return }
         switch event.keyCode {
         case 53: hide()
-        case 48: state.latchedTools.toggle(); state.tools = state.latchedTools; state.selected = nil
+        case 48: state.setMode(tools:!state.tools)
         case 123,126: state.selected = ((state.selected ?? 0)-1+state.actions.count) % max(1,state.actions.count)
         case 124,125: state.selected = ((state.selected ?? -1)+1) % max(1,state.actions.count)
         case 36,76:
@@ -215,7 +304,7 @@ final class DesktopDragMonitor {
             MainActor.assumeIsolated { self?.handle(event,local:false) }
         }
         local = NSEvent.addLocalMonitorForEvents(matching:mask.union([.keyDown])) { [weak self] event in
-            if event.type == .keyDown && event.keyCode == 53 && self?.radial.isVisible == true { self?.cancel(); return nil }
+            if event.type == .keyDown && event.keyCode == 53 && self?.radial.isVisible == true && self?.radial.state.entry == .systemDrag { self?.cancel(); return nil }
             self?.handle(event,local:true); return event
         }
         // Finder's native drag session can omit monitor notifications. Poll the current
@@ -249,7 +338,7 @@ final class DesktopDragMonitor {
             if dragActive { endMonitoring() }
             return
         }
-        guard enabled, !(radial.state.pinned && radial.isVisible), session.observe(changeCount:board.changeCount,leftDown:true,ownWindow:ownMouseDown) else { return }
+        guard enabled, !(radial.isVisible && (radial.state.pinned || radial.state.entry != .systemDrag)), session.observe(changeCount:board.changeCount,leftDown:true,ownWindow:ownMouseDown) else { return }
         let files = DragFiles.read(board)
         guard !files.isEmpty else { return }
         if !dragActive {
@@ -269,7 +358,7 @@ final class DesktopDragMonitor {
         let id = generation
         // NSDraggingDestination owns execution. Releasing the button only hides the menu.
         DispatchQueue.main.asyncAfter(deadline:.now()+0.18) { [weak self] in
-            guard let self, !self.dragActive, self.generation == id, !self.radial.state.pinned else { return }
+            guard let self, !self.dragActive, self.generation == id, !self.radial.state.pinned, self.radial.state.entry == .systemDrag else { return }
             self.radial.hide()
         }
     }

@@ -25,12 +25,21 @@ final class CitrusDelegate:NSObject,NSApplicationDelegate,NSWindowDelegate {
     var welcome:NSWindow?
     var practice:PracticeState?
     var practiceWindow:NSWindow?
+    var desktopButton:DesktopButtonController!
+    var desktopSettingsWindow:NSWindow?
+    var desktopVisibleMenu:NSMenuItem?
+    var desktopLayerMenu:NSMenuItem?
     var editors:[NSWindow] = []
     let toastState = ToastState()
     var toast:NSPanel?
+    var toastHost:NSHostingView<ToastView>?
     var workTask:Task<Void,Never>?
     func applicationDidFinishLaunching(_ notification:Notification) {
         let mainMenu = NSMenu(), appMenu = NSMenu()
+        appMenu.addItem(withTitle:"使用方法",action:#selector(showWelcome),keyEquivalent:"").target = self
+        appMenu.addItem(withTitle:"选择文件…",action:#selector(choose),keyEquivalent:"o").target = self
+        appMenu.addItem(withTitle:"桌面按钮设置…",action:#selector(desktopSettings),keyEquivalent:",").target = self
+        appMenu.addItem(.separator())
         appMenu.addItem(withTitle:"退出橘子",action:#selector(quit),keyEquivalent:"q").target = self
         let item = NSMenuItem(); item.submenu = appMenu; mainMenu.addItem(item); NSApp.mainMenu = mainMenu
         status = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
@@ -42,18 +51,29 @@ final class CitrusDelegate:NSObject,NSApplicationDelegate,NSWindowDelegate {
             let item = menu.addItem(withTitle:title,action:selector,keyEquivalent:""); item.target = self
         }
         menu.addItem(.separator())
-        let pause = menu.addItem(withTitle:"暂停 Shift 拖拽",action:#selector(toggleMonitor(_:)),keyEquivalent:""); pause.target = self
+        desktopVisibleMenu = menu.addItem(withTitle:"显示桌面小橘子",action:#selector(toggleDesktopVisible),keyEquivalent:""); desktopVisibleMenu?.target = self
+        desktopLayerMenu = menu.addItem(withTitle:"仅固定在桌面图层",action:#selector(toggleDesktopLayer),keyEquivalent:""); desktopLayerMenu?.target = self
+        menu.addItem(withTitle:"桌面按钮设置…",action:#selector(desktopSettings),keyEquivalent:",").target = self
+        menu.addItem(.separator())
+        let pause = menu.addItem(withTitle:"兼容旧版 Shift 拖拽",action:#selector(toggleMonitor(_:)),keyEquivalent:""); pause.target = self
         menu.addItem(.separator()); menu.addItem(withTitle:"退出橘子",action:#selector(quit),keyEquivalent:"q").target = self
         status.menu = menu
-        monitor = DesktopDragMonitor(radial:radial); monitor.start()
+        monitor = DesktopDragMonitor(radial:radial)
+        monitor.enabled = UserDefaults.standard.bool(forKey:"legacyShiftDrag")
+        if monitor.enabled { monitor.start() }; pause.state = monitor.enabled ? .on : .off
+        desktopButton = DesktopButtonController(radial:radial)
+        desktopButton.onChoose = { [weak self] in self?.choose() }
+        desktopButton.onSettings = { [weak self] in self?.desktopSettings() }
+        desktopButton.onChanged = { [weak self] in self?.updateDesktopMenu() }
+        updateDesktopMenu()
         radial.onAction = { [weak self] urls,action in self?.monitor.didPerform(); self?.perform(urls,action:action) }
-        EventReceipt.record("app_started",["version":"1.0.1-preview","mouse_monitors_installed":monitor.isInstalled,"drag_detection":"fresh-pasteboard-poll-with-mouse-monitors"])
+        EventReceipt.record("app_started",["version":"1.1.0-preview","mouse_monitors_installed":monitor.isInstalled,"drag_detection":"native-desktop-drop-target","legacy_shift_enabled":monitor.enabled])
         if !CommandLine.arguments.contains("--background") { showWelcome() }
         if let n = CommandLine.arguments.firstIndex(of:"--open"), CommandLine.arguments.count > n+1 {
             DispatchQueue.main.async { self.radial.show(urls:[URL(fileURLWithPath:CommandLine.arguments[n+1])],at:NSEvent.mouseLocation,tools:false,pinned:true) }
         }
     }
-    func applicationShouldHandleReopen(_ sender:NSApplication,hasVisibleWindows flag:Bool) -> Bool { if !flag { showWelcome() }; return true }
+    func applicationShouldHandleReopen(_ sender:NSApplication,hasVisibleWindows flag:Bool) -> Bool { showWelcome(); return true }
     func application(_ sender:NSApplication,openFiles filenames:[String]) {
         let urls = filenames.map { URL(fileURLWithPath:$0) }.filter { FileCatalog.kind($0) != .unsupported }
         radial.show(urls:urls,at:NSEvent.mouseLocation,tools:false,pinned:true); sender.reply(toOpenOrPrint:.success)
@@ -64,15 +84,16 @@ final class CitrusDelegate:NSObject,NSApplicationDelegate,NSWindowDelegate {
         let window = NSWindow(contentRect:CGRect(origin:.zero,size:host.fittingSize),styleMask:[.titled,.closable,.fullSizeContentView],backing:.buffered,defer:false)
         window.title = title; window.titleVisibility = .hidden; window.titlebarAppearsTransparent = true
         window.isOpaque = false; window.backgroundColor = .clear; window.isReleasedWhenClosed = false; window.level = .floating
-        window.appearance = NSAppearance(named:.aqua)
         window.standardWindowButton(.closeButton)?.isHidden = true; window.standardWindowButton(.miniaturizeButton)?.isHidden = true; window.standardWindowButton(.zoomButton)?.isHidden = true
-        window.contentView = host; window.delegate = self
+        host.frame = CGRect(origin:.zero,size:host.fittingSize)
+        window.contentView = CitrusGlass.wrap(host,cornerRadius:24); window.delegate = self
         window.setFrame(CGRect(origin:window.frame.origin,size:host.fittingSize),display:false); window.center(); NSApp.activate(ignoringOtherApps:true); window.makeKeyAndOrderFront(nil)
+        EventReceipt.record("window_shown",["title":title,"x":window.frame.minX,"y":window.frame.minY,"width":window.frame.width,"height":window.frame.height,"screen_top":NSScreen.screens.first?.frame.maxY ?? 0])
         return window
     }
     @objc func showWelcome() {
         if let welcome { NSApp.activate(ignoringOtherApps:true); welcome.makeKeyAndOrderFront(nil); return }
-        welcome = makeWindow(WelcomeView(onChoose:{ [weak self] in self?.choose() },onDemo:{ [weak self] in self?.demo() },onClose:{ [weak self] in self?.welcome?.close() }),title:"橘子 · 使用方法")
+        welcome = makeWindow(WelcomeView(onChoose:{ [weak self] in self?.choose() },onDemo:{ [weak self] in self?.demo() },onClose:{ [weak self] in self?.welcome?.close() },onSettings:{ [weak self] in self?.desktopSettings() }),title:"橘子 · 使用方法")
     }
     @objc func choose() {
         let panel = NSOpenPanel(); panel.canChooseDirectories = false; panel.allowsMultipleSelection = true
@@ -88,8 +109,8 @@ final class CitrusDelegate:NSObject,NSApplicationDelegate,NSWindowDelegate {
         do {
             let folder = FileManager.default.urls(for:.applicationSupportDirectory,in:.userDomainMask)[0].appendingPathComponent("CitrusLocal/体验文件")
             try FileManager.default.createDirectory(at:folder,withIntermediateDirectories:true)
-            let pdf = folder.appendingPathComponent("Page 001.pdf")
-            if !FileManager.default.fileExists(atPath:pdf.path) { try FileEngine.pdfData(FileEngine.textPages("橘子文件工具\n\n这是一个可以拖动、转换、裁剪的本地示例。\n\n1. 按住 Shift 拖动 PDF，松手转换 JPG。\n2. 按住 Shift + Option 拖动 JPG，选择 Crop。\n3. 拖动裁剪边框，然后点击 Apply。\n4. 再次拖动结果，选择 Add BG。\n5. 调整背景、圆角和阴影，保存新图片。\n\n所有文件均保存在此文件夹，原文件会保留。"),dpi:150).write(to:pdf,options:.withoutOverwriting) }
+            let pdf = folder.appendingPathComponent("Demo Guide.pdf")
+            if !FileManager.default.fileExists(atPath:pdf.path) { try FileEngine.pdfData(FileEngine.textPages("橘子文件工具\n\n这是一个可以拖动、转换、裁剪的本地示例。\n\n1. 把 PDF 拖到桌面上的小橘子，放下文件。\n2. 在圆盘里点击 JPG，转换为图片。\n3. 把 JPG 拖入小橘子，点击工具，再选择 Crop。\n4. 拖动裁剪边框，点击 Apply 保存副本。\n5. 再次拖入结果，选择 Add BG，调整背景并保存。\n\n也可以直接拖入圆盘扇区，松手执行。\n所有操作都在本机完成，原文件会保留。"),dpi:150).write(to:pdf,options:.withoutOverwriting) }
             welcome?.close()
             if let practiceWindow { practiceWindow.makeKeyAndOrderFront(nil); return }
             let state = PracticeState(files:[pdf]); practice = state
@@ -105,12 +126,28 @@ final class CitrusDelegate:NSObject,NSApplicationDelegate,NSWindowDelegate {
         alert.addButton(withTitle:"保存"); alert.addButton(withTitle:"取消")
         if alert.runModal() == .alertFirstButtonReturn { UserDefaults.standard.set(quality.indexOfSelectedItem == 1,forKey:"strongCompression"); UserDefaults.standard.set(sizes[size.indexOfSelectedItem],forKey:"compressionMaxSide") }
     }
-    @objc func toggleMonitor(_ sender:NSMenuItem) { monitor.enabled.toggle(); if !monitor.enabled { monitor.cancel() }; sender.title = monitor.enabled ? "暂停 Shift 拖拽" : "恢复 Shift 拖拽" }
+    func updateDesktopMenu() {
+        desktopVisibleMenu?.state = desktopButton.preferences.visible ? .on : .off
+        desktopLayerMenu?.state = desktopButton.preferences.desktopOnly ? .on : .off
+    }
+    @objc func toggleDesktopVisible() { desktopButton.toggleVisible() }
+    @objc func toggleDesktopLayer() { desktopButton.toggleLayer() }
+    @objc func desktopSettings() {
+        if let desktopSettingsWindow { NSApp.activate(ignoringOtherApps:true); desktopSettingsWindow.makeKeyAndOrderFront(nil); return }
+        desktopSettingsWindow = makeWindow(DesktopButtonSettingsView(preferences:desktopButton.preferences,onChanged:{ [weak self] in self?.desktopButton.apply() },onReset:{ [weak self] in self?.desktopButton.resetPosition() },onClose:{ [weak self] in self?.desktopSettingsWindow?.close() }),title:"橘子 · 桌面按钮")
+    }
+    @objc func toggleMonitor(_ sender:NSMenuItem) {
+        monitor.enabled.toggle(); UserDefaults.standard.set(monitor.enabled,forKey:"legacyShiftDrag")
+        if monitor.enabled && !monitor.isInstalled { monitor.start() }
+        if !monitor.enabled && radial.state.entry == .systemDrag { monitor.cancel() }
+        sender.state = monitor.enabled ? .on : .off
+    }
     @objc func quit() { NSApp.terminate(nil) }
     func windowWillClose(_ notification:Notification) {
         guard let window = notification.object as? NSWindow else { return }
         if welcome === window { welcome = nil }
         if practiceWindow === window { practiceWindow = nil; practice = nil }
+        if desktopSettingsWindow === window { desktopSettingsWindow = nil }
         editors.removeAll { $0 === window }
     }
     func perform(_ urls:[URL],action:RadialAction) {
@@ -205,10 +242,12 @@ final class CitrusDelegate:NSObject,NSApplicationDelegate,NSWindowDelegate {
         if toast == nil {
             let panel = NSPanel(contentRect:CGRect(x:0,y:0,width:340,height:140),styleMask:[.borderless,.nonactivatingPanel],backing:.buffered,defer:false)
             panel.isOpaque = false; panel.backgroundColor = .clear; panel.hasShadow = true; panel.level = .floating; panel.hidesOnDeactivate = false; panel.isReleasedWhenClosed = false
-            panel.contentView = NSHostingView(rootView:ToastView(state:toastState,onClose:{ [weak self] in self?.toast?.orderOut(nil) }))
+            let host = NSHostingView(rootView:ToastView(state:toastState,onClose:{ [weak self] in self?.toast?.orderOut(nil) }))
+            host.frame = CGRect(origin:.zero,size:host.fittingSize); toastHost = host
+            panel.contentView = CitrusGlass.wrap(host,cornerRadius:18)
             toast = panel
         }
-        if let host = toast?.contentView as? NSHostingView<ToastView> { toast?.setContentSize(host.fittingSize) }
+        if let host = toastHost { toast?.setContentSize(host.fittingSize) }
         let screen = NSScreen.screens.first { $0.frame.contains(NSEvent.mouseLocation) } ?? NSScreen.main
         if let bounds = screen?.visibleFrame, let toast { toast.setFrameOrigin(CGPoint(x:bounds.maxX-toast.frame.width-24,y:bounds.maxY-toast.frame.height-24)); toast.orderFrontRegardless() }
     }

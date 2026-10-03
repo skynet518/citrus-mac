@@ -1,0 +1,316 @@
+[
+  {
+    "desktop_only": false,
+    "event": "desktop_button_preferences",
+    "level": 3,
+    "time": "2026-10-03T16:50:51Z",
+    "visible": true
+  },
+  {
+    "drag_detection": "native-desktop-drop-target",
+    "event": "app_started",
+    "legacy_shift_enabled": false,
+    "mouse_monitors_installed": false,
+    "time": "2026-10-03T16:50:51Z",
+    "version": "1.1.0-preview"
+  },
+  {
+    "desktop_only": false,
+    "event": "desktop_button_preferences",
+    "level": 3,
+    "time": "2026-10-03T16:54:30Z",
+    "visible": true
+  },
+  {
+    "drag_detection": "native-desktop-drop-target",
+    "event": "app_started",
+    "legacy_shift_enabled": false,
+    "mouse_monitors_installed": false,
+    "time": "2026-10-03T16:54:30Z",
+    "version": "1.1.0-preview"
+  },
+  {
+    "desktop_only": true,
+    "event": "desktop_button_preferences",
+    "level": -2147483602,
+    "time": "2026-10-03T16:57:47Z",
+    "visible": true
+  },
+  {
+    "desktop_only": true,
+    "event": "desktop_button_preferences",
+    "level": -2147483602,
+    "time": "2026-10-03T16:57:51Z",
+    "visible": false
+  },
+  {
+    "desktop_only": true,
+    "event": "desktop_button_preferences",
+    "height": 68,
+    "level": -2147483602,
+    "time": "2026-10-03T16:58:11Z",
+    "visible": false,
+    "width": 68,
+    "x": 2464,
+    "y": 708
+  },
+  {
+    "drag_detection": "native-desktop-drop-target",
+    "event": "app_started",
+    "legacy_shift_enabled": false,
+    "mouse_monitors_installed": false,
+    "time": "2026-10-03T16:58:11Z",
+    "version": "1.1.0-preview"
+  },
+  {
+    "desktop_only": true,
+    "event": "desktop_button_preferences",
+    "height": 68,
+    "level": -2147483602,
+    "time": "2026-10-03T16:58:16Z",
+    "visible": true,
+    "width": 68,
+    "x": 2464,
+    "y": 708
+  },
+  {
+    "desktop_only": false,
+    "event": "desktop_button_preferences",
+    "height": 68,
+    "level": 3,
+    "time": "2026-10-03T16:58:16Z",
+    "visible": true,
+    "width": 68,
+    "x": 2464,
+    "y": 708
+  },
+  {
+    "action": "JPG",
+    "count": 1,
+    "event": "drop_received",
+    "local_x": 172,
+    "local_y": 60,
+    "source": "practice",
+    "time": "2026-10-03T16:59:58Z"
+  },
+  {
+    "action": "JPG",
+    "count": 1,
+    "event": "action_requested",
+    "time": "2026-10-03T16:59:58Z"
+  },
+  {
+    "count": 1,
+    "event": "output_created",
+    "time": "2026-10-03T16:59:58Z",
+    "files": [
+      "Demo Guide.jpg"
+    ]
+  },
+  {
+    "desktop_only": false,
+    "event": "desktop_button_preferences",
+    "height": 68,
+    "level": 3,
+    "time": "2026-10-03T17:01:33Z",
+    "visible": true,
+    "width": 68,
+    "x": 2464,
+    "y": 708
+  },
+  {
+    "drag_detection": "native-desktop-drop-target",
+    "event": "app_started",
+    "legacy_shift_enabled": false,
+    "mouse_monitors_installed": false,
+    "time": "2026-10-03T17:01:33Z",
+    "version": "1.1.0-preview"
+  },
+  {
+    "event": "practice_drag_ended",
+    "operation": 0,
+    "time": "2026-10-03T17:01:36Z",
+    "x": 2498,
+    "y": 742
+  },
+  {
+    "desktop_only": false,
+    "event": "desktop_button_preferences",
+    "height": 68,
+    "level": 3,
+    "time": "2026-10-03T17:03:39Z",
+    "visible": true,
+    "width": 68,
+    "x": 2464,
+    "y": 708
+  },
+  {
+    "drag_detection": "native-desktop-drop-target",
+    "event": "app_started",
+    "legacy_shift_enabled": false,
+    "mouse_monitors_installed": false,
+    "time": "2026-10-03T17:03:39Z",
+    "version": "1.1.0-preview"
+  },
+  {
+    "event": "practice_drag_ended",
+    "operation": 0,
+    "time": "2026-10-03T17:03:41Z",
+    "x": 2498,
+    "y": 742
+  },
+  {
+    "active_space": true,
+    "desktop_only": false,
+    "event": "desktop_button_preferences",
+    "height": 68,
+    "level": 3,
+    "time": "2026-10-03T17:08:47Z",
+    "visible": true,
+    "width": 68,
+    "window_visible": true,
+    "x": 2464,
+    "y": 708
+  },
+  {
+    "drag_detection": "native-desktop-drop-target",
+    "event": "app_started",
+    "legacy_shift_enabled": false,
+    "mouse_monitors_installed": false,
+    "time": "2026-10-03T17:08:47Z",
+    "version": "1.1.0-preview"
+  },
+  {
+    "desktop_active_space": true,
+    "desktop_visible": true,
+    "event": "practice_drag_ended",
+    "operation": 0,
+    "time": "2026-10-03T17:08:49Z",
+    "x": 2498,
+    "y": 742
+  },
+  {
+    "active_space": true,
+    "desktop_only": false,
+    "event": "desktop_button_preferences",
+    "height": 68,
+    "level": 3,
+    "time": "2026-10-03T17:22:05Z",
+    "visible": true,
+    "width": 68,
+    "window_visible": true,
+    "x": 2464,
+    "y": 708
+  },
+  {
+    "drag_detection": "native-desktop-drop-target",
+    "event": "app_started",
+    "legacy_shift_enabled": false,
+    "mouse_monitors_installed": false,
+    "time": "2026-10-03T17:22:05Z",
+    "version": "1.1.0-preview"
+  },
+  {
+    "desktop_active_space": true,
+    "desktop_visible": true,
+    "event": "practice_drag_ended",
+    "operation": 0,
+    "time": "2026-10-03T17:22:07Z",
+    "x": 2498,
+    "y": 742
+  },
+  {
+    "count": 1,
+    "event": "menu_staged",
+    "source": "file_picker",
+    "time": "2026-10-03T17:26:38Z"
+  },
+  {
+    "count": 1,
+    "event": "menu_shown",
+    "source": "file_picker",
+    "time": "2026-10-03T17:26:38Z",
+    "tools": false
+  },
+  {
+    "action": "CROP",
+    "count": 1,
+    "event": "action_requested",
+    "time": "2026-10-03T17:26:58Z"
+  },
+  {
+    "event": "editor_opened",
+    "height": 3508,
+    "time": "2026-10-03T17:26:58Z",
+    "tool": "CROP",
+    "width": 2481
+  },
+  {
+    "count": 1,
+    "event": "output_created",
+    "time": "2026-10-03T17:32:05Z",
+    "files": [
+      "Demo Guide Cropped.jpg"
+    ]
+  },
+  {
+    "action": "ADD BG",
+    "count": 1,
+    "event": "drop_received",
+    "local_x": 122,
+    "local_y": 258,
+    "source": "practice",
+    "time": "2026-10-03T17:32:45Z"
+  },
+  {
+    "desktop_active_space": true,
+    "desktop_visible": true,
+    "event": "practice_drag_ended",
+    "operation": 1,
+    "time": "2026-10-03T17:32:45Z",
+    "x": 1355,
+    "y": 812
+  },
+  {
+    "action": "ADD BG",
+    "count": 1,
+    "event": "action_requested",
+    "time": "2026-10-03T17:32:45Z"
+  },
+  {
+    "event": "editor_opened",
+    "height": 2604,
+    "time": "2026-10-03T17:32:45Z",
+    "tool": "ADD BG",
+    "width": 2020
+  },
+  {
+    "count": 1,
+    "event": "output_created",
+    "time": "2026-10-03T17:33:01Z",
+    "files": [
+      "Demo Guide Cropped BG.jpg"
+    ]
+  },
+  {
+    "active_space": true,
+    "desktop_only": false,
+    "event": "desktop_button_preferences",
+    "height": 68,
+    "level": 3,
+    "time": "2026-10-03T17:35:35Z",
+    "visible": true,
+    "width": 68,
+    "window_visible": true,
+    "x": 2464,
+    "y": 708
+  },
+  {
+    "drag_detection": "native-desktop-drop-target",
+    "event": "app_started",
+    "legacy_shift_enabled": false,
+    "mouse_monitors_installed": false,
+    "time": "2026-10-03T17:35:35Z",
+    "version": "1.1.0-preview"
+  }
+]

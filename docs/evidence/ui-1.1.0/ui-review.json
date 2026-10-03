@@ -1,0 +1,101 @@
+{
+  "review_date": "2026-10-04",
+  "timezone": "Asia/Shanghai",
+  "version": "1.1.0 preview build 3",
+  "overall_product_acceptance": "PENDING",
+  "primary_entry_acceptance": "PENDING",
+  "outputs": {
+    "Demo Guide.jpg": [
+      2481,
+      3508
+    ],
+    "Demo Guide Cropped.jpg": [
+      2020,
+      2604
+    ],
+    "Demo Guide Cropped BG.jpg": [
+      2924,
+      2924
+    ]
+  },
+  "manual_checks": [
+    {
+      "item": "欢迎页的三个主操作按钮",
+      "status": "PASS",
+      "evidence": "原生截图；三个按钮共用14 pt medium字形和明确的圆角底板。"
+    },
+    {
+      "item": "开始使用按钮收起欢迎窗口",
+      "status": "PASS",
+      "evidence": "真实点击后欢迎窗口关闭，桌面按钮继续显示。"
+    },
+    {
+      "item": "桌面按钮可见、点击选择文件和右键菜单",
+      "status": "PASS",
+      "evidence": "实际按钮界面、文件选择器及右键设置菜单。"
+    },
+    {
+      "item": "显示按钮、浮在窗口上方／仅在桌面设置",
+      "status": "PASS",
+      "evidence": "真实设置界面和原生日志中的可见性、窗口层级值。"
+    },
+    {
+      "item": "退出再启动保留显示、层级选项",
+      "status": "PASS",
+      "evidence": "真实退出／重启后设置保持；已恢复显示且浮在窗口上方供评审。"
+    },
+    {
+      "item": "演练窗口PDF拖入JPG扇区",
+      "status": "PASS",
+      "evidence": "真实NSDraggingSource/NSDraggingDestination拖放，生成2481×3508 JPG。"
+    },
+    {
+      "item": "选择文件后点击格式／工具切换",
+      "status": "PASS",
+      "evidence": "原生文件选择和可点击模式按钮，未按修饰键，实际打开Crop编辑器。"
+    },
+    {
+      "item": "真实拖动裁剪手柄并导出",
+      "status": "PASS",
+      "evidence": "界面2020×2604，重新读取实际JPEG头得到2020×2604。"
+    },
+    {
+      "item": "裁剪结果拖入背景工具并保存",
+      "status": "PASS",
+      "evidence": "演练内真实拖放；背景预设3、1:1比例，导出2924×2924 JPEG。"
+    },
+    {
+      "item": "Finder拖文件到桌面小橘子，呼出并保留圆盘",
+      "status": "PENDING",
+      "evidence": "跨窗口自动拖放到达目标坐标但未收到目标拖入回调；尚不能区分工具输入限制与产品问题。已请求实际鼠标测试。"
+    },
+    {
+      "item": "用鼠标拖动桌面小橘子并在重启后保持位置",
+      "status": "PENDING",
+      "evidence": "位置保存与屏幕边界自动用例通过；实际鼠标移动尚未验收。"
+    },
+    {
+      "item": "仅桌面模式下被其他应用窗口覆盖",
+      "status": "PENDING",
+      "evidence": "设置与窗口层级已验证；真实覆盖关系未完成视觉验收。"
+    },
+    {
+      "item": "真实多显示器、Spaces和全屏应用拖入",
+      "status": "NOT_TESTED",
+      "evidence": "几何边界自动检查不能代替真实显示器和桌面切换。"
+    },
+    {
+      "item": "macOS14/15、Intel、浅色系统外观",
+      "status": "NOT_TESTED",
+      "evidence": "本轮实际环境为Apple Silicon、macOS26.5.1。旧系统玻璃回退和外观自适应已编码，但未在这些环境运行。"
+    }
+  ],
+  "screenshots": {
+    "background-window.png": "a7af4278acc4f8490588a5438c4574f95e769df80e11d037b34c0f71fe29bda2",
+    "crop-window.png": "41ab84d24ced12c9b946b36fed2c603086021dba8e1e1b4a1a2fc9d68ad0246a",
+    "desktop-button.png": "03425c7716aa22410e27ba4b23a59788f3a0987c16f07f817456056f6f35a049",
+    "desktop-settings.png": "85e4d2b13aa9d33880482403ad8bda4ad64b96f314797cc68c9783ac826e1608",
+    "tools-circle.png": "3e6660bd6a772bba5ca060b3eea814582d9db8a35ae1b97847e0a419fe966a5c",
+    "welcome-dark.png": "1f241e6be24b8736ee9255083fb6372bd385d47a3477e8b88c6954923549165d"
+  }
+}

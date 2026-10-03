@@ -32,7 +32,7 @@ final class CropCanvas: NSView {
         NSImage(cgImage:image,size:.zero).draw(in:imageRect,from:.zero,operation:.sourceOver,fraction:1,respectFlipped:true,hints:nil)
         let overlay = NSBezierPath(rect:imageRect); overlay.appendRect(cropRect); overlay.windingRule = .evenOdd
         NSColor.black.withAlphaComponent(0.58).setFill(); overlay.fill()
-        NSColor(calibratedRed:0.9,green:0.22,blue:0.05,alpha:1).setStroke()
+        CitrusTheme.accentColor.setStroke()
         let border = NSBezierPath(rect:cropRect); border.lineWidth = 1.7; border.stroke()
         if window?.firstResponder === self {
             NSColor.white.withAlphaComponent(0.32).setStroke()
@@ -43,7 +43,7 @@ final class CropCanvas: NSView {
             }
             grid.lineWidth = 0.5; grid.stroke()
         }
-        NSColor(calibratedRed:0.9,green:0.22,blue:0.05,alpha:1).setFill()
+        CitrusTheme.accentColor.setFill()
         for p in handles { NSBezierPath(roundedRect:CGRect(x:p.x-4,y:p.y-4,width:8,height:8),xRadius:1,yRadius:1).fill() }
     }
     override func mouseDown(with event:NSEvent) {

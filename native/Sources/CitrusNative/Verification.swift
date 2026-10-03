@@ -24,7 +24,7 @@ import PDFKit
             let skipped = checks.filter { $0["status"] as? String == "SKIP" }.count
             let result:[String:Any] = ["schema_version":2,"started_at":started,"created_at":ISO8601DateFormatter().string(from:Date()),
                 "status":phase,"passed":passed,"failed":failed,"skipped":skipped,"checks":checks,"runner_error":runnerError,
-                "fixtures":folder.path,"video_flow_outputs":outputs,"physical_finder_shift_drag":"requires real UI observation"]
+                "fixtures":folder.path,"video_flow_outputs":outputs,"physical_finder_shift_drag":"legacy compatibility requires real UI observation","physical_desktop_button_drag":"requires real Finder observation; automated checks are not product acceptance"]
             let data = try JSONSerialization.data(withJSONObject:result,options:[.prettyPrinted,.sortedKeys])
             try data.write(to:folder.appendingPathComponent("verification.json"),options:.atomic)
             try data.write(to:root.appendingPathComponent("latest.json"),options:.atomic)
@@ -165,6 +165,7 @@ import PDFKit
             try persist()
         }
         try ExtendedVerification.run(folder:folder,image:image,source:source,check:check)
+        try DesktopVerification.run(image:image,source:source,check:check)
         outputs = [source.path,cropOut.path,bgOut.path,redactOut.path]
         phase = checks.contains { $0["status"] as? String == "SKIP" } ? "PASS_WITH_SKIPS" : "PASS"
         try persist()

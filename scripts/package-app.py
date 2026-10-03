@@ -32,7 +32,7 @@ shutil.copy2(binary, app / 'Contents/MacOS/CitrusNative')
 plist = {
     'CFBundleExecutable': 'CitrusNative', 'CFBundleIdentifier': 'local.kris.citrus',
     'CFBundleName': '橘子', 'CFBundleDisplayName': '橘子', 'CFBundlePackageType': 'APPL',
-    'CFBundleShortVersionString': '1.0.1', 'CFBundleVersion': '2', 'LSMinimumSystemVersion': '14.0',
+    'CFBundleShortVersionString': '1.1.0', 'CFBundleVersion': '3', 'LSMinimumSystemVersion': '14.0',
     'CFBundleIconFile': 'Citrus.icns', 'LSUIElement': True, 'NSHighResolutionCapable': True,
     'NSPrincipalClass': 'NSApplication',
     'CFBundleDocumentTypes': [{'CFBundleTypeName': 'Files', 'CFBundleTypeRole': 'Viewer',

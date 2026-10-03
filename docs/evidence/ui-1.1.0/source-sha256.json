@@ -1,0 +1,19 @@
+{
+  "native/Sources/CitrusNative/AppMain.swift": "6b42d1e8266d139f2d9ddbb5da96f81d743dd197ce7bf09979ecab30cd71e704",
+  "native/Sources/CitrusNative/CropCanvas.swift": "3d7cd0ba6234cc7d4c65c368a90115e56dacd5a1459de1c4fac6e72b50743cd1",
+  "native/Sources/CitrusNative/DesktopButton.swift": "e18815d9a624d97f5a909353c72e9901418f66bba5dd5eef08f7f4243194c70e",
+  "native/Sources/CitrusNative/DesktopVerification.swift": "136727366d6c7d4eb6354f48e2712963b02851f63aa949f63a0635fbc895e10f",
+  "native/Sources/CitrusNative/ExtendedVerification.swift": "3d87be31c4ccacc6b6943b042cefcb36df2c124a2ed77b552a4938710bcaca75",
+  "native/Sources/CitrusNative/FileEngine.swift": "ae158f7f903448fb0a1ad15f101f1904d67f2673039e0096426ffeb90982cf8b",
+  "native/Sources/CitrusNative/ImageEditor.swift": "105c5ec747a50682d2891b38b487b47fdbc2cc39e9db40f4ca3926674421c7c5",
+  "native/Sources/CitrusNative/ImageRendering.swift": "fe59160b364b0a4bd0ef9d2389b6fce7858e08e14d1bd853bac6e6f7d72c006b",
+  "native/Sources/CitrusNative/MediaEngine.swift": "318b6a106534a3e236b25fee1aca2ca51eb32410783de53b62c4597fdc6041bf",
+  "native/Sources/CitrusNative/Models.swift": "d96dc4bd6ebb478a262a09eeb8bf9286c009a7952cd891692851ffa219642397",
+  "native/Sources/CitrusNative/Practice.swift": "78fb5b1b79c43316ad2d0973cabd2b548f96174c347027eabcb87ba02b11966d",
+  "native/Sources/CitrusNative/RadialMenu.swift": "4d9b227533e7b40b0879462b01739e65cf5b80ecb6e3cd613c1657efdfc1a45e",
+  "native/Sources/CitrusNative/StatusIcon.swift": "e1de74a30c20e0fb3dfcd4e1ac8c523006a2d0d2d62cfea6b05e9b705735bcf4",
+  "native/Sources/CitrusNative/UtilityEditors.swift": "b982e61bf6c630dfd1a296af34446c78215e5a9c48e9a3a1566342a9335baa02",
+  "native/Sources/CitrusNative/Verification.swift": "b41dd58b8536af987256363271f5b017f543c8822a8751b134759435c965dde5",
+  "scripts/package-app.py": "ff1fe6ed80c3c65b61451407cb54e0fc5ef5d918cdc2f7f82785bdc1769c75f8",
+  "scripts/verify.py": "cf37a4c28968bfb10a1633d48db947f9e6fbc77c7064341929c5a9bd38e7c1dc"
+}

@@ -124,30 +124,37 @@ struct WelcomeView:View {
     let onChoose:() -> Void
     let onDemo:() -> Void
     let onClose:() -> Void
+    let onSettings:() -> Void
     var body:some View {
-        VStack(spacing:24) {
+        VStack(spacing:22) {
             ZStack {
-                Circle().fill(LinearGradient(colors:[.orange,Color(red:0.96,green:0.24,blue:0.04)],startPoint:.topLeading,endPoint:.bottomTrailing)).frame(width:68,height:68)
-                Image(systemName:"arrow.triangle.2.circlepath").font(.system(size:27,weight:.semibold)).foregroundStyle(.white)
+                RoundedRectangle(cornerRadius:22).fill(CitrusTheme.surface).frame(width:72,height:72)
+                    .overlay(RoundedRectangle(cornerRadius:22).stroke(CitrusTheme.border,lineWidth:0.5))
+                Image(nsImage:CitrusStatusIcon.make()).renderingMode(.template).resizable().scaledToFit().frame(width:36,height:36).foregroundStyle(CitrusTheme.orange)
             }.padding(.top,8)
-            VStack(spacing:8) { Text("橘子").font(.system(size:27,weight:.bold,design:.rounded)); Text("拖一下，就换好了。") .font(.system(size:15)).foregroundStyle(.secondary) }
-            VStack(alignment:.leading,spacing:16) {
-                instruction(key:"⇧",title:"按住 Shift 拖动文件",detail:"圆形菜单会出现在鼠标旁。")
-                instruction(key:"↗",title:"拖进格式扇区，松手",detail:"转换结果自动放到原文件旁边。")
-                instruction(key:"⌥",title:"再按 Option，切换工具",detail:"裁剪、背景、压缩、调色、标注和遮挡。")
-            }.frame(maxWidth:.infinity,alignment:.leading).padding(22).background(.white.opacity(0.34),in:RoundedRectangle(cornerRadius:18))
-            HStack(spacing:12) {
-                Button("体验示例",action:onDemo).buttonStyle(.bordered)
-                Button("选择文件…",action:onChoose).buttonStyle(.borderedProminent).tint(CitrusTheme.orange)
-            }.controlSize(.large)
-            Button("开始使用，收起窗口",action:onClose).buttonStyle(.borderless).font(.caption)
-            Text("运行时常驻菜单栏 · 文件在本机处理") .font(.caption).foregroundStyle(.secondary)
+            VStack(spacing:8) { Text("橘子").font(.system(size:28,weight:.semibold)); Text("拖一下，就换好了。") .font(.system(size:15)).foregroundStyle(.secondary) }
+            VStack(alignment:.leading,spacing:20) {
+                instruction(symbol:"arrow.down.doc",title:"把文件拖到小橘子",detail:"桌面按钮旁会展开操作圆盘。")
+                instruction(symbol:"cursorarrow.click",title:"放下文件，点击想要的操作",detail:"也可直接拖进格式扇区，松手执行。")
+                instruction(symbol:"slider.horizontal.3",title:"点击「工具」，继续编辑",detail:"裁剪、背景、压缩、调色、标注和遮挡。")
+            }.frame(maxWidth:.infinity,alignment:.leading).padding(20).background(CitrusTheme.surface,in:RoundedRectangle(cornerRadius:18))
+            VStack(spacing:10) {
+                HStack(spacing:12) {
+                    Button(action:onDemo) { Text("体验示例").frame(maxWidth:.infinity) }.buttonStyle(CitrusButtonStyle())
+                    Button(action:onChoose) { Text("选择文件…").frame(maxWidth:.infinity) }.buttonStyle(CitrusButtonStyle(primary:true))
+                }
+                Button(action:onClose) { Text("开始使用，收起窗口").frame(maxWidth:.infinity) }.buttonStyle(CitrusButtonStyle())
+            }.font(.system(size:14,weight:.medium)).controlSize(.large).tint(CitrusTheme.orange)
+            VStack(spacing:10) {
+                Button("桌面按钮设置…",action:onSettings).buttonStyle(.plain).font(.system(size:12)).foregroundStyle(.secondary)
+                Text("文件在本机处理 · 原文件始终保留").font(.system(size:11)).foregroundStyle(.secondary)
+            }
         }.padding(30).frame(width:430).foregroundStyle(CitrusTheme.ink).background(WarmGlass())
     }
-    func instruction(key:String,title:String,detail:String) -> some View {
+    func instruction(symbol:String,title:String,detail:String) -> some View {
         HStack(spacing:15) {
-            Text(key).font(.system(size:23,weight:.medium)).frame(width:42,height:42).background(.white.opacity(0.5),in:RoundedRectangle(cornerRadius:11))
-            VStack(alignment:.leading,spacing:4) { Text(title).font(.system(size:13,weight:.semibold)); Text(detail).font(.system(size:11)).foregroundStyle(.secondary) }
+            Image(systemName:symbol).font(.system(size:19,weight:.regular)).foregroundStyle(CitrusTheme.orange).frame(width:38,height:38)
+            VStack(alignment:.leading,spacing:5) { Text(title).font(.system(size:13,weight:.semibold)); Text(detail).font(.system(size:12)).foregroundStyle(.secondary).fixedSize(horizontal:false,vertical:true) }
         }
     }
 }
@@ -169,6 +176,6 @@ struct ToastView:View {
                 }
             }.frame(maxWidth:.infinity,alignment:.leading)
             if !state.processing { Button(action:onClose) { Image(systemName:"xmark") }.buttonStyle(.plain).accessibilityLabel("关闭提示") }
-        }.padding(18).frame(width:340).foregroundStyle(CitrusTheme.ink).background(WarmGlass())
+        }.padding(18).frame(width:340).foregroundStyle(CitrusTheme.ink).background(WarmGlass().clipShape(RoundedRectangle(cornerRadius:18)))
     }
 }

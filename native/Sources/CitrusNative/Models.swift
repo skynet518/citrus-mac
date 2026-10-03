@@ -146,12 +146,16 @@ struct RadialGeometry {
 
 @MainActor @Observable
 final class RadialState {
+    enum Entry: String { case systemDrag = "system_drag", filePicker = "file_picker", desktopButton = "desktop_button", practice }
     var urls: [URL] = []
     var tools = false
     var selected: Int?
     var pinned = false
     var latchedTools = false
     var appeared = false
+    var entry: Entry = .systemDrag
+    var dragHover = false
+    var allowsStaging: Bool { entry == .desktopButton }
     var actions: [RadialAction] {
         guard let url = urls.first else { return [] }
         if tools { return FileCatalog.tools(urls).map(RadialAction.tool) }
@@ -160,9 +164,10 @@ final class RadialState {
     }
     var action: RadialAction? { guard let selected, actions.indices.contains(selected) else { return nil }; return actions[selected] }
     func update(point: CGPoint, option: Bool) {
-        tools = pinned ? (latchedTools || option) : option
+        if entry == .systemDrag { tools = pinned ? (latchedTools || option) : option }
         selected = RadialGeometry.selection(point: point, count: actions.count)
     }
+    func setMode(tools: Bool) { self.tools = tools; latchedTools = tools; selected = nil }
 }
 
 enum CitrusError: LocalizedError {

@@ -10,20 +10,22 @@
 
 演示使用橘子 1.0.1 的实际界面和实际导出文件；光标动效重演，流程从“选择文件…”进入。画面只包含专门制作的演示文件。
 
-**MIT 开源预览。** 主分支保留 **1.0.1**，其本地安装版本、独立构建与 GitHub 自动检查记录为 **92 PASS / 0 FAIL / 0 SKIP**。新增桌面小橘子及原生玻璃界面的 **1.1.0** 位于 [界面预览分支](https://github.com/skynet518/citrus-mac/tree/codex/desktop-glass-ui)，已记录 **108 PASS / 0 FAIL / 0 SKIP** 的本地检查；详见 [新版界面与全部108项结果](https://github.com/skynet518/citrus-mac/blob/codex/desktop-glass-ui/docs/UI_REVIEW_1_1.md)。真实 Finder 拖入、按钮移动和桌面层级体验仍待验收，开源不代表完整产品验收通过。[1.0.1历史验收清单](docs/ACCEPTANCE.md)
+**MIT 开源界面预览 1.1.0。** 此分支包含桌面小橘子、可直接点击的格式／工具切换和原生玻璃界面。安装后的本地程序记录为 **108 PASS / 0 FAIL / 0 SKIP**，其中新增16项；[全部用例与界面截图](docs/UI_REVIEW_1_1.md)。真实 Finder 拖入、按钮移动和桌面层级体验仍待验收。本页下方的视频和旧图文教程展示的是 **1.0.1**；[主分支](https://github.com/skynet518/citrus-mac/tree/main)保留该版本。此分支是开源预览，未宣称完整产品验收通过。
+
+![1.1.0欢迎界面](docs/review-images-1.1.0/welcome-dark.png)
 
 ## 先体验：PDF → JPG → 裁剪 → 背景
 
 1. 启动“应用程序”中的 `橘子.app`，点击使用说明里的 **选择文件…**，或点击菜单栏的白色橘子图标进入同一入口。
 2. 选择 [Citrus Demo.pdf](docs/demo-files/Citrus%20Demo.pdf)，点击圆盘上的 **JPG**。结果保存在原文件旁边。
-3. 再选择生成的 JPG，按 **Tab** 切换工具，点击 **Crop**。拖动裁剪手柄，点击 **Apply**。
-4. 选择裁剪后的副本，按 **Tab**，点击 **Add BG**。调整背景、留白、圆角、阴影与比例，点击 **Save with Background**。
+3. 再选择生成的 JPG，点击圆盘中心的 **工具**（或按 **Tab**），点击 **Crop**。拖动裁剪手柄，点击 **Apply**。
+4. 选择裁剪后的副本，点击 **工具**（或按 **Tab**），点击 **Add BG**。调整背景、留白、圆角、阴影与比例，点击 **Save with Background**。
 
 每一步的实际截图、按钮说明和输出示例都在 **[中文图文教程](docs/GUIDE.zh-CN.md)**。原文件保留；输出重名时自动添加序号。`Esc` 关闭圆盘，方向键与回车也可选择操作。
 
 ## 安装与构建
 
-仓库当前提供源码和已验证的构建流程。需要 macOS、Swift 6 工具链及 Apple Command Line Tools。
+仓库当前提供源码和已验证的构建流程。构建1.1.0需要包含macOS26 SDK的Xcode或Apple Command Line Tools，以及Swift 6工具链。
 
 ```sh
 ./scripts/build-app.sh
@@ -45,16 +47,17 @@
 | PDF | 按页转图片、拆分、合并、文字提取与系统 OCR | 压缩会栅格化，不保留可搜索文字；PDF 转 DOCX 不保证复杂版式 |
 | 文档与媒体 | 图片嵌入 DOCX、字幕转换、归档操作、本机 FFmpeg 音视频处理 | Word/Pages 实际渲染、全部媒体编辑组合待验收；RAR 创建不在当前范围 |
 
-Finder 中 **Shift 拖拽**打开格式菜单、**Shift + Option**打开工具菜单，是待复验的桌面入口。[真实桌面验收步骤](docs/ACCEPTANCE.md#需要在真实桌面复验的步骤)单独记录，自动状态模型检查不代替物理操作。
+新版入口设计是把文件拖到桌面小橘子，在旁边展开圆盘，放下后点击操作；右键或欢迎页设置可选择“浮在窗口上方／仅在桌面”。此流程仍待真实鼠标验收。[待确认步骤](docs/UI_REVIEW_1_1.md#定稿前待确认)。旧版Shift拖拽默认关闭，可在菜单栏开启兼容选项。
 
 ## 测试与证据
 
-- [全部 92 项测试、逐项断言与实际结果](docs/TESTING.md)
-- [GitHub Actions 实际成功运行 #37063085729](https://github.com/skynet518/citrus-mac/actions/runs/37063085729)
+- [当前1.1.0全部108项结果、界面检查和待验收项](docs/UI_REVIEW_1_1.md)
+- [1.0.1历史92项测试](docs/TESTING.md)
+- [1.0.1历史GitHub Actions成功运行 #37063085729](https://github.com/skynet518/citrus-mac/actions/runs/37063085729)
 - [本地逐项回执](docs/evidence/local-verification.json) · [独立构建摘要](docs/evidence/clean-build-summary.json) · [云端逐项回执](docs/evidence/github-ci-verification.json)
 - [演示素材检查报告](docs/MEDIA_VALIDATION.md)：版面、字幕对比度、完整解码、素材来源与隐私检查
 
-自动功能结果、演示素材检查、真实桌面验收分别记录。此次演示与文档更新没有修改已测试的应用源码。
+自动功能结果、演示素材检查、真实桌面验收分别记录。旧版演示资料保留；新版界面源代码和安装版本证据见上方1.1.0报告。
 
 ## 本地数据与许可证
 

@@ -10,20 +10,22 @@ Convert files, crop images, and add backgrounds on your Mac. Citrus lives in the
 
 The demo uses actual Citrus 1.0.1 screens and exported files. Cursor motion is recreated, and the workflow starts with the file picker. Only purpose-made demo files appear.
 
-**MIT open-source preview.** The default branch retains **1.0.1**, with **92 PASS / 0 FAIL / 0 SKIP** recorded for the installed local app, clean build, and GitHub run. **1.1.0**, with a desktop citrus button and native glass UI, is available on the [UI preview branch](https://github.com/skynet518/citrus-mac/tree/codex/desktop-glass-ui); its installed local build recorded **108 PASS / 0 FAIL / 0 SKIP**. See the [new UI review and all 108 results](https://github.com/skynet518/citrus-mac/blob/codex/desktop-glass-ui/docs/UI_REVIEW_1_1.md). Physical Finder drops, button movement, and desktop-layer behavior still need acceptance. Publishing the source does not mean full product acceptance. [Historical 1.0.1 acceptance checklist](docs/ACCEPTANCE.en.md)
+**MIT open-source UI preview: 1.1.0.** This branch adds a desktop citrus button, clickable Format/Tools mode selection, and native glass UI. The installed local app recorded **108 PASS / 0 FAIL / 0 SKIP**, including 16 new checks; see [all cases and native screenshots](docs/UI_REVIEW_1_1.md). Physical Finder drops, button movement, and desktop-layer behavior remain pending acceptance. The video and older illustrated guides below show **1.0.1**, retained on [main](https://github.com/skynet518/citrus-mac/tree/main). This source preview does not claim full product acceptance.
+
+![1.1.0 welcome UI](docs/review-images-1.1.0/welcome-dark.png)
 
 ## Try it: PDF → JPG → Crop → Add BG
 
 1. Open `橘子.app` from Applications. Click **选择文件…** (Choose files) in the welcome window, or use the white citrus menu bar icon.
 2. Select [Citrus Demo.pdf](docs/demo-files/Citrus%20Demo.pdf), then click **JPG** on the wheel. The output is saved beside the source.
-3. Select the new JPG, press **Tab** to switch to tools, then click **Crop**. Drag the handles and click **Apply**.
-4. Select the cropped copy, press **Tab**, and click **Add BG**. Adjust the background, padding, corners, shadow, and ratio; click **Save with Background**.
+3. Select the new JPG, click **工具** (Tools) in the center, or press **Tab**, then click **Crop**. Drag the handles and click **Apply**.
+4. Select the cropped copy, click **工具** (Tools), or press **Tab**, then click **Add BG**. Adjust the background, padding, corners, shadow, and ratio; click **Save with Background**.
 
 The **[English illustrated guide](docs/GUIDE.en.md)** shows every screen, control, and output. The source is preserved; existing outputs receive numbered filenames. `Esc` closes the wheel. Arrow keys and Enter can also select an action.
 
 ## Build and install
 
-The repository currently provides source and a verified build workflow. Use macOS with a Swift 6 toolchain and Apple Command Line Tools.
+The repository currently provides source and a verified build workflow. Building 1.1.0 requires a Swift 6 toolchain and Xcode or Apple Command Line Tools with the macOS 26 SDK.
 
 ```sh
 ./scripts/build-app.sh
@@ -45,16 +47,17 @@ Audio/video processing requires a separate local FFmpeg installation. Citrus doe
 | PDF | Export pages as images, split, merge, extract text, system OCR | Compression rasterizes pages and removes searchable text; PDF-to-DOCX does not preserve every complex layout |
 | Documents and media | Images embedded in DOCX, subtitles, archives, local FFmpeg audio/video processing | Word/Pages rendering and all media editing combinations still need acceptance; RAR creation is outside the current scope |
 
-The Finder **Shift-drag** format wheel and **Shift + Option** tool wheel remain pending physical retest. Follow the separate [desktop acceptance procedure](docs/ACCEPTANCE.en.md#physical-desktop-retest); state-model checks do not prove system gestures.
+The new entry is designed to open the wheel beside the desktop citrus button when a file is dragged onto it, then keep the wheel available after the drop. Settings provide floating or desktop-only placement. This flow still needs physical mouse acceptance; see the [pending checks](docs/UI_REVIEW_1_1.md). Legacy Shift-drag compatibility is optional and off by default.
 
 ## Tests and evidence
 
-- [All 92 checks, assertions, and observed results](docs/TESTING.en.md)
-- [Successful GitHub Actions run #37063085729](https://github.com/skynet518/citrus-mac/actions/runs/37063085729)
+- [Current 1.1.0: all 108 results, UI checks, and pending acceptance](docs/UI_REVIEW_1_1.md)
+- [Historical 1.0.1: 92 checks](docs/TESTING.en.md)
+- [Historical 1.0.1 GitHub Actions run #37063085729](https://github.com/skynet518/citrus-mac/actions/runs/37063085729)
 - [Installed-app receipt](docs/evidence/local-verification.json) · [Clean-build summary](docs/evidence/clean-build-summary.json) · [CI per-check receipt](docs/evidence/github-ci-verification.json)
 - [Media validation report](docs/MEDIA_VALIDATION.md): layout, caption contrast, complete decoding, provenance, and privacy
 
-Automated functionality, media validation, and physical desktop acceptance are recorded separately. This media/documentation update does not change the tested app source.
+Automated functionality, media validation, and physical desktop acceptance are recorded separately. The older demo is retained; current UI source and installed-build evidence are linked in the 1.1.0 review above.
 
 ## Local data and licensing
 

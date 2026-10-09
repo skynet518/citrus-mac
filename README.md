@@ -10,7 +10,7 @@
 
 演示使用橘子 1.0.1 的实际界面和实际导出文件；光标动效重演，流程从“选择文件…”进入。画面只包含专门制作的演示文件。
 
-**当前是私有验收版本 1.0.1。** 本地安装版本、独立构建与 GitHub 自动检查均为 **92 PASS / 0 FAIL / 0 SKIP**。使用者曾报告 1.0.0 的 Finder Shift 拖拽没有弹出圆盘；1.0.1 已修复检测逻辑，真实 Shift / Shift+Option 操作仍待复验。完整产品验收尚未通过，仓库保持私有。[验收清单](docs/ACCEPTANCE.md)
+**MIT 开源预览。** 主分支保留 **1.0.1**，其本地安装版本、独立构建与 GitHub 自动检查记录为 **92 PASS / 0 FAIL / 0 SKIP**。新增桌面小橘子及原生玻璃界面的 **1.1.0** 位于 [界面预览分支](https://github.com/skynet518/citrus-mac/tree/codex/desktop-glass-ui)，已记录 **108 PASS / 0 FAIL / 0 SKIP** 的本地检查；详见 [新版界面与全部108项结果](https://github.com/skynet518/citrus-mac/blob/codex/desktop-glass-ui/docs/UI_REVIEW_1_1.md)。真实 Finder 拖入、按钮移动和桌面层级体验仍待验收，开源不代表完整产品验收通过。[1.0.1历史验收清单](docs/ACCEPTANCE.md)
 
 ## 先体验：PDF → JPG → 裁剪 → 背景
 

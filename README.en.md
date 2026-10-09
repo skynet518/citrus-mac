@@ -10,7 +10,7 @@ Convert files, crop images, and add backgrounds on your Mac. Citrus lives in the
 
 The demo uses actual Citrus 1.0.1 screens and exported files. Cursor motion is recreated, and the workflow starts with the file picker. Only purpose-made demo files appear.
 
-**Private acceptance build: 1.0.1.** The installed local app, clean build, and GitHub automated run each recorded **92 PASS / 0 FAIL / 0 SKIP**. The user reported that Finder Shift-drag did not open the wheel in 1.0.0. Version 1.0.1 repairs detection, but physical Shift / Shift+Option gestures still require a retest. Product acceptance is incomplete, and the repository remains private. [Acceptance checklist](docs/ACCEPTANCE.en.md)
+**MIT open-source preview.** The default branch retains **1.0.1**, with **92 PASS / 0 FAIL / 0 SKIP** recorded for the installed local app, clean build, and GitHub run. **1.1.0**, with a desktop citrus button and native glass UI, is available on the [UI preview branch](https://github.com/skynet518/citrus-mac/tree/codex/desktop-glass-ui); its installed local build recorded **108 PASS / 0 FAIL / 0 SKIP**. See the [new UI review and all 108 results](https://github.com/skynet518/citrus-mac/blob/codex/desktop-glass-ui/docs/UI_REVIEW_1_1.md). Physical Finder drops, button movement, and desktop-layer behavior still need acceptance. Publishing the source does not mean full product acceptance. [Historical 1.0.1 acceptance checklist](docs/ACCEPTANCE.en.md)
 
 ## Try it: PDF → JPG → Crop → Add BG
 
